@@ -1,4 +1,5 @@
-
+//  /src/App.js
+//  reference:  https://www.freecodecamp.org/news/react-router-in-5-minutes/
 
 import React from "react";
 
@@ -39,8 +40,9 @@ import Loops from './components/Loops';
 import Functions from './components/Functions';
 import JsProgrammingTechniques from './components/JsProgrammingTechniques';
 import SampleWebApplication from './components/SampleWebApplication';
-import SampleWebApplicationDemo from './components/SampleWebApplicationDemo';
+import Demo from './components/Demo';
 import RoadAhead from './components/RoadAhead';
+import QuickGuide from './components/QuickGuide';
 import Quiz from './components/Quiz';
 
 // global CSS using styled component
@@ -84,9 +86,19 @@ const App = ( ) => {
 
               {/* color of list item alternates between two colors */}
               <ListItemStyled>
+
+
+              <ListItemStyled>
                 <Link to="/">
-                  <AnchorStyled silver>
+                  <AnchorStyled>
                     Home
+                  </AnchorStyled>
+                </Link>
+              </ListItemStyled>
+
+                <Link to="/quick-guide">
+                  <AnchorStyled silver>
+                    Quick-Guide
                   </AnchorStyled>
                 </Link>
               </ListItemStyled>
@@ -190,11 +202,19 @@ const App = ( ) => {
             <Switch>
 
               {/* pass the respective title into each component */}
+      
+
               <Route exact path='/'>
                 <Home 
                   title="JavaScript Tutor (JST) Home"
                 />
               </Route>          
+
+              <Route exact path='/quick-guide'>
+                <QuickGuide 
+                  title="Quick Starting Guide for JST"
+                />
+              </Route>    
 
               <Route exact path='/html-primer'>
                 <HtmlPrimer 
@@ -204,67 +224,67 @@ const App = ( ) => {
 
               <Route exact path='/setup'>
                 <Setup 
-                  title="Setup"
+                  title="1. Setup"
                 />
               </Route>          
 
-              <Route exact path='/hello-world'>
+              <Route exact path="/hello-world">
                 <HelloWorld
-                  title="Hello World"
+                  title="2. Hello World"
                 />
               </Route>          
 
               <Route exact path='/data-types-and-structures'>
                 <DataTypesAndStructures 
-                  title="Data Types and Structures"
+                  title="3. Data Types and Structures"
                 />
               </Route>          
 
               <Route exact path='/expressions-and-operators'>
                 <ExpressionsAndOperators
-                  title="Expressions and Operators"
+                  title="4. Expressions and Operators"
                 />
               </Route>          
 
               <Route exact path='/branches'>
                 <Branches
-                  title="Branches"
+                  title="5. Branches"
                 />
               </Route>          
 
               <Route exact path='/loops'>
                 <Loops
-                  title="Loops"
+                  title="6. Loops"
                 />
               </Route>          
 
               <Route exact path='/functions'>
                 <Functions
-                  title="Functions"
+                  title="7. Functions"
                 />
               </Route>          
 
               <Route exact path='/js-programming-techniques'>
                 <JsProgrammingTechniques
-                  title="JS Programming Techniques"
+                  title="8. JS Programming Techniques"
                 />
               </Route>          
 
               <Route exact path='/sample-web-application'>
                 <SampleWebApplication
-                  title="Sample Web Application"
+                  title="9. Sample Web Application"
                 />
               </Route>          
 
-                <Route exact path='/sample-web-application-demo'>
-                <SampleWebApplicationDemo
-                  title="Sample Web Application Demo"
+                <Route exact path='/demo'>
+                <Demo
+                  title="Demo of Sample Web Application"
                 />
               </Route>          
 
               <Route exact path='/road-ahead'>
                 <RoadAhead
-                  title="Road Ahead"
+                  title="10. Road Ahead"
                 />
               </Route>          
 

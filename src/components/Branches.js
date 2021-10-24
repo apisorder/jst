@@ -308,7 +308,7 @@ const Branches = ( { title } ) =>
                                 <Header main>Recap</Header>
 
                                 ({num5++}) Branching allows only some the source code to be 
-                                executed based on some condition<LineFeeder />
+                                executed based on some condition.<LineFeeder />
                                 ({num5++}) If an action is necessary only when a condition is 
                                 satisfied, use if.<LineFeeder />
                                 ({num5++}) If two actions need to be decided based on the condition, 

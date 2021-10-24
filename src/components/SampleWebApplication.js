@@ -320,13 +320,13 @@ const SampleWebApplication = ( { title } ) =>
 
             {/* **********************link to demo********************** */}
             <DividerStyled>
-                <AnchorStyled demo><Link to='/sample-web-application-demo'>Live Demo</Link>
+                <AnchorStyled demo><Link to='/demo'>Live Demo</Link>
                 </AnchorStyled>
             </DividerStyled>
             {/* **********************link to demo********************** */}
             {/* lecture content */}
 
-            {/* ***********************************page navigation*********************************************** */}
+            {/* ***********************************page navigation********************** */}
             <DividerStyled pageLinker>
                 <Footer>
                     <Link to='/js-programming-techniques'>&lArr; Back</Link>
@@ -336,7 +336,7 @@ const SampleWebApplication = ( { title } ) =>
                     <Link to='/road-ahead'>Forward &rArr;</Link>
                 </Footer>
             </DividerStyled>
-            {/* ***********************************page navigation*********************************************** */}
+            {/* ***********************************page navigation********************** */}
         </>
     )
 }

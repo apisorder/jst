@@ -3,12 +3,5 @@
 import React from 'react';
 
 // create consistent newlines
-const Underliner = ( ) => 
-{
-    return (
-        <>
-            <hr />
-        </>
-    )
-}
+const Underliner = ( ) => ( <> <hr /> </> )
 export default Underliner;
