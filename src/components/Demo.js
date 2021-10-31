@@ -1,4 +1,4 @@
-//  /src/components/SampleWebApplicationDemo.js
+//  /src/components/Demo.js
 //  reference:  https://www.educative.io/blog/react-hooks-tutorial-todo-list
 
 //  to allow React Hooks to be used

@@ -461,15 +461,17 @@ const Quiz = ( { title } ) =>
                                 .answerChoices.map(
                                     ( answerOption ) => 
                                     (
-                                        // map each choice with an event handler
-                                        <ButtonStyled
-                                            answerChoices
-                                            onClick={ () => handleAnswerChoice( 
-                                                answerOption.isCorrect )
-                                            }
-                                        >
-                                            { answerOption.answerChoice }
-                                        </ButtonStyled>
+                                        <>
+                                            <ButtonStyled
+                                                answerChoices
+                                                onClick={ () => handleAnswerChoice( 
+                                                    answerOption.isCorrect )
+                                                }
+                                            >
+                                                { answerOption.answerChoice }
+                                            </ButtonStyled>
+                                            <LineFeeder />
+                                        </>
                                     )
                                 )
                             }
@@ -478,6 +480,11 @@ const Quiz = ( { title } ) =>
                 )}
             </DividerStyled>
 
+            {/* *******to better distinguish the quiz from the page linker*************** */}
+            <LineFeeder />
+            <LineFeeder />
+            <LineFeeder />
+            <LineFeeder />
             {/* ***********************************page navigation*********************** */}
             <DividerStyled pageLinker>
                 <Footer>

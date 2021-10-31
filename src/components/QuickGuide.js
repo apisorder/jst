@@ -1,4 +1,4 @@
-//  /src/components/Functions.js
+//  /src/components/QuickGuide.js
 
 import React from 'react';
 

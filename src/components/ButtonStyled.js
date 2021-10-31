@@ -14,9 +14,10 @@ color: MidnightBlue;
 background: Thistle;
 
 //  button for answer choices on quiz page
-${props => props.answerChoice && css`
+${props => props.answerChoices && css`
     border-radius: 50px;
-    margin: auto;
+    font-size: 25px;
+    margin: 0rem 7rem 0rem 17rem;
 `}
 
 `

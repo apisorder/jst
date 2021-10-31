@@ -155,10 +155,7 @@ const HtmlPrimer = ( { title } ) =>
 
             {/* ***********************************index.html output*********************** */}
             <DividerStyled programOutput>
-
-                <Header output>
-                    output
-                </Header>
+                <Header output>output</Header>
 
                 <ParagraphStyled>
                     While the exact composition will depend on the browser and the screen 

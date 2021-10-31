@@ -1,4 +1,4 @@
-//  /src/components/Functions.js
+//  /src/components/Home.js
 
 //  to allow React Hooks to be used
 import React, { useState } from 'react';
