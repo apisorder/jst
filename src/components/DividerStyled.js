@@ -6,6 +6,7 @@ import styled, { css } from 'styled-components';
 // CSS styling for the HTML div (content divider) element
 const DividerStyled = styled.div`
     //  CSS styling for container that houses both the nav bar and the main window
+
     ${props => props.mainContent && css`
         display: flex;
         padding: 2rem 10rem 2rem 10rem;
@@ -30,23 +31,21 @@ const DividerStyled = styled.div`
     //  CSS styling for application code
     ${props => props.programCode && css`
         margin-top: 30px;
-        margin-left: 150px;
+        margin-left: 0px;
         margin-bottom: 30px;
         margin-right: 150px;
         padding: 2rem 0rem 2rem 0rem;
-        display: inline-block;
-        border: 2px solid green;
+        display: block;
     `}
 
     //  CSS styling for the program execution
     ${props => props.programOutput && css`
         margin-top: 30px;
-        margin-left: 150px;
+        margin-left: 0px;
         margin-bottom: 30px;
         margin-right: 150px;
         padding: 2rem 0rem 2rem 0rem;
-        display: inline-block;
-        border: 2px solid Brown;
+        display: block;
     `}
 
     //  CSS styling for the images on the quick starting guide

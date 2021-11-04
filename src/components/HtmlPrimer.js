@@ -29,7 +29,7 @@ const HtmlPrimer = ( { title } ) =>
     // ***********************************local variables**********************
     //  convenience variables -> also possible to use React hooks to change the value, but doing
     //  so entails too many calls to the Hook, since each modification of value would require one
-    let lineNumber = 1, lineNumber2 = 1, lineNumber3 = 1, lineNumber4 = 1;
+    let lineNumber = 1;
     
     //  to better work with React, since JSX (not JS) always interpolates the value in template 
     //  string, and string escape sequence does not seem to work
@@ -94,68 +94,68 @@ const HtmlPrimer = ( { title } ) =>
 
             {/* ***********************************index.html******************************* */}
             <DividerStyled programCode>
-                <Header fileName>index.html</Header>
+                <Header fileNameStart>index.html (start)</Header>
 
                 <ParagraphStyled>
-                    Line {'0'+lineNumber++}<IndentStyled /><ElementDelimiter>
+                    <ElementDelimiter>
                     !-- This is a comment. --</ElementDelimiter><LineFeeder />
-                    Line {'0'+lineNumber++}<IndentStyled /><ElementDelimiter>!DOCTYPE html
+                    <ElementDelimiter>!DOCTYPE html
                     </ElementDelimiter><LineFeeder />
-                    Line {'0'+lineNumber++}<IndentStyled /><ElementDelimiter>html
+                    <ElementDelimiter>html
                     </ElementDelimiter><LineFeeder />
-                    Line {'0'+lineNumber++}<LineFeeder />
-                    Line {'0'+lineNumber++}<IndentStyled /><ElementDelimiter>
+                    <LineFeeder />
+                    <ElementDelimiter>
                     !-- The head contains meta information about the page. --
                     </ElementDelimiter><LineFeeder />
-                    Line {'0'+lineNumber++}<IndentStyled /><ElementDelimiter>head
+                    <ElementDelimiter>head
                     </ElementDelimiter><LineFeeder />
-                    Line {'0'+lineNumber++}<IndentStyled two/><ElementDelimiter>title
+                    <IndentStyled /><ElementDelimiter>title
                     </ElementDelimiter>Page Title<ElementDelimiter>/title</ElementDelimiter>
                     <LineFeeder />
-                    Line {'0'+lineNumber++}<IndentStyled /><ElementDelimiter>/head
+                    <ElementDelimiter>/head
                     </ElementDelimiter><LineFeeder />
-                    Line {'0'+lineNumber++}<LineFeeder />
-                    Line {lineNumber++}<IndentStyled /><ElementDelimiter>
+                    <LineFeeder />
+                    <ElementDelimiter>
                     !-- The body contains the visible elements on the page. --</ElementDelimiter>
                     <LineFeeder />
-                    Line {lineNumber++}<IndentStyled /><ElementDelimiter>body</ElementDelimiter>
+                    <ElementDelimiter>body</ElementDelimiter>
                     <LineFeeder />
-                    Line {lineNumber++}<IndentStyled two/><ElementDelimiter>
-                    !-- The h1 through h6 tags create headers on the page. --</ElementDelimiter>
+                    <IndentStyled /><ElementDelimiter>
+                    !-- H1 through H6 tags creating page headers. --</ElementDelimiter>
                     <LineFeeder />
-                    Line {lineNumber++}<IndentStyled two/><ElementDelimiter>h1</ElementDelimiter>
+                    <IndentStyled /><ElementDelimiter>h1</ElementDelimiter>
                     A heading<ElementDelimiter>h1</ElementDelimiter><LineFeeder />
-                    Line {lineNumber++}<LineFeeder />
-                    Line {lineNumber++}<IndentStyled two/><ElementDelimiter>button
-                    </ElementDelimiter><LineFeeder />
-                    Line {lineNumber++}<IndentStyled two/><ElementDelimiter>
-                    !-- Creates a hypertext link to other resources. --</ElementDelimiter>
                     <LineFeeder />
-                    Line {lineNumber++}<IndentStyled three/><ElementDelimiter>
-                    a href="https://cs.sfsu.edu/" target="_blank"</ElementDelimiter>
+                    <IndentStyled /><ElementDelimiter>
+                    !-- Creates a hypertext link to other resources. --</ElementDelimiter><LineFeeder />
+                    <IndentStyled /><ElementDelimiter>button
+                    </ElementDelimiter>
                     <LineFeeder />
-                    <IndentStyled six/>SFSU CS Department<ElementDelimiter>/a
+                    <IndentStyled two/><ElementDelimiter>
+                    a href="https://cs.sfsu.edu/" target="_blank"</ElementDelimiter><LineFeeder />
+                    <IndentStyled two/>CS Department<ElementDelimiter>/a
                     </ElementDelimiter><LineFeeder />
-                    Line {lineNumber++}<IndentStyled two/><ElementDelimiter>/button
+                    <IndentStyled /><ElementDelimiter>/button
                     </ElementDelimiter><LineFeeder />
-                    Line {lineNumber++}<LineFeeder />
-                    Line {lineNumber++}<IndentStyled two/><ElementDelimiter>
+                    <LineFeeder />
+                    <IndentStyled /><ElementDelimiter>
                     !-- The img tag inserts an image on the page. --</ElementDelimiter>
                     <LineFeeder />
-                    Line {lineNumber++}<IndentStyled two/><ElementDelimiter>
-                    img src="https://placeimg.com/640/480/any" alt="image" /</ElementDelimiter>
+                    <IndentStyled /><ElementDelimiter>img<LineFeeder />
+                    <IndentStyled two/>src="https://placeimg.com/640/480/any" alt="img"/</ElementDelimiter>
                     <LineFeeder />
-                    Line {lineNumber++}<IndentStyled /><ElementDelimiter>/body</ElementDelimiter>
+                    <ElementDelimiter>/body</ElementDelimiter>
                     <LineFeeder />
-                    Line {lineNumber++}<IndentStyled /><ElementDelimiter>/html</ElementDelimiter>
+                    <ElementDelimiter>/html</ElementDelimiter>
                 </ParagraphStyled>
 
+                <Header fileNameEnd>index.html (end)</Header>
             </DividerStyled>
             {/* ***********************************index.html*************************** */}
 
             {/* ***********************************index.html output*********************** */}
             <DividerStyled programOutput>
-                <Header output>output</Header>
+                <Header outputStart>output (start)</Header>
 
                 <ParagraphStyled>
                     While the exact composition will depend on the browser and the screen 
@@ -164,6 +164,7 @@ const HtmlPrimer = ( { title } ) =>
                     Department.
                 </ParagraphStyled>
 
+                <Header outputEnd>output (end)</Header>
             </DividerStyled>
             {/* ***********************************index.html output************************* */}
 
@@ -199,29 +200,32 @@ const HtmlPrimer = ( { title } ) =>
 
             {/* ***********************************script.js*********************** */}
             <DividerStyled programCode>
-                <Header fileName>script.js</Header>
+                <Header fileNameStart>script.js (start)</Header>
 
                 <ParagraphStyled>
-                    Line {'0'+lineNumber2++}<IndentStyled />{comment} This is a comment.
+                    {comment} This is a comment.
                     <LineFeeder />
-                    Line {'0'+lineNumber2++}<IndentStyled />{comment} 
+                    {comment} 
                     JS can insert HTML elements into the page.<LineFeeder />
-                    Line {'0'+lineNumber2++}<IndentStyled />
+                    <LineFeeder />
                     document.write('<ElementDelimiter>h1</ElementDelimiter>A heading
                     <ElementDelimiter>/h1</ElementDelimiter>');<LineFeeder />
-                    Line {'0'+lineNumber2++}<IndentStyled />
                     document.write('<ElementDelimiter>button</ElementDelimiter><LineFeeder />
-                    <IndentStyled four/><ElementDelimiter>
+                    <IndentStyled three/><ElementDelimiter>
                     a href="https://cs.sfsu.edu/" target="_blank"</ElementDelimiter>
                     <LineFeeder />
-                    <IndentStyled five/>SFSU CS Department<ElementDelimiter>/a
+                    <IndentStyled four/>CS Department<ElementDelimiter>/a
                     </ElementDelimiter><LineFeeder />
-                    <IndentStyled four/><ElementDelimiter>/button</ElementDelimiter>');
+                    <IndentStyled three/><ElementDelimiter>/button</ElementDelimiter>');
                     <LineFeeder />
-                    Line {'0'+lineNumber2++}<IndentStyled />document.write('<LineFeeder />
-                    <IndentStyled four/><ElementDelimiter>
-                    img src="https://placeimg.com/640/480/any" alt="image"/</ElementDelimiter>');
+                    document.write('<ElementDelimiter>img<LineFeeder />
+                    <IndentStyled three/>
+                    src="https://placeimg.com/640/480/any"<LineFeeder />
+                    <IndentStyled three/>
+                    alt="image"/</ElementDelimiter>');
                 </ParagraphStyled>
+
+                <Header fileNameEnd>script.js (end)</Header>
             </DividerStyled>
             {/* ***********************************script.js************************ */}
 
@@ -234,45 +238,49 @@ const HtmlPrimer = ( { title } ) =>
     
             {/* ***********************************index.html********************* */}
             <DividerStyled programCode>
-                <Header fileName>index.html</Header>
+                <Header fileNameStart>index.html (start)</Header>
 
                 <ParagraphStyled>
-                    Line {'0'+lineNumber3++}<IndentStyled /><ElementDelimiter>!DOCTYPE html
+                    <ElementDelimiter>!DOCTYPE html
                     </ElementDelimiter><LineFeeder />
-                    Line {'0'+lineNumber3++}<IndentStyled /><ElementDelimiter>html
+                    <ElementDelimiter>html
                     </ElementDelimiter><LineFeeder />
-                    Line {'0'+lineNumber3++}<LineFeeder />
-                    Line {'0'+lineNumber3++}<IndentStyled /><ElementDelimiter>head
+                    <LineFeeder />
+                    <ElementDelimiter>head
                     </ElementDelimiter><LineFeeder />
-                    Line {'0'+lineNumber3++}<IndentStyled two/><ElementDelimiter>title
+                    <IndentStyled /><ElementDelimiter>title
                     </ElementDelimiter>Page Title<ElementDelimiter>/title</ElementDelimiter>
                     <LineFeeder />
-                    Line {'0'+lineNumber3++}<IndentStyled/><ElementDelimiter>/head
+                    <ElementDelimiter>/head
                     </ElementDelimiter><LineFeeder />
-                    Line {'0'+lineNumber3++}<LineFeeder />
-                    Line {'0'+lineNumber3++}<IndentStyled /><ElementDelimiter>body
+                    <LineFeeder />
+                    <ElementDelimiter>body
                     </ElementDelimiter><LineFeeder />
-                    Line {'0'+lineNumber3++}<IndentStyled /><ElementDelimiter>
+                    <ElementDelimiter>
                     !-- The JS file is embedded here. --</ElementDelimiter><LineFeeder />
-                    Line {lineNumber3++}<IndentStyled two/><ElementDelimiter>
+                    <IndentStyled /><ElementDelimiter>
                     script src="script.js"</ElementDelimiter><ElementDelimiter>/script
                     </ElementDelimiter><LineFeeder />
-                    Line {lineNumber3++}<IndentStyled /><ElementDelimiter>/body
+                    <ElementDelimiter>/body
                     </ElementDelimiter><LineFeeder />
-                    Line {lineNumber3++}<IndentStyled /><ElementDelimiter>/html
+                    <ElementDelimiter>/html
                     </ElementDelimiter>
                 </ParagraphStyled>
+
+                <Header fileNameEnd>index.html (end)</Header>
             </DividerStyled>
             {/* ***********************************index.html********************** */}
 
             {/* **********************************index.html output************* */}
             <DividerStyled programOutput>
-                <Header output>output</Header>
+                <Header outputStart>output (start)</Header>
 
                 <ParagraphStyled>
                     The output should be identical to the output of the previous HTML file, 
                     namely index.html, with the sole exception of the randomly inserted image.
                 </ParagraphStyled>
+
+                <Header outputEnd>output (end)</Header>
             </DividerStyled>
             {/* **********************************index.html output************** */}
 
@@ -317,15 +325,15 @@ const HtmlPrimer = ( { title } ) =>
                             <ParagraphStyled review>
                                 <Header main>Recap</Header>
                                 
-                                ({lineNumber4++}) The use of HTML is recommended to ensure 
+                                ({lineNumber++}) The use of HTML is recommended to ensure 
                                 compatibility between web browsers.<LineFeeder />
-                                ({lineNumber4++}) HTML is not a programming language and does 
+                                ({lineNumber++}) HTML is not a programming language and does 
                                 not support programming logic.<LineFeeder />
-                                ({lineNumber4++}) Most HTML elements are made up of a starting 
+                                ({lineNumber++}) Most HTML elements are made up of a starting 
                                 tag and an ending tag.<LineFeeder />
-                                ({lineNumber4++}) JS can be embedded in HTML using the script 
+                                ({lineNumber++}) JS can be embedded in HTML using the script 
                                 tags.<LineFeeder />
-                                ({lineNumber4++}) JS can insert HTML elements into an HTML 
+                                ({lineNumber++}) JS can insert HTML elements into an HTML 
                                 document.
                             </ParagraphStyled>
                         </>

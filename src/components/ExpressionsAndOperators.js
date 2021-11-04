@@ -29,8 +29,7 @@ const ExpressionsAndOperators = ( { title } ) =>
     // ***********************************local variables**********************
     //  convenience variables -> also possible to use React hooks to change the value, but doing
     //  so entails too many calls to the Hook, since each modification of value would require one
-    let lineNumber = 1, lineNumber2 = 1, lineNumber3 = 1, lineNumber4 = 1, lineNumber5 = 1;
-    let lineNumber6 = 1, lineNumber7 = 1;
+    let lineNumber = 1;
 
     //  to better work with React, since JSX (not JS) always interpolates the value in template 
     //  string, and string escape sequence does not seem to work
@@ -143,21 +142,21 @@ const ExpressionsAndOperators = ( { title } ) =>
                 <Header fileName>crement.js</Header>
 
                 <ParagraphStyled>
-                    Line {'0'+lineNumber++}<IndentStyled />let myVariable = 6.5;<LineFeeder />
-                    Line {'0'+lineNumber++}<IndentStyled />let myVariable2 = 6.5;<LineFeeder />
-                    Line {'0'+lineNumber++}<LineFeeder />
-                    Line {'0'+lineNumber++}<IndentStyled />{comment} 
+                    <IndentStyled />let myVariable = 6.5;<LineFeeder />
+                    <IndentStyled />let myVariable2 = 6.5;<LineFeeder />
+                    <LineFeeder />
+                    <IndentStyled />{comment} 
                     On the line by itself, the operators have the same effect.<LineFeeder />
-                    Line {'0'+lineNumber++}<IndentStyled />myVariable++;<LineFeeder />
-                    Line {'0'+lineNumber++}<IndentStyled />++myVariable2;<LineFeeder />
-                    Line {'0'+lineNumber++}<LineFeeder />
-                    Line {'0'+lineNumber++}<IndentStyled />
+                    <IndentStyled />myVariable++;<LineFeeder />
+                    <IndentStyled />++myVariable2;<LineFeeder />
+                    <LineFeeder />
+                    <IndentStyled />
                     console.log( `myVariable = ${myVariable}.` );<LineFeeder />
-                    Line {'0'+lineNumber++}<IndentStyled />
+                    <IndentStyled />
                     console.log( `myVariable2 = ${myVariable2}.` );<LineFeeder />
-                    Line {lineNumber++}<IndentStyled />{comment} 
+                    <IndentStyled />{comment} 
                     However, when used in conjunction, the effects are different.<LineFeeder />
-                    Line {lineNumber++}<IndentStyled />console.log(<LineFeeder />
+                    <IndentStyled />console.log(<LineFeeder />
                     <IndentStyled three/>`--myVariable === myVariable2--: ${myDeclarations}.` );
                 </ParagraphStyled>
             </DividerStyled>
@@ -168,9 +167,9 @@ const ExpressionsAndOperators = ( { title } ) =>
                 <Header output>output</Header>
 
                 <ParagraphStyled>
-                    myVariable = 7.5.<LineFeeder />
-                    myVariable2 = 7.5.<LineFeeder />
-                    --myVariable === myVariable2--: false.
+                    <IndentStyled />myVariable = 7.5.<LineFeeder />
+                    <IndentStyled />myVariable2 = 7.5.<LineFeeder />
+                    <IndentStyled />--myVariable === myVariable2--: false.
                 </ParagraphStyled>
             </DividerStyled>
             {/* ***********************************crement.js output********************* */}
@@ -206,17 +205,17 @@ const ExpressionsAndOperators = ( { title } ) =>
                 <Header fileName>negation.js</Header>
 
                 <ParagraphStyled>
-                    Line {'0'+lineNumber2++}<IndentStyled />let isUserLogged = false; 
+                    <IndentStyled />let isUserLogged = false; 
                     <LineFeeder />
-                    Line {'0'+lineNumber2++}<LineFeeder />
-                    Line {'0'+lineNumber2++}<IndentStyled />{comment} 
+                    <LineFeeder />
+                    <IndentStyled />{comment} 
                     Check if user is logged in.<LineFeeder />
-                    Line {'0'+lineNumber2++}<IndentStyled />{comment} 
+                    <IndentStyled />{comment} 
                     Both styles can be used, but know how to interpret the result.<LineFeeder />
-                    Line {'0'+lineNumber2++}<IndentStyled />
+                    <IndentStyled />
                     console.log( `isUserLogged === false: ${ userLoggedInequality }.` );
                     <LineFeeder />
-                    Line {'0'+lineNumber2++}<IndentStyled />
+                    <IndentStyled />
                     console.log( `!isUserLogged: ${ userLoggedNegation }.` );
                 </ParagraphStyled>
             </DividerStyled>
@@ -227,8 +226,8 @@ const ExpressionsAndOperators = ( { title } ) =>
                 <Header output>output</Header>
 
                 <ParagraphStyled>
-                    isUserLogged === false: true.<LineFeeder />
-                    !isUserLogged: true.
+                    <IndentStyled />isUserLogged === false: true.<LineFeeder />
+                    <IndentStyled />!isUserLogged: true.
                 </ParagraphStyled>
             </DividerStyled>
             {/* *****************************negation.js output****************** */}
@@ -262,18 +261,18 @@ const ExpressionsAndOperators = ( { title } ) =>
                 <Header fileName>arithmetic.js</Header>
 
                 <ParagraphStyled>
-                    Line {'0'+lineNumber3++}<IndentStyled />let a = 11;<LineFeeder />
-                    Line {'0'+lineNumber3++}<IndentStyled />let b = 22;<LineFeeder />
-                    Line {'0'+lineNumber3++}<LineFeeder />
-                    Line {'0'+lineNumber3++}<IndentStyled />
+                    <IndentStyled />let a = 11;<LineFeeder />
+                    <IndentStyled />let b = 22;<LineFeeder />
+                    <LineFeeder />
+                    <IndentStyled />
                     console.log( `a * b = ${ multiplication }.` );<LineFeeder />
-                    Line {'0'+lineNumber3++}<IndentStyled />
+                    <IndentStyled />
                     console.log( `a / b = ${ division }.` );<LineFeeder />
-                    Line {'0'+lineNumber3++}<IndentStyled />
+                    <IndentStyled />
                     console.log( `a % b = ${ modulo }.` );<LineFeeder />
-                    Line {'0'+lineNumber3++}<IndentStyled />
+                    <IndentStyled />
                     console.log( `a + b = ${ addition }.` );<LineFeeder />
-                    Line {'0'+lineNumber3++}<IndentStyled />
+                    <IndentStyled />
                     console.log( `a - b = ${ subtraction }.` );
                 </ParagraphStyled>
             </DividerStyled>
@@ -284,11 +283,11 @@ const ExpressionsAndOperators = ( { title } ) =>
                 <Header output>output</Header>
 
                 <ParagraphStyled>
-                    a * b = 242.<LineFeeder />
-                    a / b = 0.5.<LineFeeder />
-                    a % b = 11.<LineFeeder />
-                    a + b = 33.<LineFeeder />
-                    a - b = -11.    
+                    <IndentStyled />a * b = 242.<LineFeeder />
+                    <IndentStyled />a / b = 0.5.<LineFeeder />
+                    <IndentStyled />a % b = 11.<LineFeeder />
+                    <IndentStyled />a + b = 33.<LineFeeder />
+                    <IndentStyled />a - b = -11.    
                 </ParagraphStyled>
             </DividerStyled>
             {/* ********************************arithmetic.js output***************** */}
@@ -321,19 +320,19 @@ const ExpressionsAndOperators = ( { title } ) =>
                 <Header fileName>comparison.js</Header>
 
                 <ParagraphStyled>
-                    Line {'0'+lineNumber4++}<IndentStyled />let a = 11;<LineFeeder />
-                    Line {'0'+lineNumber4++}<IndentStyled />let b = 22;<LineFeeder />
-                    Line {'0'+lineNumber4++}<LineFeeder />
-                    Line {'0'+lineNumber4++}<IndentStyled />
+                    <IndentStyled />let a = 11;<LineFeeder />
+                    <IndentStyled />let b = 22;<LineFeeder />
+                    <LineFeeder />
+                    <IndentStyled />
                     console.log( `{ lessThanOperation + " $" + lessThanOperationResult }.` );
                     <LineFeeder />
-                    Line {'0'+lineNumber4++}<IndentStyled />
+                    <IndentStyled />
                     console.log( `{ lessAndEqualToOperation + "$" + 
                     lessAndEqualToOperationResult }.` );<LineFeeder />
-                    Line {'0'+lineNumber4++}<IndentStyled />
+                    <IndentStyled />
                     console.log( `{ greaterThanOperation + "$" + 
                     greaterThanOperationResult }.` );<LineFeeder />
-                    Line {'0'+lineNumber4++}<IndentStyled />
+                    <IndentStyled />
                     console.log( `{ greaterAndEqualToOperation + "$" + 
                     greaterAndEqualToOperationResult }.` );
                 </ParagraphStyled>
@@ -345,10 +344,10 @@ const ExpressionsAndOperators = ( { title } ) =>
                 <Header output>output</Header>
 
                 <ParagraphStyled>
-                    a {lessThan} b: true.<LineFeeder />
-                    a {lessAndEqualTo} b: true.<LineFeeder />
-                    a {greaterThan} b: false.<LineFeeder />
-                    a {greaterAndEqualTo} b: false.
+                    <IndentStyled />a {lessThan} b: true.<LineFeeder />
+                    <IndentStyled />a {lessAndEqualTo} b: true.<LineFeeder />
+                    <IndentStyled />a {greaterThan} b: false.<LineFeeder />
+                    <IndentStyled />a {greaterAndEqualTo} b: false.
                 </ParagraphStyled>
             </DividerStyled>
             {/* **************************comparison.js output******************* */}
@@ -382,16 +381,16 @@ const ExpressionsAndOperators = ( { title } ) =>
                 <Header fileName>equality.js</Header>
 
                 <ParagraphStyled>
-                    Line {'0'+lineNumber5++}<IndentStyled />let a = 11;<LineFeeder />
-                    Line {'0'+lineNumber5++}<IndentStyled />let b = 22;<LineFeeder />
-                    Line {'0'+lineNumber5++}<LineFeeder />
-                    Line {'0'+lineNumber5++}<IndentStyled />
+                    <IndentStyled />let a = 11;<LineFeeder />
+                    <IndentStyled />let b = 22;<LineFeeder />
+                    <LineFeeder />
+                    <IndentStyled />
                     console.log( `a == b: ${equality}.` );<LineFeeder />
-                    Line {'0'+lineNumber5++}<IndentStyled />
+                    <IndentStyled />
                     console.log( `a != b: ${inequality}.` );<LineFeeder />
-                    Line {'0'+lineNumber5++}<IndentStyled />
+                    <IndentStyled />
                     console.log( `a === b: ${strictEquality}.` );<LineFeeder />
-                    Line {'0'+lineNumber5++}<IndentStyled />
+                    <IndentStyled />
                     console.log( `a !== b: ${strictInequality}.` );
                 </ParagraphStyled>
             </DividerStyled>
@@ -402,10 +401,10 @@ const ExpressionsAndOperators = ( { title } ) =>
                 <Header output>output</Header>
 
                 <ParagraphStyled>
-                    a == b: false.<LineFeeder />
-                    a != b: true.<LineFeeder />
-                    a === b: false.<LineFeeder />
-                    a !== b: true.
+                    <IndentStyled />a == b: false.<LineFeeder />
+                    <IndentStyled />a != b: true.<LineFeeder />
+                    <IndentStyled />a === b: false.<LineFeeder />
+                    <IndentStyled />a !== b: true.
                 </ParagraphStyled>
 
             </DividerStyled>
@@ -435,12 +434,12 @@ const ExpressionsAndOperators = ( { title } ) =>
                 <Header fileName>logical.js</Header>
 
                 <ParagraphStyled>
-                    Line {'0'+lineNumber6++}<IndentStyled />let a = 11;<LineFeeder />
-                    Line {'0'+lineNumber6++}<IndentStyled />let b = 22;<LineFeeder />
-                    Line {'0'+lineNumber6++}<LineFeeder />
-                    Line {'0'+lineNumber6++}<IndentStyled />
+                    <IndentStyled />let a = 11;<LineFeeder />
+                    <IndentStyled />let b = 22;<LineFeeder />
+                    <LineFeeder />
+                    <IndentStyled />
                     console.log( `a && b: ${ logicalAnd }.` );<LineFeeder />
-                    Line {'0'+lineNumber6++}<IndentStyled />
+                    <IndentStyled />
                     console.log( `a || b: ${ logicalOr }.` );
                 </ParagraphStyled>
             </DividerStyled>
@@ -451,8 +450,8 @@ const ExpressionsAndOperators = ( { title } ) =>
                 <Header output>output</Header>
 
                 <ParagraphStyled>
-                    a && b: 22.<LineFeeder />
-                    a || b: 11.
+                    <IndentStyled />a && b: 22.<LineFeeder />
+                    <IndentStyled />a || b: 11.
                 </ParagraphStyled>
             </DividerStyled>
             {/* **************************logical.js output************** */}
@@ -595,15 +594,15 @@ const ExpressionsAndOperators = ( { title } ) =>
                             <ParagraphStyled review>
                                 <Header main>Recap</Header>
                                 
-                                ({lineNumber7++}) An expression is one that which evaluates to 
+                                ({lineNumber++}) An expression is one that which evaluates to 
                                 a value.<LineFeeder />
-                                ({lineNumber7++}) In evaluating an expression, the operator 
+                                ({lineNumber++}) In evaluating an expression, the operator 
                                 precedence has the primary effect.<LineFeeder />
-                                ({lineNumber7++}) If two operators are of equal precedence, the 
+                                ({lineNumber++}) If two operators are of equal precedence, the 
                                 operator associativity is considered.<LineFeeder />
-                                ({lineNumber7++}) Most operators are left-associative.
+                                ({lineNumber++}) Most operators are left-associative.
                                 <LineFeeder />
-                                ({lineNumber7++}) The assignment operator has shorthand versions 
+                                ({lineNumber++}) The assignment operator has shorthand versions 
                                 for select operators.
                             </ParagraphStyled>
                         </>

@@ -9,10 +9,19 @@ const Header = styled.h1`
     margin: 0rem 16rem;
 
     //  for the source code file
-    ${props => props.fileName && css`
+    ${props => props.fileNameStart && css`
         font-size: 30px;
         text-align: center;
         color: Green;
+        border-bottom: 2px green solid;
+    `}
+
+    //  for the source code file
+    ${props => props.fileNameEnd && css`
+        font-size: 30px;
+        text-align: center;
+        color: Green;
+        border-top: 2px green solid;
     `}
 
     //  for the most dominant header on the page
@@ -22,10 +31,19 @@ const Header = styled.h1`
     `}
 
     //  for the result of program execution
-    ${props => props.output && css`
+    ${props => props.outputStart && css`
         font-size: 30px;
         text-align: center;
         color: Brown;
+        border-bottom: 2px brown solid;
+    `}
+
+    //  for the result of program execution
+    ${props => props.outputEnd && css`
+        font-size: 30px;
+        text-align: center;
+        color: Brown;
+        border-top: 2px brown solid;
     `}
 
     //  for the subsections on the page

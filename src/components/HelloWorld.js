@@ -28,7 +28,7 @@ const HelloWorld = ( { title } ) =>
     // ***********************************local variables**********************
     //  convenience variables -> also possible to use React hooks to change the value, but doing
     //  so entails too many calls to the Hook, since each modification of value would require one
-    let lineNumber = 1, lineNumber2 = 1;
+    let lineNumber = 1;
     
     //  to better work with React, since JSX (not JS) always interpolates the value in template 
     //  string, and string escape sequence does not seem to work
@@ -77,24 +77,27 @@ const HelloWorld = ( { title } ) =>
 
             {/* *********************************helloworld.js************************* */}
             <DividerStyled programCode>
-                <Header fileName>helloworld.js</Header>
+                <Header fileNameStart>helloworld.js (start)</Header>
 
                 <ParagraphStyled>
-                    Line {'0'+lineNumber++}<IndentStyled />{comment} This is a comment.
+                    <IndentStyled />{comment} This is a comment.
                     <LineFeeder />
-                    Line {'0'+lineNumber++}<IndentStyled />{comment} 
+                    <IndentStyled />{comment} 
                     console.log() is a print function available to JS programs.<LineFeeder />
-                    Line {'0'+lineNumber++}<IndentStyled />console.log("Hello World.");
+                    <IndentStyled />console.log("Hello World.");
                 </ParagraphStyled>
+
+                <Header fileNameEnd>helloworld.js (end)</Header>
             </DividerStyled>
             {/* *************************************helloworld.js*********************** */}
 
             {/* ******************************helloworld.js output*********************** */}
             <DividerStyled programOutput>
-                <Header output>output</Header>
+                <Header outputStart>output (start)</Header>
 
-                <ParagraphStyled>Hello World.</ParagraphStyled>
+                <ParagraphStyled><IndentStyled />Hello World.</ParagraphStyled>
 
+                <Header outputEnd>output (end)</Header>
             </DividerStyled>
             {/* ******************************helloworld.js output********************* */}
             {/* ***************1. Using the Runtime to Execute JS********************* */}
@@ -150,13 +153,13 @@ const HelloWorld = ( { title } ) =>
                             <ParagraphStyled review>
                                 <Header main>Recap</Header>
                                 
-                                ({lineNumber2++}) JS supports C-style comments, and therefore 
+                                ({lineNumber++}) JS supports C-style comments, and therefore 
                                 comments can be preceded by {comment}.<LineFeeder />
-                                ({lineNumber2++}) The console.log() print function is 
+                                ({lineNumber++}) The console.log() print function is 
                                 available to JS programs.<LineFeeder />
-                                ({lineNumber2++}) For the web browser, console.log() prints in 
+                                ({lineNumber++}) For the web browser, console.log() prints in 
                                 the JS Developer Console.<LineFeeder />
-                                ({lineNumber2++}) The F12 function key can be used to make the 
+                                ({lineNumber++}) The F12 function key can be used to make the 
                                 Console visible on select browsers.
                             </ParagraphStyled>
                         </>

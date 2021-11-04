@@ -76,10 +76,10 @@ const Branches = ( { title } ) =>
                 <Header fileName>if.js</Header>
 
                 <ParagraphStyled>
-                    Line {'0'+num++}<IndentStyled />let isUserLoggedIn = false;<LineFeeder />
-                    Line {'0'+num++}<LineFeeder />
-                    Line {'0'+num++}<IndentStyled />if ( !isUserLoggedIn )<LineFeeder />
-                    Line {'0'+num++}<IndentStyled />{leftBrace}<LineFeeder />
+                    <IndentStyled />let isUserLoggedIn = false;<LineFeeder />
+                    <LineFeeder />
+                    <IndentStyled />if ( !isUserLoggedIn )<LineFeeder />
+                    <IndentStyled />{leftBrace}<LineFeeder />
                     Line {'0'+num++}<IndentStyled two/>console.log( "Please log on." );
                     <LineFeeder />
                     Line {'0'+num++}<IndentStyled />{rightBrace}<LineFeeder />

@@ -28,9 +28,7 @@ const DataTypesAndStructures = ( { title } ) =>
     // ***********************************local variables*********************************
     //  convenience variables -> also possible to use React hooks to change the value, but doing
     //  so entails too many calls to the Hook, since each modification of value would require one
-    let lineNumber = 1, lineNumber2 = 1, lineNumber3 = 1, lineNumber4 = 1, lineNumber5 = 1;
-    let lineNumber6 = 1, lineNumber7 = 1, lineNumber8 = 1, lineNumber9 = 1, lineNumber10 = 1;
-    let lineNumber11 = 1;
+    let lineNumber = 1;
 
     //  to better work with React, since JSX (not JS) always interpolates the value in template 
     //  string, and string escape sequence does not seem to work
@@ -91,17 +89,17 @@ const DataTypesAndStructures = ( { title } ) =>
                 <Header fileName>string1.js</Header>
 
                 <ParagraphStyled>
-                    Line {'0'+lineNumber++}<IndentStyled />{comment} Declare a variable with 
+                    <IndentStyled />{comment} Declare a variable with 
                     the let keyword.<LineFeeder />
-                    Line {'0'+lineNumber++}<IndentStyled />let firstName = 'John';<LineFeeder />
-                    Line {'0'+lineNumber++}<IndentStyled />console.log( `firstName =
+                    <IndentStyled />let firstName = 'John';<LineFeeder />
+                    <IndentStyled />console.log( `firstName =
                      ${ firstName }.` );<LineFeeder />
-                    Line {'0'+lineNumber++}<IndentStyled />let lastName = "Doe";<LineFeeder />
-                    Line {'0'+lineNumber++}<IndentStyled />console.log( `lastName = 
+                    <IndentStyled />let lastName = "Doe";<LineFeeder />
+                    <IndentStyled />console.log( `lastName = 
                     ${ lastName }.` );<LineFeeder />
-                    Line {'0'+lineNumber++}<IndentStyled />let email = `JD@JST.EDU`;
+                    <IndentStyled />let email = `JD@JST.EDU`;
                     <LineFeeder />
-                    Line {'0'+lineNumber++}<IndentStyled />console.log( `email = 
+                    <IndentStyled />console.log( `email = 
                     ${ email }.` );<LineFeeder />
                 </ParagraphStyled>
             </DividerStyled>
@@ -112,9 +110,9 @@ const DataTypesAndStructures = ( { title } ) =>
                 <Header output>output</Header>
 
                 <ParagraphStyled>
-                    firstName = John.<LineFeeder />
-                    lastName = Doe.<LineFeeder />
-                    email = JD@JST.EDU.<LineFeeder />
+                    <IndentStyled />firstName = John.<LineFeeder />
+                    <IndentStyled />lastName = Doe.<LineFeeder />
+                    <IndentStyled />email = JD@JST.EDU.<LineFeeder />
                 </ParagraphStyled>
 
             </DividerStyled>
@@ -138,13 +136,13 @@ const DataTypesAndStructures = ( { title } ) =>
                 <Header fileName>string2.js</Header>
 
                 <ParagraphStyled>
-                    Line {'0'+lineNumber2++}<IndentStyled />let singleQuotationMarks = 'hello';
+                    <IndentStyled />let singleQuotationMarks = 'hello';
                     <LineFeeder />
-                    Line {'0'+lineNumber2++}<IndentStyled />let doubleQuotationMarks = "hello";
+                    <IndentStyled />let doubleQuotationMarks = "hello";
                     <LineFeeder />
-                    Line {'0'+lineNumber2++}<IndentStyled />{comment} Use the equality operator 
+                    <IndentStyled />{comment} Use the equality operator 
                     to test whether they are equal.<LineFeeder />
-                    Line {'0'+lineNumber2++}<IndentStyled />console.log( <LineFeeder />
+                    <IndentStyled />console.log( <LineFeeder />
                     <IndentStyled three/>`singleQuotationMarks === doubleQuotationMarks:
                     <LineFeeder />
                     <IndentStyled three/>${quotationMarks}` );<LineFeeder />
@@ -157,6 +155,7 @@ const DataTypesAndStructures = ( { title } ) =>
                 <Header output>output</Header>
 
                 <ParagraphStyled>
+                    <IndentStyled />
                     singleQuotationMarks === doubleQuotationMarks: true.<LineFeeder />
                 </ParagraphStyled>
 
@@ -182,12 +181,12 @@ const DataTypesAndStructures = ( { title } ) =>
                 <Header fileName>string3.js</Header>
 
                 <ParagraphStyled>
-                    Line {'0'+lineNumber3++}<IndentStyled />let age = 11;<LineFeeder />
-                    Line {'0'+lineNumber3++}<IndentStyled />let stringConcatenation = 
+                    <IndentStyled />let age = 11;<LineFeeder />
+                    <IndentStyled />let stringConcatenation = 
                     "I am " + age + ".";<LineFeeder />
-                    Line {'0'+lineNumber3++}<IndentStyled />let templateString = 
+                    <IndentStyled />let templateString = 
                     `I am ${ age }.`;<LineFeeder />
-                    Line {'0'+lineNumber3++}<IndentStyled />
+                    <IndentStyled />
                     console.log( `stringConcatenation === templateString:<LineFeeder />
                     <IndentStyled three/>${templateString}` );<LineFeeder />
                 </ParagraphStyled>
@@ -199,7 +198,7 @@ const DataTypesAndStructures = ( { title } ) =>
                 <Header output>output</Header>
 
                 <ParagraphStyled>
-                    stringConcatenation === templateString: true.<LineFeeder />
+                    <IndentStyled />stringConcatenation === templateString: true.<LineFeeder />
                 </ParagraphStyled>
             </DividerStyled>
             {/* *****************************string3.js output********************* */}
@@ -229,22 +228,22 @@ const DataTypesAndStructures = ( { title } ) =>
                 <Header fileName>boolean.js</Header>
 
                 <ParagraphStyled>
-                    Line {'0'+lineNumber4++}<IndentStyled />{comment} Declare a variable.
+                    <IndentStyled />{comment} Declare a variable.
                     <LineFeeder />
-                    Line {'0'+lineNumber4++}<IndentStyled />let isLoggedIn;<LineFeeder />
-                    Line {'0'+lineNumber4++}<LineFeeder />
-                    Line {'0'+lineNumber4++}<IndentStyled />{comment} Without assignment, 
+                    <IndentStyled />let isLoggedIn;<LineFeeder />
+                    <LineFeeder />
+                    <IndentStyled />{comment} Without assignment, 
                     the variable has the value of undefined.<LineFeeder />
-                    Line {'0'+lineNumber4++}<IndentStyled />
+                    <IndentStyled />
                     console.log( `isLoggedIn = ${ isLoggedIn }.` );<LineFeeder />
-                    Line {'0'+lineNumber4++}<LineFeeder />
-                    Line {'0'+lineNumber4++}<IndentStyled />{comment} Defining its value.
                     <LineFeeder />
-                    Line {'0'+lineNumber4++}<IndentStyled />isLoggedIn = true;<LineFeeder />
-                    Line {'0'+lineNumber4++}<LineFeeder />
-                    Line {lineNumber4++}<IndentStyled />{comment} Verifying the value assigned
+                    <IndentStyled />{comment} Defining its value.
                     <LineFeeder />
-                    Line {lineNumber4++}<IndentStyled />
+                    <IndentStyled />isLoggedIn = true;<LineFeeder />
+                    <LineFeeder />
+                    <IndentStyled />{comment} Verifying the value assigned
+                    <LineFeeder />
+                    <IndentStyled />
                     console.log( `isLoggedIn = ${ isLoggedIn }.` );
                 </ParagraphStyled>
             </DividerStyled>
@@ -255,8 +254,8 @@ const DataTypesAndStructures = ( { title } ) =>
                 <Header output>output</Header>
 
                 <ParagraphStyled>
-                    isLoggedIn = undefined.<LineFeeder />
-                    isLoggedIn = true.
+                    <IndentStyled />isLoggedIn = undefined.<LineFeeder />
+                    <IndentStyled />isLoggedIn = true.
                 </ParagraphStyled>
             </DividerStyled>
             {/* ***********************************boolean.js output******************** */}
@@ -296,17 +295,17 @@ const DataTypesAndStructures = ( { title } ) =>
                 <Header fileName>number1.js</Header>
 
                 <ParagraphStyled>
-                    Line {'0'+lineNumber5++}<IndentStyled />{comment} 
+                    <IndentStyled />{comment} 
                     All calculations are floating point.<LineFeeder />
-                    Line {'0'+lineNumber5++}<IndentStyled />
+                    <IndentStyled />
                     console.log( `5/10 = ${number1a}.` );<LineFeeder />
-                    Line {'0'+lineNumber5++}<IndentStyled />{comment} 
+                    <IndentStyled />{comment} 
                     But the result may still appear to be an integer.<LineFeeder />
-                    Line {'0'+lineNumber5++}<IndentStyled />
+                    <IndentStyled />
                     console.log( `10/5 = ${number1b}.` );<LineFeeder />
-                    Line {'0'+lineNumber5++}<IndentStyled />{comment} 
+                    <IndentStyled />{comment} 
                     Use toFixed() to remedy this issue.<LineFeeder />
-                    Line {'0'+lineNumber5++}<IndentStyled />
+                    <IndentStyled />
                     console.log( `(10/5).toFixed(1) = ${number1c}.` );<LineFeeder />
                 </ParagraphStyled>
             </DividerStyled>
@@ -317,9 +316,9 @@ const DataTypesAndStructures = ( { title } ) =>
                 <Header output>output</Header>
 
                 <ParagraphStyled>
-                    5/10 = 0.5.<LineFeeder />
-                    10/5 = 2.<LineFeeder />
-                    (10/5).toFixed(1) = 2.0.
+                    <IndentStyled />5/10 = 0.5.<LineFeeder />
+                    <IndentStyled />10/5 = 2.<LineFeeder />
+                    <IndentStyled />(10/5).toFixed(1) = 2.0.
                 </ParagraphStyled>
             </DividerStyled>
             {/* ***********************************number1.js output********************* */}
@@ -343,18 +342,18 @@ const DataTypesAndStructures = ( { title } ) =>
                 <Header fileName>number2.js</Header>
 
                 <ParagraphStyled>
-                    Line {'0'+lineNumber6++}<IndentStyled />{comment} 
+                    <IndentStyled />{comment} 
                     All calculations are floating point.<LineFeeder />
-                    Line {'0'+lineNumber6++}<IndentStyled />
+                    <IndentStyled />
                     console.log( `6/5 = ${number2a}.` );<LineFeeder />
-                    Line {'0'+lineNumber6++}<IndentStyled />
+                    <IndentStyled />
                     console.log( `-6/5 = ${number2b}.` );<LineFeeder />
-                    Line {'0'+lineNumber6++}<LineFeeder />
-                    Line {'0'+lineNumber6++}<IndentStyled />{comment} 
+                    <LineFeeder />
+                    <IndentStyled />{comment} 
                     If an integer result is necessary:<LineFeeder />
-                    Line {'0'+lineNumber6++}<IndentStyled />
+                    <IndentStyled />
                     console.log( `Math.floor(6/5) = ${number2c}.` );<LineFeeder />
-                    Line {'0'+lineNumber6++}<IndentStyled />
+                    <IndentStyled />
                     console.log( `Math.ceil(-6/5) = ${number2d}.` );<LineFeeder />
                 </ParagraphStyled>
             </DividerStyled>
@@ -365,10 +364,10 @@ const DataTypesAndStructures = ( { title } ) =>
                 <Header output>output</Header>
 
                 <ParagraphStyled>
-                    6/5 = 1.2.<LineFeeder />
-                    -6/5 = -1.2.<LineFeeder />
-                    Math.floor(6/5) = 1.<LineFeeder />
-                    Math.ceil(-6/5) = -1.
+                    <IndentStyled />6/5 = 1.2.<LineFeeder />
+                    <IndentStyled />-6/5 = -1.2.<LineFeeder />
+                    <IndentStyled />Math.floor(6/5) = 1.<LineFeeder />
+                    <IndentStyled />Math.ceil(-6/5) = -1.
                 </ParagraphStyled>
             </DividerStyled>
             {/* ***********************************number2.js output******************* */}
@@ -410,22 +409,22 @@ const DataTypesAndStructures = ( { title } ) =>
                 <Header fileName>object.js</Header>
 
                 <ParagraphStyled>
-                    Line {'0'+lineNumber7++}<IndentStyled />{comment} 
+                    <IndentStyled />{comment} 
                     Define an object with a property.<LineFeeder />
-                    Line {'0'+lineNumber7++}<IndentStyled />let userProfile = {object1b};
+                    <IndentStyled />let userProfile = {object1b};
                     <LineFeeder />
-                    Line {'0'+lineNumber7++}<LineFeeder />
-                    Line {'0'+lineNumber7++}<IndentStyled />{comment} 
+                    <LineFeeder />
+                    <IndentStyled />{comment} 
                     Print the object.<LineFeeder />
-                    Line {'0'+lineNumber7++}<IndentStyled />console.log( userProfile );
+                    <IndentStyled />console.log( userProfile );
                     <LineFeeder />
-                    Line {'0'+lineNumber7++}<IndentStyled />{comment} 
+                    <IndentStyled />{comment} 
                     Add a property to the object.<LineFeeder />
-                    Line {'0'+lineNumber7++}<IndentStyled />userProfile.gender = "female";
+                    <IndentStyled />userProfile.gender = "female";
                     <LineFeeder />
-                    Line {'0'+lineNumber7++}<IndentStyled />{comment} Print the object.
+                    <IndentStyled />{comment} Print the object.
                     <LineFeeder />
-                    Line {'0'+lineNumber7++}<IndentStyled />console.log( userProfile );
+                    <IndentStyled />console.log( userProfile );
                     <LineFeeder />
                 </ParagraphStyled>
             </DividerStyled>
@@ -436,8 +435,8 @@ const DataTypesAndStructures = ( { title } ) =>
                 <Header output>output</Header>
 
                 <ParagraphStyled>
-                    {object1b}<LineFeeder />
-                    {object1c}
+                    <IndentStyled />{object1b}<LineFeeder />
+                    <IndentStyled />{object1c}
                 </ParagraphStyled>
             </DividerStyled>
             {/* ***********************************object.js output********************** */}
@@ -472,16 +471,16 @@ const DataTypesAndStructures = ( { title } ) =>
                 <Header fileName>array1.js</Header>
 
                 <ParagraphStyled>
-                    Line {'0'+lineNumber8++}<IndentStyled />let homogeneousArray = [ 1, 2 ];
+                    <IndentStyled />let homogeneousArray = [ 1, 2 ];
                     <LineFeeder />
-                    Line {'0'+lineNumber8++}<IndentStyled />let hetrogeneousArray = [ 3, 'JST' ];
+                    <IndentStyled />let hetrogeneousArray = [ 3, 'JST' ];
                     <LineFeeder />
-                    Line {'0'+lineNumber8++}<LineFeeder />
-                    Line {'0'+lineNumber8++}<IndentStyled />{comment} Print the arrays.
                     <LineFeeder />
-                    Line {'0'+lineNumber8++}<IndentStyled />console.log( homogeneousArray );
+                    <IndentStyled />{comment} Print the arrays.
                     <LineFeeder />
-                    Line {'0'+lineNumber8++}<IndentStyled />console.log( hetrogeneousArray );
+                    <IndentStyled />console.log( homogeneousArray );
+                    <LineFeeder />
+                    <IndentStyled />console.log( hetrogeneousArray );
                 </ParagraphStyled>
             </DividerStyled>
             {/* array1.js */}
@@ -491,8 +490,8 @@ const DataTypesAndStructures = ( { title } ) =>
                 <Header output>output</Header>
 
                 <ParagraphStyled>
-                    [ 1, 2 ]<LineFeeder />
-                    [ 3, 'JST' ]
+                    <IndentStyled />[ 1, 2 ]<LineFeeder />
+                    <IndentStyled />[ 3, 'JST' ]
                 </ParagraphStyled>
             </DividerStyled>
             {/* array1.js output */}
@@ -513,19 +512,19 @@ const DataTypesAndStructures = ( { title } ) =>
                 <Header fileName>array2.js</Header>
 
                 <ParagraphStyled>
-                    Line {'0'+lineNumber9++}<IndentStyled />const array = [ 'J' ];
+                    <IndentStyled />const array = [ 'J' ];
                     <LineFeeder />
-                    Line {'0'+lineNumber9++}<LineFeeder />
-                    Line {'0'+lineNumber9++}<IndentStyled />{comment} 
+                    <LineFeeder />
+                    <IndentStyled />{comment} 
                     Push elements onto the array.<LineFeeder />
-                    Line {'0'+lineNumber9++}<IndentStyled />array.push( 'S' );<LineFeeder />
-                    Line {'0'+lineNumber9++}<IndentStyled />array.push( 'T' );<LineFeeder />
-                    Line {'0'+lineNumber9++}<IndentStyled />console.log( array );<LineFeeder />
-                    Line {'0'+lineNumber9++}<LineFeeder />
-                    Line {'0'+lineNumber9++}<IndentStyled />{comment} 
+                    <IndentStyled />array.push( 'S' );<LineFeeder />
+                    <IndentStyled />array.push( 'T' );<LineFeeder />
+                    <IndentStyled />console.log( array );<LineFeeder />
+                    <LineFeeder />
+                    <IndentStyled />{comment} 
                     Pop the most recent element.<LineFeeder />
-                    Line {'0'+lineNumber9++}<IndentStyled />array.pop(); <LineFeeder />
-                    Line {lineNumber9++}<IndentStyled />console.log( array );
+                    <IndentStyled />array.pop(); <LineFeeder />
+                    <IndentStyled />console.log( array );
                 </ParagraphStyled>
             </DividerStyled>
             {/* array2.js */}
@@ -535,8 +534,8 @@ const DataTypesAndStructures = ( { title } ) =>
                 <Header output>output</Header>
 
                 <ParagraphStyled>
-                    ['J', 'S', 'T']<LineFeeder />
-                    [ 'J', 'S' ]
+                    <IndentStyled />['J', 'S', 'T']<LineFeeder />
+                    <IndentStyled />[ 'J', 'S' ]
                 </ParagraphStyled>
             </DividerStyled>
             {/* array2.js output */}
@@ -556,20 +555,20 @@ const DataTypesAndStructures = ( { title } ) =>
                 <Header fileName>array3.js</Header>
 
                 <ParagraphStyled>
-                    Line {'0'+lineNumber10++}<IndentStyled />let todos = 
+                    <IndentStyled />let todos = 
                     [ 'study', 'cook', 'sleep' ];<LineFeeder />
-                    Line {'0'+lineNumber10++}<LineFeeder />
-                    Line {'0'+lineNumber10++}<IndentStyled />{comment} 
+                    <LineFeeder />
+                    <IndentStyled />{comment} 
                     Finish one to-do from the top of the list.<LineFeeder />
-                    Line {'0'+lineNumber10++}<IndentStyled />todos.shift();<LineFeeder />
-                    Line {'0'+lineNumber10++}<IndentStyled />console.log( todos );
+                    <IndentStyled />todos.shift();<LineFeeder />
+                    <IndentStyled />console.log( todos );
                     <LineFeeder />
-                    Line {'0'+lineNumber10++}<LineFeeder />
-                    Line {'0'+lineNumber10++}<IndentStyled />{comment} 
+                    <LineFeeder />
+                    <IndentStyled />{comment} 
                     Add one new to-do to the top of the list.<LineFeeder />
-                    Line {'0'+lineNumber10++}<IndentStyled />todos.unshift( 'exercise');
+                    <IndentStyled />todos.unshift( 'exercise');
                     <LineFeeder />
-                    Line {'0'+lineNumber10++}<IndentStyled />console.log( todos );
+                    <IndentStyled />console.log( todos );
                     <LineFeeder />
                 </ParagraphStyled>
             </DividerStyled>
@@ -580,8 +579,8 @@ const DataTypesAndStructures = ( { title } ) =>
                 <Header output>output</Header>
 
                 <ParagraphStyled>
-                    [ 'cook', 'sleep' ]<LineFeeder />
-                    [ 'exercise', 'cook', 'sleep' ]
+                    <IndentStyled />[ 'cook', 'sleep' ]<LineFeeder />
+                    <IndentStyled />[ 'exercise', 'cook', 'sleep' ]
                 </ParagraphStyled>
             </DividerStyled>
             {/* array3.js output */}
@@ -610,18 +609,18 @@ const DataTypesAndStructures = ( { title } ) =>
                             <ParagraphStyled review>
                                 <Header main>Recap</Header>
                                 
-                                ({lineNumber11++}) The String type is appropriate for 
+                                ({lineNumber++}) The String type is appropriate for 
                                 textual data.<LineFeeder />
-                                ({lineNumber11++}) Template strings support real-time 
+                                ({lineNumber++}) Template strings support real-time 
                                 interpolation of variables.<LineFeeder />
-                                ({lineNumber11++}) The Boolean type is appropriate for 
+                                ({lineNumber++}) The Boolean type is appropriate for 
                                 states which have only two possible values.<LineFeeder />
-                                ({lineNumber11++}) The Number type supports both integers 
+                                ({lineNumber++}) The Number type supports both integers 
                                 and floating-point numbers.<LineFeeder />
-                                ({lineNumber11++}) The Object type allows new properties to 
+                                ({lineNumber++}) The Object type allows new properties to 
                                 be readily added through the member operator (.).
                                 <LineFeeder />
-                                ({lineNumber11++}) The Array data structure can contain 
+                                ({lineNumber++}) The Array data structure can contain 
                                 either homogeneous or heterogenous elements.
                             </ParagraphStyled>
                         </>
