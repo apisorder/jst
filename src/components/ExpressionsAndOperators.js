@@ -569,6 +569,26 @@ const ExpressionsAndOperators = ( { title } ) =>
                 </ParagraphStyled>
 
             </DividerStyled>
+
+            <DividerStyled>
+                <table>
+                    <tr>
+                    <th style={{border: "1px solid black"}}>Precedence</th>
+                    <th style={{border: "1px solid black"}}>Name</th>
+                    <th style={{border: "1px solid black"}}>Associativity</th>
+                    </tr>
+                    <tr>
+                    <td>Alfreds Futterkiste</td>
+                    <td>Maria Anders</td>
+                    <td>Germany</td>
+                    </tr>
+                    <tr>
+                    <td>Centro comercial Moctezuma</td>
+                    <td>Francisco Chang</td>
+                    <td>Mexico</td>
+                    </tr>
+                </table>
+            </DividerStyled>
             {/* ***********Table of Operator Precedence (Descending)**************** */}
             {/* lecture content */}
 

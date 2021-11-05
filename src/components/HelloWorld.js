@@ -77,7 +77,7 @@ const HelloWorld = ( { title } ) =>
 
             {/* *********************************helloworld.js************************* */}
             <DividerStyled programCode>
-                <Header fileNameStart>helloworld.js (start)</Header>
+                <Header filenameBegin>helloworld.js (begin)</Header>
 
                 <ParagraphStyled>
                     <IndentStyled />{comment} This is a comment.
@@ -87,13 +87,13 @@ const HelloWorld = ( { title } ) =>
                     <IndentStyled />console.log("Hello World.");
                 </ParagraphStyled>
 
-                <Header fileNameEnd>helloworld.js (end)</Header>
+                <Header filenameEnd>helloworld.js (end)</Header>
             </DividerStyled>
             {/* *************************************helloworld.js*********************** */}
 
             {/* ******************************helloworld.js output*********************** */}
             <DividerStyled programOutput>
-                <Header outputStart>output (start)</Header>
+                <Header outputBegin>output (begin)</Header>
 
                 <ParagraphStyled><IndentStyled />Hello World.</ParagraphStyled>
 

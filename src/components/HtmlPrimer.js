@@ -94,7 +94,7 @@ const HtmlPrimer = ( { title } ) =>
 
             {/* ***********************************index.html******************************* */}
             <DividerStyled programCode>
-                <Header fileNameStart>index.html (start)</Header>
+                <Header filenameBegin>index.html (begin)</Header>
 
                 <ParagraphStyled>
                     <ElementDelimiter>
@@ -149,13 +149,13 @@ const HtmlPrimer = ( { title } ) =>
                     <ElementDelimiter>/html</ElementDelimiter>
                 </ParagraphStyled>
 
-                <Header fileNameEnd>index.html (end)</Header>
+                <Header filenameEnd>index.html (end)</Header>
             </DividerStyled>
             {/* ***********************************index.html*************************** */}
 
             {/* ***********************************index.html output*********************** */}
             <DividerStyled programOutput>
-                <Header outputStart>output (start)</Header>
+                <Header outputBegin>output (start)</Header>
 
                 <ParagraphStyled>
                     While the exact composition will depend on the browser and the screen 
@@ -200,7 +200,7 @@ const HtmlPrimer = ( { title } ) =>
 
             {/* ***********************************script.js*********************** */}
             <DividerStyled programCode>
-                <Header fileNameStart>script.js (start)</Header>
+                <Header filenameBegin>script.js (begin)</Header>
 
                 <ParagraphStyled>
                     {comment} This is a comment.
@@ -225,7 +225,7 @@ const HtmlPrimer = ( { title } ) =>
                     alt="image"/</ElementDelimiter>');
                 </ParagraphStyled>
 
-                <Header fileNameEnd>script.js (end)</Header>
+                <Header filenameEnd>script.js (end)</Header>
             </DividerStyled>
             {/* ***********************************script.js************************ */}
 
@@ -238,7 +238,7 @@ const HtmlPrimer = ( { title } ) =>
     
             {/* ***********************************index.html********************* */}
             <DividerStyled programCode>
-                <Header fileNameStart>index.html (start)</Header>
+                <Header filenameBegin>index.html (begin)</Header>
 
                 <ParagraphStyled>
                     <ElementDelimiter>!DOCTYPE html
@@ -267,13 +267,13 @@ const HtmlPrimer = ( { title } ) =>
                     </ElementDelimiter>
                 </ParagraphStyled>
 
-                <Header fileNameEnd>index.html (end)</Header>
+                <Header filenameEnd>index.html (end)</Header>
             </DividerStyled>
             {/* ***********************************index.html********************** */}
 
             {/* **********************************index.html output************* */}
             <DividerStyled programOutput>
-                <Header outputStart>output (start)</Header>
+                <Header outputBegin>output (begin)</Header>
 
                 <ParagraphStyled>
                     The output should be identical to the output of the previous HTML file, 

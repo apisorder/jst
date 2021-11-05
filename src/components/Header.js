@@ -9,7 +9,7 @@ const Header = styled.h1`
     margin: 0rem 16rem;
 
     //  for the source code file
-    ${props => props.fileNameStart && css`
+    ${props => props.filenameBegin && css`
         font-size: 30px;
         text-align: center;
         color: Green;
@@ -17,7 +17,7 @@ const Header = styled.h1`
     `}
 
     //  for the source code file
-    ${props => props.fileNameEnd && css`
+    ${props => props.filenameEnd && css`
         font-size: 30px;
         text-align: center;
         color: Green;
@@ -31,7 +31,7 @@ const Header = styled.h1`
     `}
 
     //  for the result of program execution
-    ${props => props.outputStart && css`
+    ${props => props.outputBegin && css`
         font-size: 30px;
         text-align: center;
         color: Brown;
