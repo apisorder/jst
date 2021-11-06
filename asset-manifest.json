@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/jst/static/js/main.c5c6cd50.chunk.js",
-    "main.js.map": "/jst/static/js/main.c5c6cd50.chunk.js.map",
+    "main.js": "/jst/static/js/main.ae6ada53.chunk.js",
+    "main.js.map": "/jst/static/js/main.ae6ada53.chunk.js.map",
     "runtime-main.js": "/jst/static/js/runtime-main.64ebcc09.js",
     "runtime-main.js.map": "/jst/static/js/runtime-main.64ebcc09.js.map",
     "static/js/2.5245bb14.chunk.js": "/jst/static/js/2.5245bb14.chunk.js",
@@ -11,22 +11,22 @@
     "static/media/about.fd8ca021.svg": "/jst/static/media/about.fd8ca021.svg",
     "static/media/background.af9475f7.png": "/jst/static/media/background.af9475f7.png",
     "static/media/homeBuilding.7df47127.svg": "/jst/static/media/homeBuilding.7df47127.svg",
-    "static/media/lessonReviewOff.26f6b8e2.svg": "/jst/static/media/lessonReviewOff.26f6b8e2.svg",
-    "static/media/lessonReviewOn.39af92db.svg": "/jst/static/media/lessonReviewOn.39af92db.svg",
+    "static/media/lessonReviewOff.b9de019e.svg": "/jst/static/media/lessonReviewOff.b9de019e.svg",
+    "static/media/lessonReviewOn.a2b22088.svg": "/jst/static/media/lessonReviewOn.a2b22088.svg",
     "static/media/logo.97441523.svg": "/jst/static/media/logo.97441523.svg",
-    "static/media/navBar.47ab4494.svg": "/jst/static/media/navBar.47ab4494.svg",
-    "static/media/pageLinker.7fcd8fca.svg": "/jst/static/media/pageLinker.7fcd8fca.svg",
-    "static/media/quizNextQuestion.cd8ac73d.svg": "/jst/static/media/quizNextQuestion.cd8ac73d.svg",
-    "static/media/quizResult.4a5f6c06.svg": "/jst/static/media/quizResult.4a5f6c06.svg",
-    "static/media/quizSystem.51e2a200.svg": "/jst/static/media/quizSystem.51e2a200.svg",
-    "static/media/todoApp.a14b43b9.svg": "/jst/static/media/todoApp.a14b43b9.svg",
-    "static/media/todoToggleDeleted.1c902306.svg": "/jst/static/media/todoToggleDeleted.1c902306.svg",
-    "static/media/todoToggleMarked.a2870840.svg": "/jst/static/media/todoToggleMarked.a2870840.svg",
-    "static/media/todoToggleUnmarked.27045449.svg": "/jst/static/media/todoToggleUnmarked.27045449.svg"
+    "static/media/navBar.cec1f663.svg": "/jst/static/media/navBar.cec1f663.svg",
+    "static/media/pageLinker.497da825.svg": "/jst/static/media/pageLinker.497da825.svg",
+    "static/media/quizNextQuestion.5c2b2e04.svg": "/jst/static/media/quizNextQuestion.5c2b2e04.svg",
+    "static/media/quizResult.4ccf6af5.svg": "/jst/static/media/quizResult.4ccf6af5.svg",
+    "static/media/quizSystem.e5c01d22.svg": "/jst/static/media/quizSystem.e5c01d22.svg",
+    "static/media/todoApp.773f9a3c.svg": "/jst/static/media/todoApp.773f9a3c.svg",
+    "static/media/todoToggleDeleted.6f53bc9c.svg": "/jst/static/media/todoToggleDeleted.6f53bc9c.svg",
+    "static/media/todoToggleMarked.9f4972b7.svg": "/jst/static/media/todoToggleMarked.9f4972b7.svg",
+    "static/media/todoToggleUnmarked.be60f55e.svg": "/jst/static/media/todoToggleUnmarked.be60f55e.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.64ebcc09.js",
     "static/js/2.5245bb14.chunk.js",
-    "static/js/main.c5c6cd50.chunk.js"
+    "static/js/main.ae6ada53.chunk.js"
   ]
 }
