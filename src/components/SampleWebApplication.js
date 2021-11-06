@@ -18,11 +18,6 @@ import { Link } from 'react-router-dom';
 
 const SampleWebApplication = ( { title } ) => 
 {
-    // ***********************************local variables**********************
-    //  convenience variables -> also possible to use React hooks to change the value, but doing
-    //  so entails too many calls to the Hook, since each modification of value would require one
-    let lineNumber = 1, lineNumber2 = 1;
-
     //  to better work with React, since JSX (not JS) always interpolates the value in template 
     //  string, and string escape sequence does not seem to work
     //  an alternative may be using string concatenation instead, and thereby avoid naming these 
@@ -67,72 +62,65 @@ const SampleWebApplication = ( { title } ) =>
 
             {/* ***********************************The HTML File**************** */}
             {/* *****************************The HTML File******************* */}
-            <DividerStyled programCode>
-                <Header fileName>The HTML File</Header>
+            <DividerStyled>
+                <Header filenameBegin>The HTML File (begin)</Header>
 
-                <ParagraphStyled>
-                    Line {'0'+lineNumber++}<IndentStyled /><ElementDelimiter>!-- index.html --
+                <ParagraphStyled code>
+                    <ElementDelimiter>!-- index.html --
                     </ElementDelimiter><LineFeeder />
-                    Line {'0'+lineNumber++}<IndentStyled /><ElementDelimiter>
+                    <ElementDelimiter>
                     !-- reference: https://www.udemy.com/course/modern-javascript/
-                    </ElementDelimiter><LineFeeder />
-                    Line {'0'+lineNumber++}<LineFeeder />
-                    Line {'0'+lineNumber++}<IndentStyled /><ElementDelimiter>!DOCTYPE html
-                    </ElementDelimiter><LineFeeder />
-                    Line {'0'+lineNumber++}<IndentStyled /><ElementDelimiter>html
-                    </ElementDelimiter><LineFeeder />
-                    Line {'0'+lineNumber++}<IndentStyled two/><ElementDelimiter>head
-                    </ElementDelimiter><LineFeeder />
-                    Line {'0'+lineNumber++}<IndentStyled three/><ElementDelimiter>
+                    </ElementDelimiter><LineFeeder /><LineFeeder />
+                    <ElementDelimiter>!DOCTYPE html</ElementDelimiter><LineFeeder />
+                    <ElementDelimiter>html</ElementDelimiter><LineFeeder />
+                    <IndentStyled /><ElementDelimiter>head</ElementDelimiter><LineFeeder />
+                    <IndentStyled two/><ElementDelimiter>
                     !-- center-align all text --</ElementDelimiter><LineFeeder />
-                    Line {'0'+lineNumber++}<IndentStyled three/><ElementDelimiter>style
-                    </ElementDelimiter><LineFeeder />
-                    Line {'0'+lineNumber++}<IndentStyled four/>body {leftBrace}<LineFeeder />
-                    Line {lineNumber++}<IndentStyled seven/>text-align: center;<LineFeeder />
-                    Line {lineNumber++}<IndentStyled six/>{rightBrace}<LineFeeder />
-                    Line {lineNumber++}<IndentStyled three/><ElementDelimiter>/style
-                    </ElementDelimiter><LineFeeder />
-                    Line {lineNumber++}<IndentStyled two/><ElementDelimiter>/head
-                    </ElementDelimiter><LineFeeder />
-                    Line {lineNumber++}<IndentStyled /><LineFeeder />
-                    Line {lineNumber++}<IndentStyled two/><ElementDelimiter>body
-                    </ElementDelimiter><LineFeeder />
-                    Line {lineNumber++}<IndentStyled three/><ElementDelimiter>h1
-                    </ElementDelimiter>Todos<ElementDelimiter>/h1</ElementDelimiter>
+                    <IndentStyled two/><ElementDelimiter>style</ElementDelimiter><LineFeeder />
+                    <IndentStyled three/>body {leftBrace}<LineFeeder />
+                    <IndentStyled six/>text-align: center;<LineFeeder />
+                    <IndentStyled five/>{rightBrace}<LineFeeder />
+                    <IndentStyled two/><ElementDelimiter>/style</ElementDelimiter><LineFeeder />
+                    <IndentStyled /><ElementDelimiter>/head</ElementDelimiter><LineFeeder />
                     <LineFeeder />
-                    Line {lineNumber++}<LineFeeder />
-                    Line {lineNumber++}<IndentStyled three/><ElementDelimiter>
+                    <IndentStyled /><ElementDelimiter>body</ElementDelimiter><LineFeeder />
+                    <IndentStyled two/><ElementDelimiter>h1
+                    </ElementDelimiter>Todos<ElementDelimiter>/h1</ElementDelimiter>
+                    <LineFeeder /><LineFeeder />
+                    <IndentStyled two/><ElementDelimiter>
                     !-- place to render the list of todos --</ElementDelimiter><LineFeeder />
-                    Line {lineNumber++}<IndentStyled three/><ElementDelimiter>div id="todos"
+                    <IndentStyled two/><ElementDelimiter>div id="todos"
                     </ElementDelimiter><ElementDelimiter>/div</ElementDelimiter><LineFeeder />
-                    Line {lineNumber++}<IndentStyled three/><ElementDelimiter>
+                    <IndentStyled two/><ElementDelimiter>
                     !-- trigger to clear the selected todos --</ElementDelimiter><LineFeeder />
-                    Line {lineNumber++}<IndentStyled three/><ElementDelimiter>
+                    <IndentStyled two/><ElementDelimiter>
                     button id="clear"</ElementDelimiter>Clear Selected
                     <ElementDelimiter>button</ElementDelimiter><LineFeeder />
-                    Line {lineNumber++}<IndentStyled three/><ElementDelimiter>
+                    <IndentStyled two/><ElementDelimiter>
                     !-- trigger to add entries to the list of todos --</ElementDelimiter>
                     <LineFeeder />
-                    Line {lineNumber++}<IndentStyled three/><ElementDelimiter>form id="new-todo"
+                    <IndentStyled two/><ElementDelimiter>form id="new-todo"
                     </ElementDelimiter><LineFeeder />
-                    Line {lineNumber++}<IndentStyled four/><ElementDelimiter>
+                    <IndentStyled three/><ElementDelimiter>
                     input type="text" placeholder="Something to do" name="text"
                     </ElementDelimiter><LineFeeder />
-                    Line {lineNumber++}<IndentStyled four/><ElementDelimiter>button
+                    <IndentStyled three/><ElementDelimiter>button
                     </ElementDelimiter>Add Todo<ElementDelimiter>button</ElementDelimiter>
                     <LineFeeder />
-                    Line {lineNumber++}<IndentStyled three/><ElementDelimiter>/form
+                    <IndentStyled two/><ElementDelimiter>/form
                     </ElementDelimiter><LineFeeder />
-                    Line {lineNumber++}<IndentStyled three/><ElementDelimiter>
+                    <IndentStyled two/><ElementDelimiter>
                     !-- where logic is handled --</ElementDelimiter><LineFeeder />
-                    Line {lineNumber++}<IndentStyled three/><ElementDelimiter>
+                    <IndentStyled two/><ElementDelimiter>
                     script src="todo-app.js"</ElementDelimiter><ElementDelimiter>/script
                     </ElementDelimiter><LineFeeder />
-                    Line {lineNumber++}<IndentStyled two/><ElementDelimiter>/body
+                    <IndentStyled /><ElementDelimiter>/body
                     </ElementDelimiter><LineFeeder />
-                    Line {lineNumber++}<IndentStyled /><ElementDelimiter>/html</ElementDelimiter>
+                    <ElementDelimiter>/html</ElementDelimiter>
                     <LineFeeder />
                 </ParagraphStyled>
+
+                <Header filenameEnd>The HTML File (end)</Header>
             </DividerStyled>
             {/* *****************************The HTML File******************* */}
 
@@ -143,167 +131,143 @@ const SampleWebApplication = ( { title } ) =>
                 <LineFeeder />
             </DividerStyled>
 
-            <DividerStyled programCode>
-                <Header fileName>The JS File</Header>
+            <DividerStyled>
+                <Header filenameBegin>The JS File (begin)</Header>
 
-                <ParagraphStyled>
-                    Line {'0'+lineNumber2++}<IndentStyled />{comment} todo-app.js<LineFeeder />
-                    Line {'0'+lineNumber2++}<LineFeeder />
-                    Line {'0'+lineNumber2++}<IndentStyled />let todos = [];<LineFeeder />
-                    Line {'0'+lineNumber2++}<IndentStyled /><LineFeeder />
-                    Line {'0'+lineNumber2++}<IndentStyled />{comment} 
+                <ParagraphStyled code>
+                    {comment} todo-app.js<LineFeeder /><LineFeeder />
+                    let todos = [];<LineFeeder /><LineFeeder />
+                    {comment} 
                     get the Document Object Model (DOM) elements for an individual todo
                     <LineFeeder />
-                    Line {'0'+lineNumber2++}<IndentStyled />
                     const createTodoDOM = function ( todo )<LineFeeder />
-                    Line {'0'+lineNumber2++}<IndentStyled />{leftBrace}<LineFeeder />
-                    Line {'0'+lineNumber2++}<IndentStyled two/
-                    >const todoElement = document.createElement( 'div' );<LineFeeder />
-                    Line {'0'+lineNumber2++}<IndentStyled two />
+                    {leftBrace}<LineFeeder />
+                    <IndentStyled />const todoElement = document.createElement( 'div' );
+                    <LineFeeder />
+                    <IndentStyled />
                     const todoText = document.createElement( 'span' );<LineFeeder />
-                    Line {lineNumber2++}<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled two/>{comment} setup the todo text
                     <LineFeeder />
-                    Line {lineNumber2++}<IndentStyled two/>todoText.textContent = todo.text;
+                    <IndentStyled />{comment} setup the todo text<LineFeeder />
+                    <IndentStyled />todoText.textContent = todo.text;<LineFeeder />
                     <LineFeeder />
-                    Line {lineNumber2++}<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled two/>{comment} 
+                    <IndentStyled />{comment} 
                     if this todo has been completed, strikethrough the todo to indicate it
                     <LineFeeder />
-                    Line {lineNumber2++}<IndentStyled two/>{comment} 
+                    <IndentStyled />{comment} 
                     works in conjunction with the event handler defined below<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled two/>if ( todo.completed === true )
-                    <LineFeeder />
-                    Line {lineNumber2++}<IndentStyled two/>{leftBrace}<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled three/>
+                    <IndentStyled />if ( todo.completed === true )<LineFeeder />
+                    <IndentStyled />{leftBrace}<LineFeeder />
+                    <IndentStyled two/>
                     todoText.setAttribute('style', 'text-decoration: line-through');
                     <LineFeeder />
-                    Line {lineNumber2++}<IndentStyled two/>{rightBrace}<LineFeeder />
-                    Line {lineNumber2++}<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled two/>{comment} 
+                    <IndentStyled />{rightBrace}<LineFeeder /><LineFeeder />
+                    <IndentStyled />{comment} 
                     add the todo element to the parent div element<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled two/>todoElement.appendChild( todoText );
+                    <IndentStyled />todoElement.appendChild( todoText );<LineFeeder />
                     <LineFeeder />
-                    Line {lineNumber2++}<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled two/>{comment} 
+                    <IndentStyled />{comment} 
                     add event handler to enable styles to change on the todo<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled two/>
+                    <IndentStyled />
                     todoElement.addEventListener( 'click', function ( e )<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled three/>{leftBrace}<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled four/>toggleTodo( todo.id );
-                    <LineFeeder />
-                    Line {lineNumber2++}<IndentStyled four/>{comment} 
-                    reflect the changes visually<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled four/>renderTodos( todos );<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled three/>{rightBrace}<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled two/>{rightBrace}<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled two/>return todoElement;<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled />{rightBrace}<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled /><LineFeeder />
-                    Line {lineNumber2++}<IndentStyled />{comment} render the list of todos
-                    <LineFeeder />
-                    Line {lineNumber2++}<IndentStyled />const renderTodos = function ( todos ) 
-                    <LineFeeder />
-                    Line {lineNumber2++}<IndentStyled />{leftBrace}<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled two/>{comment} 
+                    <IndentStyled two/>{leftBrace}<LineFeeder />
+                    <IndentStyled three/>toggleTodo( todo.id );<LineFeeder />
+                    <IndentStyled three/>{comment} reflect the changes visually<LineFeeder />
+                    <IndentStyled three/>renderTodos( todos );<LineFeeder />
+                    <IndentStyled two/>{rightBrace}<LineFeeder />
+                    <IndentStyled />{rightBrace}<LineFeeder />
+                    <IndentStyled />return todoElement;<LineFeeder />
+                    {rightBrace}<LineFeeder /><LineFeeder />
+                    {comment} render the list of todos<LineFeeder />
+                    const renderTodos = function ( todos )<LineFeeder />
+                    {leftBrace}<LineFeeder />
+                    <IndentStyled />{comment} 
                     clear the todos currently shown on-screen<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled two/>
+                    <IndentStyled />
                     document.querySelector( '#todos' ).innerHTML = '';<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled /><LineFeeder />
-                    Line {lineNumber2++}<IndentStyled two/>{comment} 
+                    <LineFeeder />
+                    <IndentStyled />{comment} 
                     create the DOM element by calling createTodoDOM<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled two/>{comment} and add it to the parent div
+                    <IndentStyled />{comment} and add it to the parent div
                     <LineFeeder />
-                    Line {lineNumber2++}<IndentStyled two/>todos.forEach( function ( todo, index ) 
+                    <IndentStyled />todos.forEach( function ( todo, index ) 
                     <LineFeeder />
-                    Line {lineNumber2++}<IndentStyled three/>{leftBrace}<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled four/>
-                    document.querySelector( '#todos' ).appendChild(createTodoDOM( todo ));
+                    <IndentStyled two/>{leftBrace}<LineFeeder />
+                    <IndentStyled three/>
+                    document.querySelector( '#todos' ).appendChild(<LineFeeder />
+                    <IndentStyled three/>createTodoDOM( todo ));
                     <LineFeeder />
-                    Line {lineNumber2++}<IndentStyled three/>{rightBrace}<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled two/>{rightBrace}<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled />{rightBrace}<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled />{comment} initial rendering<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled />renderTodos( todos );<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled /><LineFeeder />
-                    Line {lineNumber2++}<IndentStyled />{comment} 
+                    <IndentStyled two/>{rightBrace}<LineFeeder />
+                    <IndentStyled />{rightBrace}<LineFeeder />
+                    {rightBrace}<LineFeeder />
+                    {comment} initial rendering<LineFeeder />
+                    renderTodos( todos );<LineFeeder /><LineFeeder />
+                    {comment} 
                     add event handler to handle adding a new todo to the list of todos
                     <LineFeeder />
-                    Line {lineNumber2++}<IndentStyled />
                     document.querySelector( '#new-todo' ).addEventListener( 'submit', 
                     function ( e ) <LineFeeder />
-                    Line {lineNumber2++}<IndentStyled two/>{leftBrace}<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled three/>{comment} 
+                    <IndentStyled />{leftBrace}<LineFeeder />
+                    <IndentStyled two/>{comment} 
                     prevent browser refresh default<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled three/>e.preventDefault( );<LineFeeder />
-                    Line {lineNumber2++}<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled three/>{comment} 
+                    <IndentStyled two/>e.preventDefault( );<LineFeeder /><LineFeeder />
+                    <IndentStyled two/>{comment} 
                     create an object with attributes of the new todo and add it to the list
                     <LineFeeder />
-                    Line {lineNumber2++}<IndentStyled three/>todos.push({leftBrace}<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled four/>id: Date.now(),<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled four/>text: e.target.elements.text.value
-                    <LineFeeder />
-                    Line {lineNumber2++}<IndentStyled four/>completed: false<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled three/>{rightBrace});<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled /><LineFeeder />
-                    Line {lineNumber2++}<IndentStyled three/>{comment} 
-                    reflect the change visually<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled three/>renderTodos( todos );<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled /><LineFeeder />
-                    Line {lineNumber2++}<IndentStyled three/>{comment} 
+                    <IndentStyled two/>todos.push({leftBrace}<LineFeeder />
+                    <IndentStyled three/>id: Date.now(),<LineFeeder />
+                    <IndentStyled three/>text: e.target.elements.text.value<LineFeeder />
+                    <IndentStyled three/>completed: false<LineFeeder />
+                    <IndentStyled two/>{rightBrace});<LineFeeder /><LineFeeder />
+                    <IndentStyled two/>{comment} reflect the change visually<LineFeeder />
+                    <IndentStyled two/>renderTodos( todos );<LineFeeder /><LineFeeder />
+                    <IndentStyled two/>{comment} 
                     reset input for the user, so no manual deletion is necessary<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled three/>e.target.elements.text.value = '';
-                    <LineFeeder />
-                    Line {lineNumber2++}<IndentStyled two/>{rightBrace}<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled />)<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled /><LineFeeder />
-                    Line {lineNumber2++}<IndentStyled />{comment} 
+                    <IndentStyled two/>e.target.elements.text.value = '';<LineFeeder />
+                    <IndentStyled />{rightBrace}<LineFeeder />
+                    )<LineFeeder /><LineFeeder />
+                    {comment} 
                     toggle the completed value for a given todo<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled />const toggleTodo = function ( id )
-                    <LineFeeder />
-                    Line {lineNumber2++}<IndentStyled />{leftBrace}<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled two/>{comment} 
+                    const toggleTodo = function ( id )<LineFeeder />
+                    {leftBrace}<LineFeeder />
+                    <IndentStyled />{comment} 
                     locate the desired todo to allow toggling<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled two/>const todoTargeted = todos.find ( 
-                        function ( todo ) <LineFeeder />
-                    Line {lineNumber2++}<IndentStyled three/>{leftBrace}<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled four/>return todo.id === id;<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled three/>{rightBrace}<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled two/>)<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled /><LineFeeder />
-                    Line {lineNumber2++}<IndentStyled two/>{comment} if a match was found, 
+                    <IndentStyled />const todoTargeted = todos.find ( function ( todo )
+                    <LineFeeder />
+                    <IndentStyled two/>{leftBrace}<LineFeeder />
+                    <IndentStyled three/>return todo.id === id;<LineFeeder />
+                    <IndentStyled two/>{rightBrace}<LineFeeder />
+                    <IndentStyled />)<LineFeeder /><LineFeeder />
+                    <IndentStyled />{comment} if a match was found, 
                     toggle its completed property<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled two/>if ( todoTargeted !== undefined )
+                    <IndentStyled />if ( todoTargeted !== undefined )
                     <LineFeeder />
-                    Line {lineNumber2++}<IndentStyled two/>{leftBrace}<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled three/>todoTargeted.completed = 
+                    <IndentStyled />{leftBrace}<LineFeeder />
+                    <IndentStyled two/>todoTargeted.completed = 
                     !todoTargeted.completed;<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled two/>{rightBrace}<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled />{rightBrace}<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled /><LineFeeder />
-                    Line {lineNumber2++}<IndentStyled />{comment} event handler to clear 
-                    completed todos<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled />document.querySelector( '#clear' )
-                    .addEventListener( 'click', function ( e ) <LineFeeder />
-                    Line {lineNumber2++}<IndentStyled />{leftBrace}<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled two/>{comment} filter out todos which have 
-                    not been completed<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled two/>const incompleteTodos = todos.filter( 
-                        function ( todo ) <LineFeeder />
-                    Line {lineNumber2++}<IndentStyled three/>{leftBrace}<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled five/>return !todo.completed<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled three/>{rightBrace}<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled two/>)<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled /><LineFeeder />
-                    Line {lineNumber2++}<IndentStyled two/>todos = incompleteTodos;<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled /><LineFeeder />
-                    Line {lineNumber2++}<IndentStyled two/>{comment} reflect the change visually
+                    <IndentStyled />{rightBrace}<LineFeeder />
+                    {rightBrace}<LineFeeder />
                     <LineFeeder />
-                    Line {lineNumber2++}<IndentStyled two/>renderTodos( todos );<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled two/>{rightBrace}<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled />)<LineFeeder />
+                    {comment} event handler to clear 
+                    completed todos<LineFeeder />
+                    document.querySelector( '#clear' )
+                    .addEventListener( 'click', function ( e ) <LineFeeder />
+                    {leftBrace}<LineFeeder />
+                    <IndentStyled />{comment} filter out todos which have 
+                    not been completed<LineFeeder />
+                    <IndentStyled />const incompleteTodos = todos.filter( function ( todo )
+                    <LineFeeder />
+                    <IndentStyled two/>{leftBrace}<LineFeeder />
+                    <IndentStyled four/>return !todo.completed<LineFeeder />
+                    <IndentStyled two/>{rightBrace}<LineFeeder />
+                    <IndentStyled />)<LineFeeder /><LineFeeder />
+                    <IndentStyled />todos = incompleteTodos;<LineFeeder /><LineFeeder />
+                    <IndentStyled />{comment} reflect the change visually<LineFeeder />
+                    <IndentStyled />renderTodos( todos );<LineFeeder />
+                    <IndentStyled />{rightBrace}<LineFeeder />
+                    )<LineFeeder />
                 </ParagraphStyled>
+
+                <Header filenameEnd>The JS File (end)</Header>
             </DividerStyled>
 
             <DividerStyled>

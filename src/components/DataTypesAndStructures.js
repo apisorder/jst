@@ -85,36 +85,37 @@ const DataTypesAndStructures = ( { title } ) =>
             </DividerStyled>
 
             {/* ***********************************string1.js********************** */}
-            <DividerStyled programCode>
-                <Header fileName>string1.js</Header>
+            <DividerStyled>
+                <Header filenameBegin>string1.js (begin)</Header>
 
-                <ParagraphStyled>
-                    <IndentStyled />{comment} Declare a variable with 
+                <ParagraphStyled code>
+                    {comment} Declare a variable with 
                     the let keyword.<LineFeeder />
-                    <IndentStyled />let firstName = 'John';<LineFeeder />
-                    <IndentStyled />console.log( `firstName =
+                    let firstName = 'John';<LineFeeder />
+                    console.log( `firstName =
                      ${ firstName }.` );<LineFeeder />
-                    <IndentStyled />let lastName = "Doe";<LineFeeder />
-                    <IndentStyled />console.log( `lastName = 
+                    let lastName = "Doe";<LineFeeder />
+                    console.log( `lastName = 
                     ${ lastName }.` );<LineFeeder />
-                    <IndentStyled />let email = `JD@JST.EDU`;
-                    <LineFeeder />
-                    <IndentStyled />console.log( `email = 
-                    ${ email }.` );<LineFeeder />
+                    let email = `JD@JST.EDU`;<LineFeeder />
+                    console.log( `email = ${ email }.` );<LineFeeder />
                 </ParagraphStyled>
+
+                <Header filenameEnd>string1.js (end)</Header>
             </DividerStyled>
             {/* ***********************************string1.js*************************** */}
 
             {/* *****************************string1.js output*************************** */}
             <DividerStyled programOutput>
-                <Header output>output</Header>
+                <Header outputBegin>output (begin)</Header>
 
                 <ParagraphStyled>
-                    <IndentStyled />firstName = John.<LineFeeder />
-                    <IndentStyled />lastName = Doe.<LineFeeder />
-                    <IndentStyled />email = JD@JST.EDU.<LineFeeder />
+                    firstName = John.<LineFeeder />
+                    lastName = Doe.<LineFeeder />
+                    email = JD@JST.EDU.<LineFeeder />
                 </ParagraphStyled>
 
+                <Header outputEnd>output (end)</Header>
             </DividerStyled>
             {/* *****************************string1.js output************************ */}
 
@@ -132,33 +133,33 @@ const DataTypesAndStructures = ( { title } ) =>
             </DividerStyled>
             
             {/* ***********************************string2.js*************************** */}
-            <DividerStyled programCode>
-                <Header fileName>string2.js</Header>
+            <DividerStyled>
+                <Header filenameBegin>string2.js (begin)</Header>
 
-                <ParagraphStyled>
-                    <IndentStyled />let singleQuotationMarks = 'hello';
+                <ParagraphStyled code>
+                    let singleQuotationMarks = 'hello';<LineFeeder />
+                    let doubleQuotationMarks = "hello";<LineFeeder />
+                    {comment} Use the equality operator to test whether they are equal.
                     <LineFeeder />
-                    <IndentStyled />let doubleQuotationMarks = "hello";
+                    console.log( <LineFeeder />
+                    <IndentStyled two/>`singleQuotationMarks === doubleQuotationMarks:
                     <LineFeeder />
-                    <IndentStyled />{comment} Use the equality operator 
-                    to test whether they are equal.<LineFeeder />
-                    <IndentStyled />console.log( <LineFeeder />
-                    <IndentStyled three/>`singleQuotationMarks === doubleQuotationMarks:
-                    <LineFeeder />
-                    <IndentStyled three/>${quotationMarks}` );<LineFeeder />
+                    <IndentStyled two/>${quotationMarks}` );<LineFeeder />
                 </ParagraphStyled>
+
+                <Header filenameEnd>string2.js (end)</Header>
             </DividerStyled>
             {/* ***********************************string2.js**************************** */}
 
             {/* *****************************string2.js output************************ */}
             <DividerStyled programOutput>
-                <Header output>output</Header>
+                <Header outputBegin>output (begin)</Header>
 
                 <ParagraphStyled>
-                    <IndentStyled />
                     singleQuotationMarks === doubleQuotationMarks: true.<LineFeeder />
                 </ParagraphStyled>
 
+                <Header outputEnd>output (end)</Header>
             </DividerStyled>
             {/* *****************************string2.js output*************************** */}
 
@@ -177,29 +178,32 @@ const DataTypesAndStructures = ( { title } ) =>
             </DividerStyled>
     
             {/* ***********************************string3.js***************************** */}
-            <DividerStyled programCode>
-                <Header fileName>string3.js</Header>
+            <DividerStyled>
+                <Header filenameBegin>string3.js (begin)</Header>
 
-                <ParagraphStyled>
-                    <IndentStyled />let age = 11;<LineFeeder />
-                    <IndentStyled />let stringConcatenation = 
+                <ParagraphStyled code>
+                    let age = 11;<LineFeeder />
+                    let stringConcatenation = 
                     "I am " + age + ".";<LineFeeder />
-                    <IndentStyled />let templateString = 
+                    let templateString = 
                     `I am ${ age }.`;<LineFeeder />
-                    <IndentStyled />
                     console.log( `stringConcatenation === templateString:<LineFeeder />
-                    <IndentStyled three/>${templateString}` );<LineFeeder />
+                    <IndentStyled two/>${templateString}` );<LineFeeder />
                 </ParagraphStyled>
+
+                <Header filenameEnd>string3.js (end)</Header>
             </DividerStyled>
             {/* ***********************************string3.js***************************** */}
 
             {/* *****************************string3.js output**************************** */}
             <DividerStyled programOutput>
-                <Header output>output</Header>
+                <Header outputBegin>output (begin)</Header>
 
                 <ParagraphStyled>
-                    <IndentStyled />stringConcatenation === templateString: true.<LineFeeder />
+                    stringConcatenation === templateString: true.<LineFeeder />
                 </ParagraphStyled>
+
+                <Header outputEnd>output (end)</Header>
             </DividerStyled>
             {/* *****************************string3.js output********************* */}
             {/* ***********************************1. String************************* */}
@@ -224,39 +228,36 @@ const DataTypesAndStructures = ( { title } ) =>
             </DividerStyled>
 
             {/* ***********************************boolean.js************************** */}
-            <DividerStyled programCode>
-                <Header fileName>boolean.js</Header>
+            <DividerStyled>
+                <Header filenameBegin>boolean.js (begin)</Header>
 
-                <ParagraphStyled>
-                    <IndentStyled />{comment} Declare a variable.
-                    <LineFeeder />
-                    <IndentStyled />let isLoggedIn;<LineFeeder />
-                    <LineFeeder />
-                    <IndentStyled />{comment} Without assignment, 
+                <ParagraphStyled code>
+                    {comment} Declare a variable.<LineFeeder />
+                    let isLoggedIn;<LineFeeder /><LineFeeder />
+                    {comment} Without assignment, 
                     the variable has the value of undefined.<LineFeeder />
-                    <IndentStyled />
                     console.log( `isLoggedIn = ${ isLoggedIn }.` );<LineFeeder />
                     <LineFeeder />
-                    <IndentStyled />{comment} Defining its value.
-                    <LineFeeder />
-                    <IndentStyled />isLoggedIn = true;<LineFeeder />
-                    <LineFeeder />
-                    <IndentStyled />{comment} Verifying the value assigned
-                    <LineFeeder />
-                    <IndentStyled />
+                    {comment} Defining its value.<LineFeeder />
+                    isLoggedIn = true;<LineFeeder /><LineFeeder />
+                    {comment} Verifying the value assigned<LineFeeder />
                     console.log( `isLoggedIn = ${ isLoggedIn }.` );
                 </ParagraphStyled>
+
+                <Header filenameEnd>boolean.js (end)</Header>
             </DividerStyled>
             {/* ***********************************boolean.js****************************** */}
 
             {/* ***********************************boolean.js output*********************** */}
             <DividerStyled programOutput>
-                <Header output>output</Header>
+                <Header outputBegin>output (begin)</Header>
 
                 <ParagraphStyled>
-                    <IndentStyled />isLoggedIn = undefined.<LineFeeder />
-                    <IndentStyled />isLoggedIn = true.
+                    isLoggedIn = undefined.<LineFeeder />
+                    isLoggedIn = true.
                 </ParagraphStyled>
+
+                <Header outputEnd>output (end)</Header>
             </DividerStyled>
             {/* ***********************************boolean.js output******************** */}
 
@@ -291,35 +292,36 @@ const DataTypesAndStructures = ( { title } ) =>
             </DividerStyled>
 
             {/* ***********************************number1.js************************ */}
-            <DividerStyled programCode>
-                <Header fileName>number1.js</Header>
+            <DividerStyled>
+                <Header filenameBegin>number1.js (begin)</Header>
 
-                <ParagraphStyled>
-                    <IndentStyled />{comment} 
+                <ParagraphStyled code>
+                    {comment} 
                     All calculations are floating point.<LineFeeder />
-                    <IndentStyled />
                     console.log( `5/10 = ${number1a}.` );<LineFeeder />
-                    <IndentStyled />{comment} 
+                    {comment} 
                     But the result may still appear to be an integer.<LineFeeder />
-                    <IndentStyled />
                     console.log( `10/5 = ${number1b}.` );<LineFeeder />
-                    <IndentStyled />{comment} 
+                    {comment} 
                     Use toFixed() to remedy this issue.<LineFeeder />
-                    <IndentStyled />
                     console.log( `(10/5).toFixed(1) = ${number1c}.` );<LineFeeder />
                 </ParagraphStyled>
+
+                <Header filenameEnd>number1.js (end)</Header>
             </DividerStyled>
             {/* ***********************************number1.js***************************** */}
 
             {/* ***********************************number1.js output********************** */}
             <DividerStyled programOutput>
-                <Header output>output</Header>
+                <Header outputBegin>output (begin)</Header>
 
                 <ParagraphStyled>
-                    <IndentStyled />5/10 = 0.5.<LineFeeder />
-                    <IndentStyled />10/5 = 2.<LineFeeder />
-                    <IndentStyled />(10/5).toFixed(1) = 2.0.
+                    5/10 = 0.5.<LineFeeder />
+                    10/5 = 2.<LineFeeder />
+                    (10/5).toFixed(1) = 2.0.
                 </ParagraphStyled>
+
+                <Header outputEnd>output (end)</Header>
             </DividerStyled>
             {/* ***********************************number1.js output********************* */}
 
@@ -338,37 +340,36 @@ const DataTypesAndStructures = ( { title } ) =>
             </DividerStyled>
 
             {/* ***********************************number2.js****************************** */}
-            <DividerStyled programCode>
-                <Header fileName>number2.js</Header>
+            <DividerStyled>
+                <Header filenameBegin>number2.js (begin)</Header>
 
-                <ParagraphStyled>
-                    <IndentStyled />{comment} 
+                <ParagraphStyled code>
+                    {comment} 
                     All calculations are floating point.<LineFeeder />
-                    <IndentStyled />
                     console.log( `6/5 = ${number2a}.` );<LineFeeder />
-                    <IndentStyled />
-                    console.log( `-6/5 = ${number2b}.` );<LineFeeder />
-                    <LineFeeder />
-                    <IndentStyled />{comment} 
+                    console.log( `-6/5 = ${number2b}.` );<LineFeeder /><LineFeeder />
+                    {comment} 
                     If an integer result is necessary:<LineFeeder />
-                    <IndentStyled />
                     console.log( `Math.floor(6/5) = ${number2c}.` );<LineFeeder />
-                    <IndentStyled />
                     console.log( `Math.ceil(-6/5) = ${number2d}.` );<LineFeeder />
                 </ParagraphStyled>
+
+                <Header filenameEnd>number2.js (end)</Header>
             </DividerStyled>
             {/* ***********************************number2.js*************************** */}
 
             {/* ***********************************number2.js output********************* */}
             <DividerStyled programOutput>
-                <Header output>output</Header>
+                <Header outputBegin>output (begin)</Header>
 
                 <ParagraphStyled>
-                    <IndentStyled />6/5 = 1.2.<LineFeeder />
-                    <IndentStyled />-6/5 = -1.2.<LineFeeder />
-                    <IndentStyled />Math.floor(6/5) = 1.<LineFeeder />
-                    <IndentStyled />Math.ceil(-6/5) = -1.
+                    6/5 = 1.2.<LineFeeder />
+                    -6/5 = -1.2.<LineFeeder />
+                    Math.floor(6/5) = 1.<LineFeeder />
+                    Math.ceil(-6/5) = -1.
                 </ParagraphStyled>
+
+                <Header outputEnd>output (end)</Header>
             </DividerStyled>
             {/* ***********************************number2.js output******************* */}
 
@@ -405,39 +406,35 @@ const DataTypesAndStructures = ( { title } ) =>
             </DividerStyled>
 
             {/* ***********************************object.js******************************* */}
-            <DividerStyled programCode>
-                <Header fileName>object.js</Header>
+            <DividerStyled>
+                <Header filenameBegin>object.js (begin)</Header>
 
-                <ParagraphStyled>
-                    <IndentStyled />{comment} 
+                <ParagraphStyled code>
+                    {comment} 
                     Define an object with a property.<LineFeeder />
-                    <IndentStyled />let userProfile = {object1b};
-                    <LineFeeder />
-                    <LineFeeder />
-                    <IndentStyled />{comment} 
-                    Print the object.<LineFeeder />
-                    <IndentStyled />console.log( userProfile );
-                    <LineFeeder />
-                    <IndentStyled />{comment} 
-                    Add a property to the object.<LineFeeder />
-                    <IndentStyled />userProfile.gender = "female";
-                    <LineFeeder />
-                    <IndentStyled />{comment} Print the object.
-                    <LineFeeder />
-                    <IndentStyled />console.log( userProfile );
-                    <LineFeeder />
+                    let userProfile = {object1b};<LineFeeder /><LineFeeder />
+                    {comment} Print the object.<LineFeeder />
+                    console.log( userProfile );<LineFeeder />
+                    {comment} Add a property to the object.<LineFeeder />
+                    userProfile.gender = "female";<LineFeeder />
+                    {comment} Print the object.<LineFeeder />
+                    console.log( userProfile );<LineFeeder />
                 </ParagraphStyled>
+
+                <Header filenameEnd>object.js (end)</Header>
             </DividerStyled>
             {/* ***********************************object.js************************/}
 
             {/* ***********************************object.js output**************** */}
             <DividerStyled programOutput>
-                <Header output>output</Header>
+                <Header outputBegin>output (start)</Header>
 
                 <ParagraphStyled>
-                    <IndentStyled />{object1b}<LineFeeder />
-                    <IndentStyled />{object1c}
+                    {object1b}<LineFeeder />
+                    {object1c}
                 </ParagraphStyled>
+
+                <Header outputEnd>output (end)</Header>
             </DividerStyled>
             {/* ***********************************object.js output********************** */}
 
@@ -467,37 +464,36 @@ const DataTypesAndStructures = ( { title } ) =>
             </DividerStyled>
 
             {/* array1.js */}
-            <DividerStyled programCode>
-                <Header fileName>array1.js</Header>
+            <DividerStyled>
+                <Header filenameBegin>array1.js (begin)</Header>
 
-                <ParagraphStyled>
-                    <IndentStyled />let homogeneousArray = [ 1, 2 ];
+                <ParagraphStyled code>
+                    let homogeneousArray = [ 1, 2 ];<LineFeeder />
+                    let hetrogeneousArray = [ 3, 'JST' ];<LineFeeder />
                     <LineFeeder />
-                    <IndentStyled />let hetrogeneousArray = [ 3, 'JST' ];
-                    <LineFeeder />
-                    <LineFeeder />
-                    <IndentStyled />{comment} Print the arrays.
-                    <LineFeeder />
-                    <IndentStyled />console.log( homogeneousArray );
-                    <LineFeeder />
-                    <IndentStyled />console.log( hetrogeneousArray );
+                    {comment} Print the arrays.<LineFeeder />
+                    console.log( homogeneousArray );<LineFeeder />
+                    console.log( hetrogeneousArray );
                 </ParagraphStyled>
+
+                <Header filenameEnd>array1.js (end)</Header>
             </DividerStyled>
             {/* array1.js */}
 
             {/* array1.js output */}
             <DividerStyled programOutput>
-                <Header output>output</Header>
+                <Header outputBegin>output (begin)</Header>
 
                 <ParagraphStyled>
-                    <IndentStyled />[ 1, 2 ]<LineFeeder />
-                    <IndentStyled />[ 3, 'JST' ]
+                    [ 1, 2 ]<LineFeeder />
+                    [ 3, 'JST' ]
                 </ParagraphStyled>
+
+                <Header outputEnd>output (end)</Header>
             </DividerStyled>
             {/* array1.js output */}
 
             <DividerStyled>
-
                     <ParagraphStyled>
                         A stack is a common data structure, and JS provides array methods to 
                         work with stacks, namely the push() function to store value onto the top 
@@ -508,35 +504,34 @@ const DataTypesAndStructures = ( { title } ) =>
             </DividerStyled>
 
             {/* array2.js */}
-            <DividerStyled programCode>
-                <Header fileName>array2.js</Header>
+            <DividerStyled>
+                <Header filenameBegin>array2.js (begin)</Header>
 
                 <ParagraphStyled>
-                    <IndentStyled />const array = [ 'J' ];
-                    <LineFeeder />
-                    <LineFeeder />
-                    <IndentStyled />{comment} 
-                    Push elements onto the array.<LineFeeder />
-                    <IndentStyled />array.push( 'S' );<LineFeeder />
-                    <IndentStyled />array.push( 'T' );<LineFeeder />
-                    <IndentStyled />console.log( array );<LineFeeder />
-                    <LineFeeder />
-                    <IndentStyled />{comment} 
-                    Pop the most recent element.<LineFeeder />
-                    <IndentStyled />array.pop(); <LineFeeder />
-                    <IndentStyled />console.log( array );
+                    const array = [ 'J' ];<LineFeeder /><LineFeeder />
+                    {comment} Push elements onto the array.<LineFeeder />
+                    array.push( 'S' );<LineFeeder />
+                    array.push( 'T' );<LineFeeder />
+                    console.log( array );<LineFeeder /><LineFeeder />
+                    {comment} Pop the most recent element.<LineFeeder />
+                    array.pop(); <LineFeeder />
+                    console.log( array );
                 </ParagraphStyled>
+
+                <Header filenameEnd>array2.js (end)</Header>
             </DividerStyled>
             {/* array2.js */}
 
             {/* array2.js output */}
             <DividerStyled programOutput>
-                <Header output>output</Header>
+                <Header outputBegin>output (begin)</Header>
 
                 <ParagraphStyled>
-                    <IndentStyled />['J', 'S', 'T']<LineFeeder />
-                    <IndentStyled />[ 'J', 'S' ]
+                    ['J', 'S', 'T']<LineFeeder />
+                    [ 'J', 'S' ]
                 </ParagraphStyled>
+
+                <Header outputEnd>output (end)</Header>
             </DividerStyled>
             {/* array2.js output */}
     
@@ -551,37 +546,36 @@ const DataTypesAndStructures = ( { title } ) =>
             </DividerStyled>
 
             {/* array3.js */}
-            <DividerStyled programCode>
-                <Header fileName>array3.js</Header>
+            <DividerStyled>
+                <Header filenameBegin>array3.js (begin)</Header>
 
-                <ParagraphStyled>
-                    <IndentStyled />let todos = 
-                    [ 'study', 'cook', 'sleep' ];<LineFeeder />
-                    <LineFeeder />
-                    <IndentStyled />{comment} 
+                <ParagraphStyled code>
+                    let todos = 
+                    [ 'study', 'cook', 'sleep' ];<LineFeeder /><LineFeeder />
+                    {comment} 
                     Finish one to-do from the top of the list.<LineFeeder />
-                    <IndentStyled />todos.shift();<LineFeeder />
-                    <IndentStyled />console.log( todos );
-                    <LineFeeder />
-                    <LineFeeder />
-                    <IndentStyled />{comment} 
+                    todos.shift();<LineFeeder />
+                    console.log( todos );<LineFeeder /><LineFeeder />
+                    {comment} 
                     Add one new to-do to the top of the list.<LineFeeder />
-                    <IndentStyled />todos.unshift( 'exercise');
-                    <LineFeeder />
-                    <IndentStyled />console.log( todos );
-                    <LineFeeder />
+                    todos.unshift( 'exercise');<LineFeeder />
+                    console.log( todos );<LineFeeder />
                 </ParagraphStyled>
+
+                <Header filenameEnd>array3.js (end)</Header>
             </DividerStyled>
             {/* array3.js */}
 
             {/* array3.js output */}
             <DividerStyled programOutput>
-                <Header output>output</Header>
+                <Header outputBegin>output (begin)</Header>
 
                 <ParagraphStyled>
-                    <IndentStyled />[ 'cook', 'sleep' ]<LineFeeder />
-                    <IndentStyled />[ 'exercise', 'cook', 'sleep' ]
+                    [ 'cook', 'sleep' ]<LineFeeder />
+                    [ 'exercise', 'cook', 'sleep' ]
                 </ParagraphStyled>
+
+                <Header outputEnd>output (end)</Header>
             </DividerStyled>
             {/* array3.js output */}
             {/* ***********************************5. Array*************************** */}

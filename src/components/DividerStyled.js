@@ -27,16 +27,6 @@ const DividerStyled = styled.div`
         padding: 0rem 10rem 0rem 30rem;
         text-align: center;
     `}
-    
-    //  CSS styling for application code
-    ${props => props.programCode && css`
-        margin-top: 30px;
-        margin-left: 0px;
-        margin-bottom: 30px;
-        margin-right: 150px;
-        padding: 2rem 0rem 2rem 0rem;
-        display: block;
-    `}
 
     //  CSS styling for the program execution
     ${props => props.programOutput && css`
@@ -54,16 +44,6 @@ const DividerStyled = styled.div`
         width: 500px;
         display: block;
         margin: auto;
-    `}
-
-    ${props => props.table && css`
-        margin-top: 30px;
-        margin-left: 380px;
-        margin-bottom: 30px;
-        margin-right: 150px;
-        padding: 2rem 0rem 2rem 0rem;
-        display: inline-block;
-        border: 10px solid Purple;
     `}
 `
 export default DividerStyled;

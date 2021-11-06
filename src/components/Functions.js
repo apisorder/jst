@@ -28,8 +28,7 @@ const Functions = ( { title } ) =>
     // ***********************************local variables**********************
     //  convenience variables -> also possible to use React hooks to change the value, but doing
     //  so entails too many calls to the Hook, since each modification of value would require one
-    let lineNumber = 1, lineNumber2 = 1, lineNumber3 = 1, lineNumber4 = 1, lineNumber5 = 1;
-    let lineNumber6 = 1;
+    let lineNumber = 1;
 
     //  to better work with React, since JSX (not JS) always interpolates the value in template 
     //  string, and string escape sequence does not seem to work
@@ -85,78 +84,71 @@ const Functions = ( { title } ) =>
             </DividerStyled>
 
             {/* ****************************named.js******************************* */}
-            <DividerStyled programCode>
-                <Header fileName>named.js</Header>
+            <DividerStyled>
+                <Header filenameBegin>named.js (begin)</Header>
 
-                <ParagraphStyled>
-                    Line {'0'+lineNumber++}<IndentStyled />{comment} Named function
+                <ParagraphStyled code>
+                    {comment} Named function<LineFeeder />
+                    function fib ( number )<LineFeeder />
+                    {leftBrace}<LineFeeder />
+                    <IndentStyled />if ( number {lessAndEqualTo} 1 )<LineFeeder />
+                    <IndentStyled />{leftBrace}<LineFeeder />
+                    <IndentStyled two/>return number;<LineFeeder />
+                    <IndentStyled />{rightBrace}<LineFeeder /><LineFeeder />
+                    <IndentStyled />return fib( number - 1 ) + fib( number - 2 );
                     <LineFeeder />
-                    Line {'0'+lineNumber++}<IndentStyled />function fib ( number )
-                    <LineFeeder />
-                    Line {'0'+lineNumber++}<IndentStyled />{leftBrace}<LineFeeder />
-                    Line {'0'+lineNumber++}<IndentStyled two/>if ( number {lessAndEqualTo} 1 )
-                    <LineFeeder />
-                    Line {'0'+lineNumber++}<IndentStyled two/>{leftBrace}<LineFeeder />
-                    Line {'0'+lineNumber++}<IndentStyled three/>return number;<LineFeeder />
-                    Line {'0'+lineNumber++}<IndentStyled two/>{rightBrace}<LineFeeder />
-                    Line {'0'+lineNumber++}<LineFeeder />
-                    Line {'0'+lineNumber++}<IndentStyled two/>return fib( number - 1 ) + 
-                    fib( number - 2 );<LineFeeder />
-                    Line {lineNumber++}<IndentStyled />{rightBrace}<LineFeeder />
-                    Line {lineNumber++}<LineFeeder />
-                    Line {lineNumber++}<IndentStyled />{comment} 
-                    Prints the 10th Fibonacci number.<LineFeeder />
-                    Line {lineNumber++}<IndentStyled />
+                    {rightBrace}<LineFeeder /><LineFeeder />
+                    {comment} Prints the 10th Fibonacci number.<LineFeeder />
                     console.log( `fib(10) = ${ fibonacciCall }.` );
                 </ParagraphStyled>
+
+                <Header filenameEnd>named.js (end)</Header>
             </DividerStyled>
             {/* **********************************named.js***************************** */}
 
             {/* **************************named.js output***************************** */}
             <DividerStyled programOutput>
-                <Header output>output</Header>
+                <Header outputBegin>output (begin)</Header>
 
                 <ParagraphStyled>fib(10) = 55.</ParagraphStyled>
+
+                <Header outputEnd>output (end)</Header>
             </DividerStyled>
             {/* **********************************named.js output**************** */}
 
             {/* **********************************anonymous.js********************* */}
-            <DividerStyled programCode>
-                <Header fileName>anonymous.js</Header>
+            <DividerStyled>
+                <Header filenameBegin>anonymous.js (begin)</Header>
 
-                <ParagraphStyled>
-                    Line {'0'+lineNumber2++}<IndentStyled />{comment} 
-                    Locate even numbers and save them in another array<LineFeeder />
-                    Line {'0'+lineNumber2++}<IndentStyled />const filterEvens = 
-                    function ( source ) <LineFeeder />
-                    Line {'0'+lineNumber2++}<IndentStyled />{leftBrace}<LineFeeder />
-                    Line {'0'+lineNumber2++}<IndentStyled two/>let result = [];<LineFeeder />
-                    Line {'0'+lineNumber2++}<LineFeeder />
-                    Line {'0'+lineNumber2++}<IndentStyled two/>for ({forLoopCondition})
+                <ParagraphStyled code>
+                    {comment} Locate even numbers and save them in another array
                     <LineFeeder />
-                    Line {'0'+lineNumber2++}<IndentStyled two/>{leftBrace}<LineFeeder />
-                    Line {'0'+lineNumber2++}<IndentStyled three/>if ( source[ i ] % 2 === 0 ) 
-                    <LineFeeder />
-                    Line {'0'+lineNumber2++}<IndentStyled three/>{leftBrace}<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled four/>result.push( source[ i ] );
-                    <LineFeeder />
-                    Line {lineNumber2++}<IndentStyled three/>{rightBrace}<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled two/>{rightBrace}<LineFeeder />
-                    Line {lineNumber2++}<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled two/>console.log( result );<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled />{rightBrace}<LineFeeder />
-                    Line {lineNumber2++}<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled />
+                    const filterEvens = function ( source ) <LineFeeder />
+                    {leftBrace}<LineFeeder />
+                    <IndentStyled />let result = [];<LineFeeder /><LineFeeder />
+                    <IndentStyled />for ({forLoopCondition})<LineFeeder />
+                    <IndentStyled />{leftBrace}<LineFeeder />
+                    <IndentStyled two/>if ( source[ i ] % 2 === 0 ) <LineFeeder />
+                    <IndentStyled two/>{leftBrace}<LineFeeder />
+                    <IndentStyled three/>result.push( source[ i ] );<LineFeeder />
+                    <IndentStyled two/>{rightBrace}<LineFeeder />
+                    <IndentStyled />{rightBrace}<LineFeeder /><LineFeeder />
+                    <IndentStyled />console.log( result );<LineFeeder />
+                    {rightBrace}<LineFeeder /><LineFeeder />
                     filterEvens( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ] );<LineFeeder />
                 </ParagraphStyled>
+
+                <Header filenameEnd>anonymous.js (end)</Header>
             </DividerStyled>
             {/* **********************************anonymous.js********************** */}
 
             {/* **************************anonymous.js output*********************** */}
             <DividerStyled programOutput>
-                <Header output>output</Header>
+                <Header outputBegin>output (begin)</Header>
 
                 <ParagraphStyled>[ 2, 4, 6, 8, 10 ]</ParagraphStyled>
+
+                <Header outputEnd>output (end)</Header>
             </DividerStyled>
             {/* **********************************anonymous.js output************** */}
             {/* *************************1. Named and Anonymous Functions************* */}
@@ -182,49 +174,38 @@ const Functions = ( { title } ) =>
             </DividerStyled>
 
             {/* **********************************arrow.js**************************** */}
-            <DividerStyled programCode>
-                <Header fileName>arrow.js</Header>
+            <DividerStyled>
+                <Header filenameBegin>arrow.js (begin)</Header>
 
-                <ParagraphStyled>
-                    Line {'0'+lineNumber3++}<IndentStyled />{comment} 
-                    Calculates the sum of squares.<LineFeeder />
-                    Line {'0'+lineNumber3++}<IndentStyled />{comment} 
-                    With anonymous function.<LineFeeder />
-                    Line {'0'+lineNumber3++}<IndentStyled />const anonymous = 
-                    function ( a, b ) <LineFeeder />
-                    Line {'0'+lineNumber3++}<IndentStyled />{leftBrace}<LineFeeder />
-                    Line {'0'+lineNumber3++}<IndentStyled two/>return a * a + b * b;
+                <ParagraphStyled code>
+                    {comment} Calculates the sum of squares.<LineFeeder />
+                    {comment} With anonymous function.<LineFeeder />
+                    const anonymous = function ( a, b ) <LineFeeder />
+                    {leftBrace}<LineFeeder />
+                    <IndentStyled />return a * a + b * b;<LineFeeder />
+                    {rightBrace}<LineFeeder /><LineFeeder />
+                    {comment} With arrow function.<LineFeeder />
+                    const arrow = ( a, b ) {arrow}<LineFeeder />
+                    {leftBrace}<LineFeeder />
+                    <IndentStyled />return a * a + b * b;<LineFeeder />
+                    {rightBrace}<LineFeeder /><LineFeeder />
+                    {comment} With arrow function, concise form.<LineFeeder />
+                    const arrowConcise = ( a, b ) {arrow} a * a + b * b;<LineFeeder />
                     <LineFeeder />
-                    Line {'0'+lineNumber3++}<IndentStyled />{rightBrace}<LineFeeder />
-                    Line {'0'+lineNumber3++}<LineFeeder />
-                    Line {'0'+lineNumber3++}<IndentStyled />{comment} With arrow function.
+                    {comment} Verify the results are equivalent.<LineFeeder />
+                    console.log( `anonymous(1, 2) = ${ anonymousFunctionCall }.`);
                     <LineFeeder />
-                    Line {'0'+lineNumber3++}<IndentStyled />const arrow = ( a, b ) {arrow} 
-                    <LineFeeder />
-                    Line {lineNumber3++}<IndentStyled />{leftBrace}<LineFeeder />
-                    Line {lineNumber3++}<IndentStyled two/>return a * a + b * b;<LineFeeder />
-                    Line {lineNumber3++}<IndentStyled />{rightBrace}<LineFeeder />
-                    Line {lineNumber3++}<LineFeeder />
-                    Line {lineNumber3++}<IndentStyled />{comment} 
-                    With arrow function, concise form.<LineFeeder />
-                    Line {lineNumber3++}<IndentStyled />const arrowConcise = 
-                    ( a, b ) {arrow} a * a + b * b;<LineFeeder />
-                    Line {lineNumber3++}<LineFeeder />
-                    Line {lineNumber3++}<IndentStyled />{comment} 
-                    Verify the results are equivalent.<LineFeeder />
-                    Line {lineNumber3++}<IndentStyled />
-                    console.log( `anonymous(1, 2) = ${ anonymousFunctionCall }.`);<LineFeeder />
-                    Line {lineNumber3++}<IndentStyled />
                     console.log( `arrow(1, 2) = ${ arrowFunctionCall }.`)<LineFeeder />
-                    Line {lineNumber3++}<IndentStyled />
                     console.log( `arrowConcise(1, 2) = ${ arrowConciseFunctionCall }.`)
                 </ParagraphStyled>
+
+                <Header filenameEnd>arrow.js (end)</Header>
             </DividerStyled>
             {/* **********************************arrow.js************************** */}
 
             {/* **********************************arrow.js output***************** */}
             <DividerStyled programOutput>
-                <Header output>output</Header>
+                <Header outputBegin>output (begin)</Header>
 
                 <ParagraphStyled>
                     anonymous(1, 2) = 5.<LineFeeder />
@@ -232,6 +213,7 @@ const Functions = ( { title } ) =>
                     arrowConcise(1, 2) = 5.
                 </ParagraphStyled>
 
+                <Header outputEnd>output (end)</Header>
             </DividerStyled>
             {/* **********************************arrow.js output********************** */}
             {/* **********************************2. Arrow Functions******************** */}
@@ -267,51 +249,48 @@ const Functions = ( { title } ) =>
             </DividerStyled>
 
             {/* **********************************noneed.js***************************** */}
-            <DividerStyled programCode>
-                <Header fileName>noneed.js</Header>
+            <DividerStyled>
+                <Header filenameBegin>noneed.js (begin)</Header>
 
-                <ParagraphStyled>
-                    Line {'0'+lineNumber4++}<IndentStyled />{comment} Create an object.
+                <ParagraphStyled code>
+                    {comment} Create an object.<LineFeeder />
+                    let userProfile = <LineFeeder />
+                    {leftBrace}<LineFeeder />
+                    <IndentStyled />name: 'JST',<LineFeeder /><LineFeeder />
+                    <IndentStyled />named: function print() <LineFeeder />
+                    <IndentStyled />{leftBrace}<LineFeeder />
+                    <IndentStyled two/>console.log( `Patron is registered.` );
                     <LineFeeder />
-                    Line {'0'+lineNumber4++}<IndentStyled />let userProfile = <LineFeeder />
-                    Line {'0'+lineNumber4++}<IndentStyled />{leftBrace}<LineFeeder />
-                    Line {'0'+lineNumber4++}<IndentStyled two/>name: 'JST',<LineFeeder />
-                    Line {'0'+lineNumber4++}<IndentStyled /><LineFeeder />
-                    Line {'0'+lineNumber4++}<IndentStyled two/>named: function print() 
+                    <IndentStyled />{rightBrace},<LineFeeder /><LineFeeder />
+                    <IndentStyled />anonymous: function () <LineFeeder />
+                    <IndentStyled />{leftBrace}<LineFeeder />
+                    <IndentStyled two/>console.log( `Patron is registered.` );
                     <LineFeeder />
-                    Line {'0'+lineNumber4++}<IndentStyled two/>{leftBrace}<LineFeeder />
-                    Line {'0'+lineNumber4++}<IndentStyled three/>
-                    console.log( `Patron is registered.` );<LineFeeder />
-                    Line {'0'+lineNumber4++}<IndentStyled two/>{rightBrace},<LineFeeder />
-                    Line {lineNumber4++}<LineFeeder />
-                    Line {lineNumber4++}<IndentStyled two/>anonymous: function () <LineFeeder />
-                    Line {lineNumber4++}<IndentStyled two/>{leftBrace}<LineFeeder />
-                    Line {lineNumber4++}<IndentStyled three/>
-                    console.log( `Patron is registered.` );<LineFeeder />
-                    Line {lineNumber4++}<IndentStyled two/>{rightBrace},<LineFeeder />
-                    Line {lineNumber4++}<LineFeeder />
-                    Line {lineNumber4++}<IndentStyled two/>arrow: () {arrow} 
+                    <IndentStyled />{rightBrace},<LineFeeder /><LineFeeder />
+                    <IndentStyled />arrow: () {arrow} 
                     console.log( `Patron is registered.` ),<LineFeeder />
-                    Line {lineNumber4++}<IndentStyled />{rightBrace};<LineFeeder />
-                    Line {lineNumber4++}<LineFeeder />
-                    Line {lineNumber4++}<IndentStyled />{comment} 
-                    Manipulation of data is not needed.<LineFeeder />
-                    Line {lineNumber4++}<IndentStyled />userProfile.named();<LineFeeder />
-                    Line {lineNumber4++}<IndentStyled />userProfile.anonymous();<LineFeeder />
-                    Line {lineNumber4++}<IndentStyled />userProfile.arrow();<LineFeeder />
+                    {rightBrace};<LineFeeder /><LineFeeder />
+                    {comment} Manipulation of data is not needed.<LineFeeder />
+                    userProfile.named();<LineFeeder />
+                    userProfile.anonymous();<LineFeeder />
+                    userProfile.arrow();<LineFeeder />
                 </ParagraphStyled>
+
+                <Header filenameEnd>noneed.js (end)</Header>
             </DividerStyled>
             {/* **********************************noneed.js***************************** */}
 
             {/* **********************************noneed.js output************************* */}
             <DividerStyled programOutput>
-                <Header output>output</Header>
+                <Header outputBegin>output (begin)</Header>
 
                 <ParagraphStyled>
                     Patron is registered.<LineFeeder />
                     Patron is registered.<LineFeeder />
                     Patron is registered.
                 </ParagraphStyled>
+
+                <Header outputEnd>output (end)</Header>
             </DividerStyled>
             {/* **********************************noneed.js output******************** */}
 
@@ -328,50 +307,48 @@ const Functions = ( { title } ) =>
             </DividerStyled>
 
             {/* **********************************need.js*************************** */}
-            <DividerStyled programCode>
-                <Header fileName>need.js</Header>
+            <DividerStyled>
+                <Header filenameBegin>need.js (begin)</Header>
 
-                <ParagraphStyled>
-                    Line {'0'+lineNumber5++}<IndentStyled />let userProfile = <LineFeeder />
-                    Line {'0'+lineNumber5++}<IndentStyled />{leftBrace}<LineFeeder />
-                    Line {'0'+lineNumber5++}<IndentStyled two/>name: 'JST',<LineFeeder />
-                    Line {'0'+lineNumber5++}<LineFeeder />
-                    Line {'0'+lineNumber5++}<IndentStyled two/>named: function print() 
+                <ParagraphStyled code>
+                    let userProfile = <LineFeeder />
+                    {leftBrace}<LineFeeder />
+                    <IndentStyled />name: 'JST',<LineFeeder /><LineFeeder />
+                    <IndentStyled />named: function print() <LineFeeder />
+                    <IndentStyled />{leftBrace}<LineFeeder />
+                    <IndentStyled two/>console.log( `Patron ${thisName} is registered.` );
                     <LineFeeder />
-                    Line {'0'+lineNumber5++}<IndentStyled two/>{leftBrace}<LineFeeder />
-                    Line {'0'+lineNumber5++}<IndentStyled three/>
-                    console.log( `Patron ${thisName} is registered.` );<LineFeeder />
-                    Line {'0'+lineNumber5++}<IndentStyled two/>{rightBrace},<LineFeeder />
-                    Line {'0'+lineNumber5++}<LineFeeder />
-                    Line {lineNumber5++}<IndentStyled two/>anonymous: function () <LineFeeder />
-                    Line {lineNumber5++}<IndentStyled two/>{leftBrace}<LineFeeder />
-                    Line {lineNumber5++}<IndentStyled three/>
-                    console.log( `Patron ${ thisName } is registered.` );<LineFeeder />
-                    Line {lineNumber5++}<IndentStyled two/>{rightBrace},<LineFeeder />
-                    Line {lineNumber5++}<LineFeeder />
-                    Line {lineNumber5++}<IndentStyled two/>arrow: () {arrow} <LineFeeder />
-                    <IndentStyled five/>console.log(`Patron ${ thisName } is registered.`),
+                    <IndentStyled />{rightBrace},<LineFeeder /><LineFeeder />
+                    <IndentStyled />anonymous: function () <LineFeeder />
+                    <IndentStyled />{leftBrace}<LineFeeder />
+                    <IndentStyled two/>console.log( `Patron ${ thisName } is registered.` );
                     <LineFeeder />
-                    Line {lineNumber5++}<IndentStyled />{rightBrace};<LineFeeder />
-                    Line {lineNumber5++}<LineFeeder />
-                    Line {lineNumber5++}<IndentStyled />{comment} Manipulation of data is needed.
+                    <IndentStyled />{rightBrace},<LineFeeder /><LineFeeder />
+                    <IndentStyled />arrow: () {arrow} <LineFeeder />
+                    <IndentStyled four/>console.log(`Patron ${ thisName } is registered.`),
                     <LineFeeder />
-                    Line {lineNumber5++}<IndentStyled />userProfile.named();<LineFeeder />
-                    Line {lineNumber5++}<IndentStyled />userProfile.anonymous();<LineFeeder />
-                    Line {lineNumber5++}<IndentStyled />userProfile.arrow();<LineFeeder />
+                    {rightBrace};<LineFeeder /><LineFeeder />
+                    {comment} Manipulation of data is needed.<LineFeeder />
+                    userProfile.named();<LineFeeder />
+                    userProfile.anonymous();<LineFeeder />
+                    userProfile.arrow();<LineFeeder />
                 </ParagraphStyled>
+
+                <Header filenameEnd>need.js (end)</Header>
             </DividerStyled>
             {/* **********************************need.js************************** */}
 
             {/* **********************************need.js output************************ */}
             <DividerStyled programOutput>
-                <Header output>output</Header>
+                <Header outputBegin>output (begin)</Header>
 
                 <ParagraphStyled>
                     Patron JST is registered.<LineFeeder />
                     Patron JST is registered.<LineFeeder />
                     Patron undefined is registered.
                 </ParagraphStyled>
+
+                <Header outputEnd>output (end)</Header>
             </DividerStyled>
             {/* **********************************need.js output********************* */}
     
@@ -400,17 +377,17 @@ const Functions = ( { title } ) =>
                             <ParagraphStyled review>
                                 <Header main>Recap</Header>
                             
-                                ({lineNumber6++}) Functions allow the developer to 
+                                ({lineNumber++}) Functions allow the developer to 
                                 compartmentalize for easier code reuse.<LineFeeder />
-                                ({lineNumber6++}) If a function is defined as part of an object, 
+                                ({lineNumber++}) If a function is defined as part of an object, 
                                 it is called a method.<LineFeeder />
-                                ({lineNumber6++}) Functions can be named or anonymous, and both 
+                                ({lineNumber++}) Functions can be named or anonymous, and both 
                                 types are interchangeable.<LineFeeder />
-                                ({lineNumber6++}) Arrow functions are a recent addition to the JS 
+                                ({lineNumber++}) Arrow functions are a recent addition to the JS 
                                 language with simplier syntax.<LineFeeder />
-                                ({lineNumber6++}) However, although more concise, arrow functions 
+                                ({lineNumber++}) However, although more concise, arrow functions 
                                 are unsuitable as object methods.<LineFeeder />
-                                ({lineNumber6++}) This is because arrow functions cannot access 
+                                ({lineNumber++}) This is because arrow functions cannot access 
                                 the object's properties.<LineFeeder />
                             </ParagraphStyled>
                         </>

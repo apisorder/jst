@@ -26,7 +26,7 @@ const Branches = ( { title } ) =>
     // ***********************************local variables*********************************
     //  convenience variables -> also possible to use React hooks to change the value, but doing
     //  so entails too many calls to the Hook, since each modification of value would require one
-    let num = 1, num2 = 1, num3 = 1, num4 = 1, num5 = 1;
+    let num = 1;
 
     //  to better work with React, since JSX (not JS) always interpolates the value in template 
     //  string, and string escape sequence does not seem to work
@@ -72,31 +72,33 @@ const Branches = ( { title } ) =>
             </DividerStyled>
 
             {/* **********************************if.js********************************* */}
-            <DividerStyled programCode>
-                <Header fileName>if.js</Header>
+            <DividerStyled>
+                <Header filenameBegin>if.js (begin)</Header>
 
-                <ParagraphStyled>
-                    <IndentStyled />let isUserLoggedIn = false;<LineFeeder />
+                <ParagraphStyled code>
+                    let isUserLoggedIn = false;<LineFeeder /><LineFeeder />
+                    if ( !isUserLoggedIn )<LineFeeder />
+                    {leftBrace}<LineFeeder />
+                    <IndentStyled />console.log( "Please log on." );
                     <LineFeeder />
-                    <IndentStyled />if ( !isUserLoggedIn )<LineFeeder />
-                    <IndentStyled />{leftBrace}<LineFeeder />
-                    Line {'0'+num++}<IndentStyled two/>console.log( "Please log on." );
-                    <LineFeeder />
-                    Line {'0'+num++}<IndentStyled />{rightBrace}<LineFeeder />
-                    Line {'0'+num++}<LineFeeder />
-                    Line {'0'+num++}<IndentStyled />if ( isUserLoggedIn )<LineFeeder />
-                    Line {'0'+num++}<IndentStyled />{leftBrace}<LineFeeder />
-                    Line {num++}<IndentStyled two/>console.log( "Welcome, User." );<LineFeeder />
-                    Line {num++}<IndentStyled />{rightBrace}<LineFeeder />
+                    {rightBrace}<LineFeeder /><LineFeeder />
+                    if ( isUserLoggedIn )<LineFeeder />
+                    {leftBrace}<LineFeeder />
+                    <IndentStyled />console.log( "Welcome, User." );<LineFeeder />
+                    {rightBrace}<LineFeeder />
                 </ParagraphStyled>
+
+                <Header filenameEnd>if.js (end)</Header>
             </DividerStyled>
             {/* **********************************if.js*********************************** */}
 
             {/* **********************************if.js output************************ */}
             <DividerStyled programOutput>
-                <Header output>output</Header>
+                <Header outputBegin>output (begin)</Header>
 
                 <ParagraphStyled>Please log on.</ParagraphStyled>
+
+                <Header outputEnd>output (end)</Header>
             </DividerStyled>
             {/* **********************************if.js output*************************** */}
 
@@ -126,31 +128,32 @@ const Branches = ( { title } ) =>
             </DividerStyled>
 
             {/* *********************************ifelse.js********************************* */}
-            <DividerStyled programCode>
-                <Header fileName>ifelse.js</Header>
+            <DividerStyled>
+                <Header filenameBegin>ifelse.js (begin)</Header>
 
-                <ParagraphStyled>
-                    Line {'0'+num2++}<IndentStyled />let isUserLoggedIn = false;<LineFeeder />
-                    Line {'0'+num2++}<LineFeeder />
-                    Line {'0'+num2++}<IndentStyled />if ( !isUserLoggedIn )<LineFeeder />
-                    Line {'0'+num2++}<IndentStyled />{leftBrace}<LineFeeder />
-                    Line {'0'+num2++}<IndentStyled two/>console.log( "Please log on." );
-                    <LineFeeder />
-                    Line {'0'+num2++}<IndentStyled />{rightBrace}<LineFeeder />
-                    Line {'0'+num2++}<IndentStyled />else<LineFeeder />
-                    Line {'0'+num2++}<IndentStyled />{leftBrace}<LineFeeder />
-                    Line {'0'+num2++}<IndentStyled two/>console.log( "Welcome, User." );
-                    <LineFeeder />
-                    Line {num2++}<IndentStyled />{rightBrace}<LineFeeder />
+                <ParagraphStyled code>
+                    let isUserLoggedIn = false;<LineFeeder /><LineFeeder />
+                    if ( !isUserLoggedIn )<LineFeeder />
+                    {leftBrace}<LineFeeder />
+                    <IndentStyled />console.log( "Please log on." );<LineFeeder />
+                    {rightBrace}<LineFeeder />
+                    else<LineFeeder />
+                    {leftBrace}<LineFeeder />
+                    <IndentStyled />console.log( "Welcome, User." );<LineFeeder />
+                    {rightBrace}<LineFeeder />
                 </ParagraphStyled>
+
+                <Header filenameEnd>ifelse.js (end)</Header>
             </DividerStyled>
             {/* *********************************ifelse.js********************************* */}
 
             {/* *********************************ifelse.js output*********************** */}
             <DividerStyled programOutput>
-                <Header output>output</Header>
+                <Header outputBegin>output (begin)</Header>
 
                 <ParagraphStyled>Please log on.</ParagraphStyled>
+
+                <Header outputEnd>output (end)</Header>
             </DividerStyled>
             {/* *********************************ifelse.js output**************************** */}
 
@@ -180,41 +183,41 @@ const Branches = ( { title } ) =>
             </DividerStyled>
 
             {/* *********************************ifelseifelse.js************************* */}
-            <DividerStyled programCode>
-                <Header fileName>ifelseifelse.js</Header>
+            <DividerStyled>
+                <Header filenameBegin>ifelseifelse.js (begin)</Header>
 
-                <ParagraphStyled>
-                    Line {'0'+num3++}<IndentStyled />let number = 0;<LineFeeder />
-                    Line {'0'+num3++}<IndentStyled />let isNumber = 0;<LineFeeder />
-                    Line {'0'+num3++}<LineFeeder />
-                    Line {'0'+num3++}<IndentStyled />if ( number === 0 )<LineFeeder />
-                    Line {'0'+num3++}<IndentStyled />{leftBrace}<LineFeeder />
-                    Line {'0'+num3++}<IndentStyled two/>isNumber = 'neither positive nor 
-                    negative';
+                <ParagraphStyled code>
+                    let number = 0;<LineFeeder />
+                    let isNumber = 0;<LineFeeder /><LineFeeder />
+                    if ( number === 0 )<LineFeeder />
+                    {leftBrace}<LineFeeder />
+                    <IndentStyled />isNumber = 'neither positive nor negative';
                     <LineFeeder />
-                    Line {'0'+num3++}<IndentStyled />{rightBrace}<LineFeeder />
-                    Line {'0'+num3++}<IndentStyled />else if ( number {greaterThan} 0 )
+                    {rightBrace}<LineFeeder />
+                    else if ( number {greaterThan} 0 )<LineFeeder />
+                    {leftBrace}<LineFeeder />
+                    <IndentStyled />isNumber = 'positive';<LineFeeder />
+                    {rightBrace}<LineFeeder />
+                    else<LineFeeder />
+                    {leftBrace}<LineFeeder />
+                    <IndentStyled />isNumber = 'negative';<LineFeeder />
+                    {rightBrace}<LineFeeder />
                     <LineFeeder />
-                    Line {'0'+num3++}<IndentStyled />{leftBrace}<LineFeeder />
-                    Line {num3++}<IndentStyled two/>isNumber = 'positive';<LineFeeder />
-                    Line {num3++}<IndentStyled />{rightBrace}<LineFeeder />
-                    Line {num3++}<IndentStyled />else<LineFeeder />
-                    Line {num3++}<IndentStyled />{leftBrace}<LineFeeder />
-                    Line {num3++}<IndentStyled two/>isNumber = 'negative';<LineFeeder />
-                    Line {num3++}<IndentStyled />{rightBrace}<LineFeeder />
-                    Line {num3++}<LineFeeder />
-                    Line {num3++}<IndentStyled />console.log( `Number ${number} is 
-                    ${isNumber}.` );
+                    console.log( `Number ${number} is ${isNumber}.` );
                     <LineFeeder />
                 </ParagraphStyled>
+
+                <Header filenameEnd>ifelseifelse.js (end)</Header>
             </DividerStyled>
             {/* *********************************ifelseifelse.js**************************** */}
 
             {/* *********************************ifelseifelse.js output********************** */}
             <DividerStyled programOutput>
-                <Header output>output</Header>
+                <Header outputBegin>output (begin)</Header>
 
                 <ParagraphStyled>Number 0 is neither positive nor negative.</ParagraphStyled>
+
+                <Header outputEnd>output (end)</Header>
             </DividerStyled>
             {/* *********************************ifelseifelse.js output****************** */}
 
@@ -245,41 +248,43 @@ const Branches = ( { title } ) =>
             </DividerStyled>
 
             {/* *********************************switch.js********************************* */}
-            <DividerStyled programCode>
-                <Header fileName>switch.js</Header>
+            <DividerStyled>
+                <Header filenameBegin>switch.js (begin)</Header>
 
-                <ParagraphStyled>
-                    Line {'0'+num4++}<IndentStyled />let day = 1;<LineFeeder />
-                    Line {'0'+num4++}<IndentStyled />let whatDay;<LineFeeder />
-                    Line {'0'+num4++}<LineFeeder />
-                    Line {'0'+num4++}<IndentStyled />switch( day ) <LineFeeder />
-                    Line {'0'+num4++}<IndentStyled />{leftBrace}<LineFeeder />
-                    Line {'0'+num4++}<IndentStyled two/>case 1:<LineFeeder />
-                    Line {'0'+num4++}<IndentStyled two/>case 2:<LineFeeder />
-                    Line {'0'+num4++}<IndentStyled two/>case 3:<LineFeeder />
-                    Line {'0'+num4++}<IndentStyled two/>case 4:<LineFeeder />
-                    Line {num4++}<IndentStyled two/>case 5:<LineFeeder />
-                    Line {num4++}<IndentStyled three/>whatDay = 'school day';<LineFeeder />
-                    Line {num4++}<IndentStyled three/>break;<LineFeeder />
-                    Line {num4++}<IndentStyled two/>case 6:<LineFeeder />
-                    Line {num4++}<IndentStyled two/>case 7:<LineFeeder />
-                    Line {num4++}<IndentStyled three/>whatDay = 'weekend';<LineFeeder />
-                    Line {num4++}<IndentStyled three/>break;<LineFeeder />
-                    Line {num4++}<IndentStyled two/>default:<LineFeeder />
-                    Line {num4++}<IndentStyled three/>whatDay = 'impossible';<LineFeeder />
-                    Line {num4++}<IndentStyled />{rightBrace}<LineFeeder />
-                    Line {num4++}<LineFeeder />
-                    Line {num4++}<IndentStyled />console.log( `Today is ${ whatDay }.` );
+                <ParagraphStyled code>
+                    let day = 1;<LineFeeder />
+                    let whatDay;<LineFeeder /><LineFeeder />
+                    switch( day ) <LineFeeder />
+                    {leftBrace}<LineFeeder />
+                    <IndentStyled />case 1:<LineFeeder />
+                    <IndentStyled />case 2:<LineFeeder />
+                    <IndentStyled />case 3:<LineFeeder />
+                    <IndentStyled />case 4:<LineFeeder />
+                    <IndentStyled />case 5:<LineFeeder />
+                    <IndentStyled two/>whatDay = 'school day';<LineFeeder />
+                    <IndentStyled two/>break;<LineFeeder />
+                    <IndentStyled />case 6:<LineFeeder />
+                    <IndentStyled />case 7:<LineFeeder />
+                    <IndentStyled two/>whatDay = 'weekend';<LineFeeder />
+                    <IndentStyled two/>break;<LineFeeder />
+                    <IndentStyled />default:<LineFeeder />
+                    <IndentStyled two/>whatDay = 'impossible';<LineFeeder />
+                    {rightBrace}<LineFeeder /><LineFeeder />
+                    console.log( `Today is ${ whatDay }.` );
                     <LineFeeder />
                 </ParagraphStyled>
+
+                <Header filenameEnd>switch.js (end)</Header>
             </DividerStyled>
             {/* *********************************switch.js************************* */}
 
             {/* *********************************switch.js output****************** */}
             <DividerStyled programOutput>
-                <Header output>output</Header>
+                <Header outputBegin>output (begin)</Header>
 
                 <ParagraphStyled>Today is school day.</ParagraphStyled>
+
+                <Header outputEnd>output (end)</Header>
             </DividerStyled>
             {/* *********************************switch.js output************************ */}
             {/* **********************************4. The Switch Statement*************** */}
@@ -307,15 +312,15 @@ const Branches = ( { title } ) =>
                             <ParagraphStyled review>
                                 <Header main>Recap</Header>
 
-                                ({num5++}) Branching allows only some the source code to be 
+                                ({num++}) Branching allows only some the source code to be 
                                 executed based on some condition.<LineFeeder />
-                                ({num5++}) If an action is necessary only when a condition is 
+                                ({num++}) If an action is necessary only when a condition is 
                                 satisfied, use if.<LineFeeder />
-                                ({num5++}) If two actions need to be decided based on the condition, 
+                                ({num++}) If two actions need to be decided based on the condition, 
                                 use if-else.<LineFeeder />
-                                ({num5++}) If more than two actions need to decided based on the 
+                                ({num++}) If more than two actions need to decided based on the 
                                 condition, use if-else if-else.<LineFeeder />
-                                ({num5++}) The switch statement can also be used in the last case, 
+                                ({num++}) The switch statement can also be used in the last case, 
                                 depending on preference.
                             </ParagraphStyled>
                         </>

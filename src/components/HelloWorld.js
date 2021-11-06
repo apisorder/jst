@@ -8,7 +8,6 @@ import AnchorStyled from './AnchorStyled';
 import DividerStyled from './DividerStyled';
 import Footer from './Footer';
 import Header from './Header';
-import IndentStyled from './IndentStyled';
 import LineFeeder from './LineFeeder';
 import ParagraphStyled from './ParagraphStyled';
 
@@ -76,15 +75,14 @@ const HelloWorld = ( { title } ) =>
             </DividerStyled>
 
             {/* *********************************helloworld.js************************* */}
-            <DividerStyled programCode>
+            <DividerStyled>
                 <Header filenameBegin>helloworld.js (begin)</Header>
 
-                <ParagraphStyled>
-                    <IndentStyled />{comment} This is a comment.
-                    <LineFeeder />
-                    <IndentStyled />{comment} 
+                <ParagraphStyled code>
+                    {comment} This is a comment.<LineFeeder />
+                    {comment} 
                     console.log() is a print function available to JS programs.<LineFeeder />
-                    <IndentStyled />console.log("Hello World.");
+                    console.log("Hello World.");
                 </ParagraphStyled>
 
                 <Header filenameEnd>helloworld.js (end)</Header>
@@ -95,7 +93,7 @@ const HelloWorld = ( { title } ) =>
             <DividerStyled programOutput>
                 <Header outputBegin>output (begin)</Header>
 
-                <ParagraphStyled><IndentStyled />Hello World.</ParagraphStyled>
+                <ParagraphStyled>Hello World.</ParagraphStyled>
 
                 <Header outputEnd>output (end)</Header>
             </DividerStyled>

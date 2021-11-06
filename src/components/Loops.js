@@ -28,7 +28,7 @@ const Loops = ( { title } ) =>
     // ***********************************local variables**********************
     //  convenience variables -> also possible to use React hooks to change the value, but doing
     //  so entails too many calls to the Hook, since each modification of value would require one
-    let lineNumber = 1, lineNumber2 = 1, lineNumber3 = 1, lineNumber4 = 1, lineNumber5 = 1;
+    let lineNumber = 1;
 
     //  to better work with React, since JSX (not JS) always interpolates the value in template 
     //  string, and string escape sequence does not seem to work
@@ -78,34 +78,33 @@ const Loops = ( { title } ) =>
             {/* ***********************1. The While Loop********************** */}
 
             {/* **********************************while.js********************** */}
-            <DividerStyled programCode>
-                <Header fileName>while.js</Header>
+            <DividerStyled>
+                <Header filenameBegin>while.js (begin)</Header>
 
-                <ParagraphStyled>
-                    Line {'0'+lineNumber++}<IndentStyled />{comment} Calculates the factorial 
-                    of a number.<LineFeeder />
-                    Line {'0'+lineNumber++}<IndentStyled />let result = 1;<LineFeeder />
-                    Line {'0'+lineNumber++}<IndentStyled />let number = 6;<LineFeeder />
-                    Line {'0'+lineNumber++}<LineFeeder />
-                    Line {'0'+lineNumber++}<IndentStyled />{comment} While the number is not 0
-                    <LineFeeder />
-                    Line {'0'+lineNumber++}<IndentStyled />while ( number )<LineFeeder />
-                    Line {'0'+lineNumber++}<IndentStyled />{leftBrace}<LineFeeder />
-                    Line {'0'+lineNumber++}<IndentStyled two/>result *= number;<LineFeeder />
-                    Line {'0'+lineNumber++}<IndentStyled two/>number--;<LineFeeder />
-                    Line {lineNumber++}<IndentStyled />{rightBrace}<LineFeeder />
-                    Line {lineNumber++}<LineFeeder />
-                    Line {lineNumber++}<IndentStyled />
+                <ParagraphStyled code>
+                    {comment} Calculates the factorial of a number.<LineFeeder />
+                    let result = 1;<LineFeeder />
+                    let number = 6;<LineFeeder /><LineFeeder />
+                    {comment} While the number is not 0<LineFeeder />
+                    while ( number )<LineFeeder />
+                    {leftBrace}<LineFeeder />
+                    <IndentStyled />result *= number;<LineFeeder />
+                    <IndentStyled />number--;<LineFeeder />
+                    {rightBrace}<LineFeeder /><LineFeeder />
                     console.log( `Factorial of 6 = ${ result }.` );
                 </ParagraphStyled>
+
+                <Header filenameEnd>while.js (end)</Header>
             </DividerStyled>
             {/* **********************************while.js********************** */}
 
             {/* **********************************while.js output**************** */}
             <DividerStyled programOutput>
-                <Header output>output</Header>
+                <Header outputBegin>output (begin)</Header>
 
                 <ParagraphStyled>Factorial of 6 = 720.</ParagraphStyled>
+
+                <Header outputEnd>output (end)</Header>
             </DividerStyled>
             {/* **********************************while.js output**************** */}
             {/* ***********************1. The While Loop********************** */}
@@ -128,34 +127,34 @@ const Loops = ( { title } ) =>
             </DividerStyled>
 
             {/* **********************************dowhile.js******************* */}
-            <DividerStyled programCode>
-                <Header fileName>dowhile.js</Header>
+            <DividerStyled>
+                <Header filenameBegin>dowhile.js (begin)</Header>
 
-                <ParagraphStyled>
-                    Line {'0'+lineNumber2++}<IndentStyled />{comment} This program sums from 6 
-                    to 1.<LineFeeder />
-                    Line {'0'+lineNumber2++}<IndentStyled />let sum = 0;<LineFeeder />
-                    Line {'0'+lineNumber2++}<IndentStyled />let number = 6;<LineFeeder />
-                    Line {'0'+lineNumber2++}<LineFeeder />
-                    Line {'0'+lineNumber2++}<IndentStyled />{comment} while the number is not 0
-                    <LineFeeder />
-                    Line {'0'+lineNumber2++}<IndentStyled />do<LineFeeder />
-                    Line {'0'+lineNumber2++}<IndentStyled />{leftBrace}<LineFeeder />
-                    Line {'0'+lineNumber2++}<IndentStyled two/>sum += number;<LineFeeder />
-                    Line {'0'+lineNumber2++}<IndentStyled two/>number--;<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled />{rightBrace}<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled />while ( number );<LineFeeder />
-                    Line {lineNumber2++}<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled />console.log( `The sum is ${ sum }.` );
+                <ParagraphStyled code>
+                    {comment} This program sums from 6 to 1.<LineFeeder />
+                    let sum = 0;<LineFeeder />
+                    let number = 6;<LineFeeder /><LineFeeder />
+                    {comment} while the number is not 0<LineFeeder />
+                    do<LineFeeder />
+                    {leftBrace}<LineFeeder />
+                    <IndentStyled />sum += number;<LineFeeder />
+                    <IndentStyled />number--;<LineFeeder />
+                    {rightBrace}<LineFeeder />
+                    while ( number );<LineFeeder /><LineFeeder />
+                    console.log( `The sum is ${ sum }.` );
                 </ParagraphStyled>
+
+                <Header filenameEnd>dowhile.js (end)</Header>
             </DividerStyled>
             {/* **********************************dowhile.js******************* */}
 
             {/* **********************************dowhile.js output****************** */}
             <DividerStyled programOutput>
-                <Header output>output</Header>
+                <Header outputBegin>output (begin)</Header>
 
                 <ParagraphStyled>The sum is 21.</ParagraphStyled>
+
+                <Header outputEnd>output (end)</Header>
             </DividerStyled>
             {/* **********************************dowhile.js output****************** */}
             {/* ********************2. The Do-While Loop************************* */}
@@ -179,40 +178,37 @@ const Loops = ( { title } ) =>
             </DividerStyled>
 
             {/* **********************************for.js************************ */}
-            <DividerStyled programCode>
-                <Header fileName>for.js</Header>
+            <DividerStyled>
+                <Header filenameBegin>for.js (begin)</Header>
 
-                <ParagraphStyled>
-                    Line {'0'+lineNumber3++}<IndentStyled />{comment} 
-                    Determine if the array has even numbers.<LineFeeder />
-                    Line {'0'+lineNumber3++}<IndentStyled />let array = [ 2, 1, 3, 6 ];
-                    <LineFeeder />
-                    Line {'0'+lineNumber3++}<IndentStyled />let hasEven = false;<LineFeeder />
-                    Line {'0'+lineNumber3++}<LineFeeder />
-                    Line {'0'+lineNumber3++}<IndentStyled />for ( {forLoopCondition} ) 
-                    <LineFeeder />
-                    Line {'0'+lineNumber3++}<IndentStyled />{leftBrace}<LineFeeder />
-                    Line {'0'+lineNumber3++}<IndentStyled two/>{comment} 
+                <ParagraphStyled code>
+                    {comment} Determine if the array has even numbers.<LineFeeder />
+                    let array = [ 2, 1, 3, 6 ];<LineFeeder />
+                    let hasEven = false;<LineFeeder /><LineFeeder />
+                    for ( {forLoopCondition} ) <LineFeeder />
+                    {leftBrace}<LineFeeder />
+                    <IndentStyled />{comment} 
                     Terminate the loop early with break if number is even.<LineFeeder />
-                    Line {'0'+lineNumber3++}<IndentStyled two/>if ( array[ i ] % 2 === 0 ) 
-                    <LineFeeder />
-                    Line {'0'+lineNumber3++}<IndentStyled two/>{leftBrace}<LineFeeder />
-                    Line {lineNumber3++}<IndentStyled three/>hasEven = true;<LineFeeder />
-                    Line {lineNumber3++}<IndentStyled three/>break;<LineFeeder />
-                    Line {lineNumber3++}<IndentStyled two/>{rightBrace}<LineFeeder />
-                    Line {lineNumber3++}<IndentStyled />{rightBrace}<LineFeeder />
-                    Line {lineNumber3++}<LineFeeder />
-                    Line {lineNumber3++}<IndentStyled />
+                    <IndentStyled />if ( array[ i ] % 2 === 0 )<LineFeeder />
+                    <IndentStyled />{leftBrace}<LineFeeder />
+                    <IndentStyled two/>hasEven = true;<LineFeeder />
+                    <IndentStyled two/>break;<LineFeeder />
+                    <IndentStyled />{rightBrace}<LineFeeder />
+                    {rightBrace}<LineFeeder /><LineFeeder />
                     console.log( `The array has even numbers: ${ hasEven }.` );
                 </ParagraphStyled>
+
+                <Header filenameEnd>for.js (end)</Header>
             </DividerStyled>
             {/* **********************************for.js************************ */}
 
             {/* **********************************for.js output******************** */}
             <DividerStyled programOutput>
-                <Header output>output</Header>
+                <Header outputBegin>output (begin)</Header>
 
                 <ParagraphStyled>The array has even numbers: true.</ParagraphStyled>
+
+                <Header outputEnd>output (end)</Header>
             </DividerStyled>
             {/* **********************************for.js output******************** */}
             {/* **********************************3. The For Loop****************** */}
@@ -240,36 +236,33 @@ const Loops = ( { title } ) =>
             </DividerStyled>
 
             {/* **********************************foreach.js******************* */}
-            <DividerStyled programCode>
-                <Header fileName>foreach.js</Header>
+            <DividerStyled>
+                <Header filenameBegin>foreach.js (begin)</Header>
 
-                <ParagraphStyled>
-                    Line {'0'+lineNumber4++}<IndentStyled />{comment} Sums the array.
-                    <LineFeeder />
-                    Line {'0'+lineNumber4++}<IndentStyled />let array = [ 2, 1, 3, 6 ];
-                    <LineFeeder />
-                    Line {'0'+lineNumber4++}<IndentStyled />let sum = 0;<LineFeeder />
-                    Line {'0'+lineNumber4++}<LineFeeder />
-                    Line {'0'+lineNumber4++}<IndentStyled />{comment} 
-                    Same as for ( {forLoopCondition} )<LineFeeder />
-                    Line {'0'+lineNumber4++}<IndentStyled />{forEachCalls}<LineFeeder />
-                    Line {'0'+lineNumber4++}<IndentStyled three/>{comment} 
-                    Same as sum += array[i]<LineFeeder />
-                    Line {'0'+lineNumber4++}<IndentStyled three/>sum += i;<LineFeeder />
-                    Line {'0'+lineNumber4++}<IndentStyled two/>{rightBrace}<LineFeeder />
-                    Line {lineNumber4++}<IndentStyled />)<LineFeeder />
-                    Line {lineNumber4++}<LineFeeder />
-                    Line {lineNumber4++}<IndentStyled />
+                <ParagraphStyled code>
+                    {comment} Sums the array.<LineFeeder />
+                    let array = [ 2, 1, 3, 6 ];<LineFeeder />
+                    let sum = 0;<LineFeeder /><LineFeeder />
+                    {comment} Same as for ( {forLoopCondition} )<LineFeeder />
+                    {forEachCalls}<LineFeeder />
+                    <IndentStyled two/>{comment} Same as sum += array[i]<LineFeeder />
+                    <IndentStyled two/>sum += i;<LineFeeder />
+                    <IndentStyled />{rightBrace}<LineFeeder />)
+                    <LineFeeder /><LineFeeder />
                     console.log( `The sum of the array is ${ sum }.` );
                 </ParagraphStyled>
+
+                <Header filenameEnd>foreach.js (end)</Header>
             </DividerStyled>
             {/* **********************************foreach.js******************* */}
 
             {/* *********************foreach.js output********************** */}
             <DividerStyled programOutput>
-                <Header output>output</Header>
+                <Header outputBegin>output (begin)</Header>
 
                 <ParagraphStyled>The sum of the array is 12.</ParagraphStyled>
+
+                <Header outputEnd>output (end)</Header>
             </DividerStyled>
             {/* *********************foreach.js output********************** */}
             {/* *******************4. The forEach() Array Method**************** */}
@@ -297,15 +290,15 @@ const Loops = ( { title } ) =>
                             <ParagraphStyled review>
                                 <Header main>Recap</Header>
                                 
-                                ({lineNumber5++}) Loops can be used to simplify running the 
+                                ({lineNumber++}) Loops can be used to simplify running the 
                                 identical code for multiple times.<LineFeeder />
-                                ({lineNumber5++}) Additionally, loops can be used to repeat the 
+                                ({lineNumber++}) Additionally, loops can be used to repeat the 
                                 same code until some condition fails.<LineFeeder />
-                                ({lineNumber5++}) While and do-while loops both execute the code 
+                                ({lineNumber++}) While and do-while loops both execute the code 
                                 until some condition fails.<LineFeeder />
-                                ({lineNumber5++}) In contrast, the for loop executes the code for 
+                                ({lineNumber++}) In contrast, the for loop executes the code for 
                                 a specified number of times.<LineFeeder />
-                                ({lineNumber5++}) In the case of an array, the forEach( ) method 
+                                ({lineNumber++}) In the case of an array, the forEach( ) method 
                                 may be simplier than the for loop.
                             </ParagraphStyled>
                         </>

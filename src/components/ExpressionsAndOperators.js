@@ -137,42 +137,44 @@ const ExpressionsAndOperators = ( { title } ) =>
                 </ParagraphStyled>
             </DividerStyled>
 
-            {/* ***********************************crement.js******************************* */}
-            <DividerStyled programCode>
-                <Header fileName>crement.js</Header>
+            {/* ***********************************incrementDecrement.js******************************* */}
+            <DividerStyled>
+                <Header filenameBegin>incrementDecrement.js (begin)</Header>
 
-                <ParagraphStyled>
-                    <IndentStyled />let myVariable = 6.5;<LineFeeder />
-                    <IndentStyled />let myVariable2 = 6.5;<LineFeeder />
+                <ParagraphStyled code>
+                    let myVariable = 6.5;<LineFeeder />
+                    let myVariable2 = 6.5;<LineFeeder />
                     <LineFeeder />
-                    <IndentStyled />{comment} 
+                    {comment} 
                     On the line by itself, the operators have the same effect.<LineFeeder />
-                    <IndentStyled />myVariable++;<LineFeeder />
-                    <IndentStyled />++myVariable2;<LineFeeder />
+                    myVariable++;<LineFeeder />
+                    ++myVariable2;<LineFeeder />
                     <LineFeeder />
-                    <IndentStyled />
                     console.log( `myVariable = ${myVariable}.` );<LineFeeder />
-                    <IndentStyled />
                     console.log( `myVariable2 = ${myVariable2}.` );<LineFeeder />
-                    <IndentStyled />{comment} 
+                    {comment} 
                     However, when used in conjunction, the effects are different.<LineFeeder />
-                    <IndentStyled />console.log(<LineFeeder />
-                    <IndentStyled three/>`--myVariable === myVariable2--: ${myDeclarations}.` );
+                    console.log(<LineFeeder />
+                    <IndentStyled two/>`--myVariable === myVariable2--: ${myDeclarations}.` );
                 </ParagraphStyled>
-            </DividerStyled>
-            {/* ***********************************crement.js*************************** */}
 
-            {/* ***********************************crement.js output********************** */}
+                <Header filenameEnd>incrementDecrement.js (end)</Header>
+            </DividerStyled>
+            {/* ***********************************incrementDecrement.js*************************** */}
+
+            {/* ***********************************incrementDecrement.js output********************** */}
             <DividerStyled programOutput>
-                <Header output>output</Header>
+                <Header outputBegin>output (begin)</Header>
 
                 <ParagraphStyled>
-                    <IndentStyled />myVariable = 7.5.<LineFeeder />
-                    <IndentStyled />myVariable2 = 7.5.<LineFeeder />
-                    <IndentStyled />--myVariable === myVariable2--: false.
+                    myVariable = 7.5.<LineFeeder />
+                    myVariable2 = 7.5.<LineFeeder />
+                    --myVariable === myVariable2--: false.
                 </ParagraphStyled>
+
+                <Header outputEnd>output (end)</Header>
             </DividerStyled>
-            {/* ***********************************crement.js output********************* */}
+            {/* ***********************************incrementDecrement.js output********************* */}
             {/* ******2. The Increment Operator (++) and the Decrement Operator (--)****** */}
 
             {/* ************3. The Negation Operator (!)******************************** */}
@@ -201,34 +203,35 @@ const ExpressionsAndOperators = ( { title } ) =>
             </DividerStyled>
 
             {/* ***********************************negation.js************************* */}
-            <DividerStyled programCode>
-                <Header fileName>negation.js</Header>
+            <DividerStyled>
+                <Header filenameBegin>negation.js (begin)</Header>
 
-                <ParagraphStyled>
-                    <IndentStyled />let isUserLogged = false; 
-                    <LineFeeder />
-                    <LineFeeder />
-                    <IndentStyled />{comment} 
+                <ParagraphStyled code>
+                    let isUserLogged = false; <LineFeeder /><LineFeeder />
+                    {comment} 
                     Check if user is logged in.<LineFeeder />
-                    <IndentStyled />{comment} 
-                    Both styles can be used, but know how to interpret the result.<LineFeeder />
-                    <IndentStyled />
+                    {comment} 
+                    Both styles can be used, but know how to interpret the result.
+                    <LineFeeder />
                     console.log( `isUserLogged === false: ${ userLoggedInequality }.` );
                     <LineFeeder />
-                    <IndentStyled />
                     console.log( `!isUserLogged: ${ userLoggedNegation }.` );
                 </ParagraphStyled>
+
+                <Header filenameEnd>negation.js (end)</Header>
             </DividerStyled>
             {/* ***********************************negation.js********************* */}
 
             {/* *****************************negation.js output********************* */}
             <DividerStyled programOutput>
-                <Header output>output</Header>
+                <Header outputBegin>output (begin)</Header>
 
                 <ParagraphStyled>
-                    <IndentStyled />isUserLogged === false: true.<LineFeeder />
-                    <IndentStyled />!isUserLogged: true.
+                    isUserLogged === false: true.<LineFeeder />
+                    !isUserLogged: true.
                 </ParagraphStyled>
+
+                <Header outputEnd>output (end)</Header>
             </DividerStyled>
             {/* *****************************negation.js output****************** */}
             {/* ************************3. The Negation Operator (!)*********** */}
@@ -257,38 +260,36 @@ const ExpressionsAndOperators = ( { title } ) =>
             </DividerStyled>
 
             {/* ********************************arithmetic.js************************** */}
-            <DividerStyled programCode>
-                <Header fileName>arithmetic.js</Header>
+            <DividerStyled>
+                <Header filenameBegin>arithmetic.js (begin)</Header>
 
-                <ParagraphStyled>
-                    <IndentStyled />let a = 11;<LineFeeder />
-                    <IndentStyled />let b = 22;<LineFeeder />
-                    <LineFeeder />
-                    <IndentStyled />
+                <ParagraphStyled code>
+                    let a = 11;<LineFeeder />
+                    let b = 22;<LineFeeder /><LineFeeder />
                     console.log( `a * b = ${ multiplication }.` );<LineFeeder />
-                    <IndentStyled />
                     console.log( `a / b = ${ division }.` );<LineFeeder />
-                    <IndentStyled />
                     console.log( `a % b = ${ modulo }.` );<LineFeeder />
-                    <IndentStyled />
                     console.log( `a + b = ${ addition }.` );<LineFeeder />
-                    <IndentStyled />
                     console.log( `a - b = ${ subtraction }.` );
                 </ParagraphStyled>
+
+                <Header filenameEnd>arithmetic.js (end)</Header>
             </DividerStyled>
             {/* ********************************arithmetic.js*********************** */}
 
             {/* ********************************arithmetic.js output************** */}
             <DividerStyled programOutput>
-                <Header output>output</Header>
+                <Header outputBegin>output (begin)</Header>
 
                 <ParagraphStyled>
-                    <IndentStyled />a * b = 242.<LineFeeder />
-                    <IndentStyled />a / b = 0.5.<LineFeeder />
-                    <IndentStyled />a % b = 11.<LineFeeder />
-                    <IndentStyled />a + b = 33.<LineFeeder />
-                    <IndentStyled />a - b = -11.    
+                    a * b = 242.<LineFeeder />
+                    a / b = 0.5.<LineFeeder />
+                    a % b = 11.<LineFeeder />
+                    a + b = 33.<LineFeeder />
+                    a - b = -11.    
                 </ParagraphStyled>
+
+                <Header outputEnd>output (end)</Header>
             </DividerStyled>
             {/* ********************************arithmetic.js output***************** */}
             {/* *****************4. The Arithmetic Operators (+, -, *, /, and %)********** */}
@@ -316,39 +317,39 @@ const ExpressionsAndOperators = ( { title } ) =>
             </DividerStyled>
 
             {/* ********************************comparison.js*********************** */}
-            <DividerStyled programCode>
-                <Header fileName>comparison.js</Header>
+            <DividerStyled>
+                <Header filenameBegin>comparison.js (begin)</Header>
 
-                <ParagraphStyled>
-                    <IndentStyled />let a = 11;<LineFeeder />
-                    <IndentStyled />let b = 22;<LineFeeder />
+                <ParagraphStyled code>
+                    let a = 11;<LineFeeder />
+                    let b = 22;<LineFeeder />
                     <LineFeeder />
-                    <IndentStyled />
                     console.log( `{ lessThanOperation + " $" + lessThanOperationResult }.` );
                     <LineFeeder />
-                    <IndentStyled />
                     console.log( `{ lessAndEqualToOperation + "$" + 
                     lessAndEqualToOperationResult }.` );<LineFeeder />
-                    <IndentStyled />
                     console.log( `{ greaterThanOperation + "$" + 
                     greaterThanOperationResult }.` );<LineFeeder />
-                    <IndentStyled />
                     console.log( `{ greaterAndEqualToOperation + "$" + 
                     greaterAndEqualToOperationResult }.` );
                 </ParagraphStyled>
+
+                <Header filenameEnd>comparison.js (end)</Header>
             </DividerStyled>
             {/* ********************************comparison.js********************* */}
 
             {/* **************************comparison.js output********************** */}
             <DividerStyled programOutput>
-                <Header output>output</Header>
+                <Header outputBegin>output (begin)</Header>
 
                 <ParagraphStyled>
-                    <IndentStyled />a {lessThan} b: true.<LineFeeder />
-                    <IndentStyled />a {lessAndEqualTo} b: true.<LineFeeder />
-                    <IndentStyled />a {greaterThan} b: false.<LineFeeder />
-                    <IndentStyled />a {greaterAndEqualTo} b: false.
+                    a {lessThan} b: true.<LineFeeder />
+                    a {lessAndEqualTo} b: true.<LineFeeder />
+                    a {greaterThan} b: false.<LineFeeder />
+                    a {greaterAndEqualTo} b: false.
                 </ParagraphStyled>
+
+                <Header outputEnd>output (end)</Header>
             </DividerStyled>
             {/* **************************comparison.js output******************* */}
             {/* ********5. The Comparison Operators (<, <=, >, and >=)*************** */}
@@ -377,36 +378,35 @@ const ExpressionsAndOperators = ( { title } ) =>
             </DividerStyled>
 
             {/* **************************equality.js**************************** */}
-            <DividerStyled programCode>
-                <Header fileName>equality.js</Header>
+            <DividerStyled>
+                <Header filenameBegin>equality.js (begin)</Header>
 
-                <ParagraphStyled>
-                    <IndentStyled />let a = 11;<LineFeeder />
-                    <IndentStyled />let b = 22;<LineFeeder />
+                <ParagraphStyled code>
+                    let a = 11;<LineFeeder />
+                    let b = 22;<LineFeeder />
                     <LineFeeder />
-                    <IndentStyled />
                     console.log( `a == b: ${equality}.` );<LineFeeder />
-                    <IndentStyled />
                     console.log( `a != b: ${inequality}.` );<LineFeeder />
-                    <IndentStyled />
                     console.log( `a === b: ${strictEquality}.` );<LineFeeder />
-                    <IndentStyled />
                     console.log( `a !== b: ${strictInequality}.` );
                 </ParagraphStyled>
+
+                <Header filenameEnd>equality.js (end)</Header>
             </DividerStyled>
             {/* **************************equality.js**************************** */}
 
             {/* **************************equality.js output******************** */}
             <DividerStyled programOutput>
-                <Header output>output</Header>
+                <Header outputBegin>output (begin)</Header>
 
                 <ParagraphStyled>
-                    <IndentStyled />a == b: false.<LineFeeder />
-                    <IndentStyled />a != b: true.<LineFeeder />
-                    <IndentStyled />a === b: false.<LineFeeder />
-                    <IndentStyled />a !== b: true.
+                    a == b: false.<LineFeeder />
+                    a != b: true.<LineFeeder />
+                    a === b: false.<LineFeeder />
+                    a !== b: true.
                 </ParagraphStyled>
 
+                <Header outputEnd>output (end)</Header>
             </DividerStyled>
             {/* **************************equality.js output******************** */}
             {/* ****6. The Equality and Inequality Operators (==, !=, ===, and !==)***** */}
@@ -430,29 +430,31 @@ const ExpressionsAndOperators = ( { title } ) =>
             </DividerStyled>
 
             {/* **************************logical.js**************************** */}
-            <DividerStyled programCode>
-                <Header fileName>logical.js</Header>
+            <DividerStyled>
+                <Header filenameBegin>logical.js (begin)</Header>
 
-                <ParagraphStyled>
-                    <IndentStyled />let a = 11;<LineFeeder />
-                    <IndentStyled />let b = 22;<LineFeeder />
+                <ParagraphStyled code>
+                    let a = 11;<LineFeeder />
+                    let b = 22;<LineFeeder />
                     <LineFeeder />
-                    <IndentStyled />
                     console.log( `a && b: ${ logicalAnd }.` );<LineFeeder />
-                    <IndentStyled />
                     console.log( `a || b: ${ logicalOr }.` );
                 </ParagraphStyled>
+
+                <Header filenameEnd>logical.js (end)</Header>
             </DividerStyled>
             {/* **************************logical.js**************************** */}
 
             {/* **************************logical.js output***************** */}
             <DividerStyled programOutput>
-                <Header output>output</Header>
+                <Header outputBegin>output (begin)</Header>
 
                 <ParagraphStyled>
-                    <IndentStyled />a && b: 22.<LineFeeder />
-                    <IndentStyled />a || b: 11.
+                    a && b: 22.<LineFeeder />
+                    a || b: 11.
                 </ParagraphStyled>
+
+                <Header outputEnd>output (end)</Header>
             </DividerStyled>
             {/* **************************logical.js output************** */}
             {/* *****************7. The Logical Operators (&& and ||)*************** */}
@@ -498,98 +500,103 @@ const ExpressionsAndOperators = ( { title } ) =>
             <DividerStyled>
                 {/* extra space from the last program output to make the reading easier */}
                 <LineFeeder />
-                <Header subsection>Table of Operator Precedence (Descending)</Header>
-            </DividerStyled>
+                <Header subsection>Operator Precedence in Descending Order</Header>
 
-            <DividerStyled table>
-                {/* styling to emulate the appearance of a table */}
-                <ParagraphStyled>     
-                    Precedence<IndentStyled four/>Operator
-                    <IndentStyled four/>Associativity<LineFeeder />
-                    <Underliner />
-                    10<IndentStyled six/>Member (.)
-                    <IndentStyled six/>Left<LineFeeder />
-                    <Underliner />
-                    9<IndentStyled six/>Postfix Increment (++)
-                    <IndentStyled two/>N/A<LineFeeder />
-                    <IndentStyled seven/>Postfix Decrement (--)
-                    <IndentStyled two/>N/A<LineFeeder />
-                    <Underliner />
-                    8<IndentStyled six/>Prefix Increment (++)
-                    <IndentStyled two/>Right<LineFeeder />
-                    <IndentStyled seven/>Prefix Decrement ( --)
-                    <IndentStyled two/>Right<LineFeeder />
-                    <IndentStyled seven/>Negation (!)
-                    <IndentStyled six/>Right<LineFeeder />
-                    <Underliner />
-                    7<IndentStyled six/>Multiplication ( * )
-                    <IndentStyled four/>Left<LineFeeder />
-                    <IndentStyled seven/>Division (/)
-                    <IndentStyled six/>Left<LineFeeder />
-                    <IndentStyled seven/>Modulus ( %)
-                    <IndentStyled five/>Left<LineFeeder />
-                    <Underliner />
-                    6<IndentStyled six/>Addition (+)
-                    <IndentStyled six/>Left<LineFeeder />
-                    <IndentStyled seven/>Subtraction (-)
-                    <IndentStyled five/>Left<LineFeeder />
-                    <Underliner />
-                    5<IndentStyled six/>Less Than ({lessThan})
-                    <IndentStyled five/>Left<LineFeeder />
-                    <IndentStyled seven/>Less Than Or Equal To ({lessAndEqualTo})
-                    <LineFeeder />
-                    <IndentStyled seven/><IndentStyled ten/>Left<LineFeeder />
-                    <IndentStyled seven/>Greater Than ({greaterThan})
-                    <IndentStyled four/>Left<LineFeeder />
-                    <IndentStyled seven/>Greater Than Or Equal To ({greaterAndEqualTo})
-                    <LineFeeder />
-                    <IndentStyled seven/><IndentStyled ten/>Left<LineFeeder />
-                    <Underliner />
-                    4<IndentStyled six/>Equality (==)
-                    <IndentStyled five/>Left<LineFeeder />
-                    <IndentStyled seven/>Inequality (!=)
-                    <IndentStyled five/>Left<LineFeeder />
-                    <IndentStyled seven/>Strict Equality (===)	
-                    <IndentStyled three/>Left<LineFeeder />
-                    <IndentStyled seven/>Strict Inequality (!==)
-                    <IndentStyled three/>Left<LineFeeder />
-                    <Underliner />
-                    3<IndentStyled six/>Logical AND (&&)
-                    <IndentStyled four/>Left<LineFeeder />
-                    <Underliner />
-                    2<IndentStyled six/>Logical OR (||)
-                    <IndentStyled five/>Left<LineFeeder />
-                    <Underliner />
-                    1<IndentStyled six/>Assignment (=)
-                    <IndentStyled five/>Left<LineFeeder />
-                    <IndentStyled seven/>Shorthand (+=, -=, *=, /=)
-                    <IndentStyled />Left<LineFeeder />
-                    <IndentStyled seven/>Shorthand (%=, &&=, ||=)
-                    <IndentStyled />Left
-                </ParagraphStyled>
+                <LineFeeder /><LineFeeder />
 
-            </DividerStyled>
+                <Header filenameBegin>Operator Precedence 10</Header>
+                <DividerStyled>
+                    <ParagraphStyled>Member (.)<Underliner /></ParagraphStyled>
+                </DividerStyled>
 
-            <DividerStyled>
-                <table>
-                    <tr>
-                    <th style={{border: "1px solid black"}}>Precedence</th>
-                    <th style={{border: "1px solid black"}}>Name</th>
-                    <th style={{border: "1px solid black"}}>Associativity</th>
-                    </tr>
-                    <tr>
-                    <td>Alfreds Futterkiste</td>
-                    <td>Maria Anders</td>
-                    <td>Germany</td>
-                    </tr>
-                    <tr>
-                    <td>Centro comercial Moctezuma</td>
-                    <td>Francisco Chang</td>
-                    <td>Mexico</td>
-                    </tr>
-                </table>
+                <Header outputBegin>Operator Precedence 9</Header>
+                <DividerStyled>
+                    <ParagraphStyled>
+                        Postfix Increment (++)<LineFeeder /><Underliner />
+                        Postfix Decrement (--)<Underliner />
+                    </ParagraphStyled>
+                </DividerStyled>
+
+                <Header filenameBegin>Operator Precedence 8</Header>
+                <DividerStyled>
+                    <ParagraphStyled>
+                        Prefix Increment (++)<LineFeeder /><Underliner />
+                        Prefix Decrement (--)<LineFeeder /><Underliner />
+                        Negation (!)<Underliner />
+                    </ParagraphStyled>
+                </DividerStyled>
+
+                <Header outputBegin>Operator Precedence 7</Header>
+                <DividerStyled>
+                    <ParagraphStyled>
+                        Multiplication (*)<LineFeeder /><Underliner />
+                        Division (/)<LineFeeder /><Underliner />
+                        Modulus (%)<Underliner />
+                    </ParagraphStyled>
+                </DividerStyled>
+
+                <Header filenameBegin>Operator Precedence 6</Header>
+                <DividerStyled>
+                    <ParagraphStyled>
+                        Addition (+)<LineFeeder /><Underliner />
+                        Subtraction (-)<Underliner />
+                    </ParagraphStyled>
+                </DividerStyled>
+
+                <Header outputBegin>Operator Precedence 5</Header>
+                <DividerStyled>
+                    <ParagraphStyled>
+                        Less Than ({lessThan})<LineFeeder /><Underliner />
+                        Less Than Or Equal To ({lessAndEqualTo})<LineFeeder />
+                        <Underliner />
+                        Greater Than ({greaterThan})<LineFeeder /><Underliner />
+                        Greater Than Or Equal To ({greaterAndEqualTo})<Underliner />
+                    </ParagraphStyled>
+                </DividerStyled>
+
+                <Header filenameBegin>Operator Precedence 4</Header>
+                <DividerStyled>
+                    <ParagraphStyled>
+                        Equality (==)<LineFeeder /><Underliner />
+                        Inequality (!=)<LineFeeder /><Underliner />
+                        Strict Equality (===)<LineFeeder /><Underliner />
+                        Strict Inequality (!==)<Underliner />
+                    </ParagraphStyled>
+                </DividerStyled>
+
+                <Header outputBegin>Operator Precedence 3</Header>
+                <DividerStyled>
+                    <ParagraphStyled>
+                        Logical AND (&&)<Underliner />
+                    </ParagraphStyled>
+                </DividerStyled>
+
+                <Header filenameBegin>Operator Precdence 2</Header>
+                <DividerStyled>
+                    <ParagraphStyled>
+                        Logical OR (||)<Underliner />
+                    </ParagraphStyled>
+                </DividerStyled>
+
+                <Header outputBegin>Operator Precedence 1</Header>
+                <DividerStyled>
+                    <ParagraphStyled>
+                    Assignment (=)<LineFeeder /><Underliner />
+                    Shorthands (+=, -=, *=, /=, %=, &&=, ||=)<Underliner />
+                    </ParagraphStyled>
+                </DividerStyled>
             </DividerStyled>
             {/* ***********Table of Operator Precedence (Descending)**************** */}
+            <DividerStyled>
+                <ParagraphStyled>
+                        With the exception of two groups named below, all operators 
+                        aforementioned are left associative.  The postfix increment 
+                        operator (++) and postfix decrement operator (--) do not have operator 
+                        associativity; the prefix increment operator (++), prefix decrement 
+                        operator (--), and the negation operator (logical NOT, !) are right 
+                        associative.
+                </ParagraphStyled>
+            </DividerStyled>
             {/* lecture content */}
 
              {/* *******************lesson review********************************* */}

@@ -13,6 +13,10 @@ const ParagraphStyled = styled.p`
     margin-bottom: 47px;
     text-align: justify;   
 
+    ${props => props.code && css`
+    text-align: left;
+    `}
+
     //  prompting the user with a question
     ${props => props.questionProgress && css`
         font-size: 35px;

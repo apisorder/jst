@@ -29,7 +29,7 @@ const JSProgrammingTechniques = ( { title } ) =>
     // ***********************************local variables**********************
     //  convenience variables -> also possible to use React hooks to change the value, but doing
     //  so entails too many calls to the Hook, since each modification of value would require one
-    let lineNumber = 1, lineNumber2 = 1, lineNumber3 = 1, lineNumber4 = 1, lineNumber5 = 1;
+    let lineNumber = 1;
 
     //  to better work with React, since JSX (not JS) always interpolates the value in template 
     //  string, and string escape sequence does not seem to work
@@ -105,48 +105,38 @@ const JSProgrammingTechniques = ( { title } ) =>
             </DividerStyled>
 
             {/* ***********************************async.js***************************** */}
-            <DividerStyled programCode>
-                <Header fileName>async.js</Header>
+            <DividerStyled>
+                <Header filenameBegin>async.js (begin)</Header>
 
-                <ParagraphStyled>
-                    Line {'0'+lineNumber++}<IndentStyled />{comment} synchronous<LineFeeder />
-                    Line {'0'+lineNumber++}<IndentStyled />console.log(' Synchronous ');
-                    <LineFeeder />
-                    Line {'0'+lineNumber++}<IndentStyled />
+                <ParagraphStyled code>
+                    {comment} synchronous<LineFeeder />
+                    console.log(' Synchronous ');<LineFeeder />
                     console.log(' Customer places an order. ');<LineFeeder />
-                    Line {'0'+lineNumber++}<IndentStyled />
                     console.log(' The order is being prepared. ');<LineFeeder />
-                    Line {'0'+lineNumber++}<IndentStyled />
                     console.log(' Customer pays for the order. ');<LineFeeder />
-                    Line {'0'+lineNumber++}<LineFeeder />
-                    Line {'0'+lineNumber++}<IndentStyled />
                     {comment} asynchronous<LineFeeder />
-                    Line {'0'+lineNumber++}<IndentStyled />
                     console.log(' Asynchronous ');<LineFeeder />
-                    Line {'0'+lineNumber++}<IndentStyled />
                     console.log(' Customer places an order. ');<LineFeeder />
-                    Line {lineNumber++}<IndentStyled />
                     setTimeout( ( ) => {leftBrace}<LineFeeder />
-                    Line {lineNumber++}<IndentStyled two/> callback()<LineFeeder />
-                    Line {lineNumber++}<IndentStyled />{rightBrace}, 2000);<LineFeeder />
-                    Line {lineNumber++}<IndentStyled />
+                    <IndentStyled /> callback()<LineFeeder />
+                    {rightBrace}, 2000);<LineFeeder />
                     console.log(' Customer pays for the order. ');<LineFeeder />
-                    Line {lineNumber++}<LineFeeder />
-                    Line {lineNumber++}<IndentStyled />{comment} 
-                    the callback function, and it can be named anything<LineFeeder />
-                    Line {lineNumber++}<IndentStyled />const callback = ( ) => 
+                    {comment} the callback function, and it can be named anything
                     <LineFeeder />
-                    Line {lineNumber++}<IndentStyled />{leftBrace}<LineFeeder />
-                    Line {lineNumber++}<IndentStyled two/>
+                    const callback = ( ) => <LineFeeder />
+                    {leftBrace}<LineFeeder />
+                    <IndentStyled />
                     console.log(' The order is being prepared. ');<LineFeeder />
-                    Line {lineNumber++}<IndentStyled />{rightBrace}
+                    {rightBrace}
                 </ParagraphStyled>
+
+                <Header filenameEnd>async.js (end)</Header>
             </DividerStyled>
             {/* ***********************************async.js***************************** */}
 
             {/* ************************async.js output***************************** */}
             <DividerStyled programOutput>
-                <Header output>output</Header>
+                <Header outputBegin>output (begin)</Header>
 
                 <ParagraphStyled>
                     Synchronous<LineFeeder />
@@ -158,6 +148,8 @@ const JSProgrammingTechniques = ( { title } ) =>
                     Customer pays for the order.<LineFeeder />
                     The order is being prepared.
                 </ParagraphStyled>
+
+                <Header outputEnd>output (end)</Header>
             </DividerStyled>
             {/* ************************async.js output***************************** */}
 
@@ -195,62 +187,46 @@ const JSProgrammingTechniques = ( { title } ) =>
             </DividerStyled>
 
             {/* **************************callback-hell.js******************************* */}
-            <DividerStyled programCode>
-                <Header fileName>callback-hell.js</Header>
+            <DividerStyled>
+                <Header filenameBegin>callback-hell.js (begin)</Header>
 
-                <ParagraphStyled>
-                    Line {'0'+lineNumber2++}<IndentStyled />{comment} 
+                <ParagraphStyled code>
+                    {comment} 
                     for each callback, set the timer, and do work when timer is up
                     <LineFeeder />
-                    Line {'0'+lineNumber2++}<IndentStyled />let openForBusiness = ( ) => 
-                    <LineFeeder />
-                    Line {'0'+lineNumber2++}<IndentStyled />{leftBrace}<LineFeeder />
-                    Line {'0'+lineNumber2++}<IndentStyled two/>setTimeout( ( ) =>
-                    <LineFeeder />
-                    Line {'0'+lineNumber2++}<IndentStyled two/>{leftBrace}<LineFeeder />
-                    Line {'0'+lineNumber2++}<IndentStyled three/>
-                    console.log(' Customer arrives. ');<LineFeeder />
-                    Line {'0'+lineNumber2++}<IndentStyled four/>
-                    setTimeout( ( ) => <LineFeeder />
-                    Line {'0'+lineNumber2++}<IndentStyled four/>{leftBrace}<LineFeeder />
-                    Line {'0'+lineNumber2++}<IndentStyled five/>
-                    console.log(' Customer orders. ');<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled five/>setTimeout( ( ) => <LineFeeder />
-                    Line {lineNumber2++}<IndentStyled five/>{leftBrace}<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled six/>
-                    console.log(' Preparing order. ');<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled six/>setTimeout( ( ) =>
-                    <LineFeeder />
-                    Line {lineNumber2++}<IndentStyled six/>{leftBrace}<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled seven/>
-                    console.log(' Customer pays. ');<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled seven/>
-                    setTimeout( ( ) =><LineFeeder />
-                    Line {lineNumber2++}<IndentStyled seven/>{leftBrace}<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled eight/>
-                    console.log(' Customer leaves. ');<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled seven/>{rightBrace}, 1000)
-                    <LineFeeder />
-                    Line {lineNumber2++}<IndentStyled six/>{rightBrace}, 4000)
-                    <LineFeeder />
-                    Line {lineNumber2++}<IndentStyled five/>{rightBrace}, 5000)
-                    <LineFeeder />
-                    Line {lineNumber2++}<IndentStyled four/>{rightBrace}, 1000)
-                    <LineFeeder />
-                    Line {lineNumber2++}<IndentStyled three/>{rightBrace}, 4000)
-                    <LineFeeder />
-                    Line {lineNumber2++}<IndentStyled two/>{rightBrace}<LineFeeder />
-                    Line {lineNumber2++}<LineFeeder />
-                    Line {lineNumber2++}<IndentStyled />openForBusiness( );
-                    <LineFeeder />
+                    let openForBusiness = ( ) => <LineFeeder />
+                    {leftBrace}<LineFeeder />
+                    <IndentStyled />setTimeout( ( ) =><LineFeeder />
+                    <IndentStyled />{leftBrace}<LineFeeder />
+                    <IndentStyled two/>console.log(' Customer arrives. ');<LineFeeder />
+                    <IndentStyled two/>setTimeout( ( ) => <LineFeeder />
+                    <IndentStyled three/>{leftBrace}<LineFeeder />
+                    <IndentStyled four/>console.log(' Customer orders. ');<LineFeeder />
+                    <IndentStyled four/>setTimeout( ( ) => <LineFeeder />
+                    <IndentStyled four/>{leftBrace}<LineFeeder />
+                    <IndentStyled five/>console.log(' Preparing order. ');<LineFeeder />
+                    <IndentStyled five/>setTimeout( ( ) =><LineFeeder />
+                    <IndentStyled five/>{leftBrace}<LineFeeder />
+                    <IndentStyled six/>console.log(' Customer pays. ');<LineFeeder />
+                    <IndentStyled six/>setTimeout( ( ) =><LineFeeder />
+                    <IndentStyled six/>{leftBrace}<LineFeeder />
+                    <IndentStyled seven/>console.log(' Customer leaves. ');<LineFeeder />
+                    <IndentStyled six/>{rightBrace}, 1000)<LineFeeder />
+                    <IndentStyled five/>{rightBrace}, 4000)<LineFeeder />
+                    <IndentStyled four/>{rightBrace}, 5000)<LineFeeder />
+                    <IndentStyled three/>{rightBrace}, 1000)<LineFeeder />
+                    <IndentStyled two/>{rightBrace}, 4000)<LineFeeder />
+                    <IndentStyled />{rightBrace}<LineFeeder /><LineFeeder />
+                    openForBusiness( );<LineFeeder />
                 </ParagraphStyled>
 
+                <Header filenameEnd>callback-hell.js (end)</Header>
             </DividerStyled>
             {/* **************************callback-hell.js******************************* */}
 
             {/* ***************callback-hell.js output******************************* */}
             <DividerStyled programOutput>
-                <Header output>output</Header>
+                <Header outputBegin>output (begin)</Header>
 
                 <ParagraphStyled>
                     Customer arrives.<LineFeeder />
@@ -260,6 +236,7 @@ const JSProgrammingTechniques = ( { title } ) =>
                     Customer leaves.
                 </ParagraphStyled>
 
+                <Header outputEnd>output (end)</Header>
             </DividerStyled>
             {/* ***************callback-hell.js output******************************* */}
 
@@ -315,77 +292,63 @@ const JSProgrammingTechniques = ( { title } ) =>
             </DividerStyled>
 
             {/* *****************************promises.js********************** */}
-            <DividerStyled programCode>
-                <Header fileName>promises.js</Header>
+            <DividerStyled>
+                <Header filenameBegin>promises.js (begin)</Header>
 
-                <ParagraphStyled>
-                    Line {'0'+lineNumber3++}<IndentStyled />{comment} promises.js
-                    <LineFeeder />
-                    Line {'0'+lineNumber3++}<LineFeeder />
-                    Line {'0'+lineNumber3++}<IndentStyled />let isOpenForBusiness = true;
-                    <LineFeeder />
-                    Line {'0'+lineNumber3++}<LineFeeder />
-                    Line {'0'+lineNumber3++}<IndentStyled />
+                <ParagraphStyled code>
+                    {comment} promises.js<LineFeeder /><LineFeeder />
+                    let isOpenForBusiness = true;<LineFeeder /><LineFeeder />
                     let order = ( timeNeeded, workNeeded ) =><LineFeeder />
-                    Line {'0'+lineNumber3++}<IndentStyled />{leftBrace}<LineFeeder />
-                    Line {'0'+lineNumber3++}<IndentStyled two/>{comment} 
+                    {leftBrace}<LineFeeder />
+                    <IndentStyled />{comment} 
                     original promise:  resolve = success, and reject = failure<LineFeeder />
-                    Line {'0'+lineNumber3++}<IndentStyled two/>
-                    return new Promise( ( resolve, reject ) => <LineFeeder />
-                    Line {'0'+lineNumber3++}<IndentStyled three/>{leftBrace}<LineFeeder />
-                    Line {lineNumber3++}<IndentStyled four/>
-                    if ( isOpenForBusiness )<LineFeeder />
-                    Line {lineNumber3++}<IndentStyled four/>{leftBrace}<LineFeeder />
-                    Line {lineNumber3++}<IndentStyled five/>{comment} 
-                    when timer is up, do work<LineFeeder />
-                    Line {lineNumber3++}<IndentStyled five/>setTimeout( ( ) =>
+                    <IndentStyled />return new Promise( ( resolve, reject ) => <LineFeeder />
+                    <IndentStyled two/>{leftBrace}<LineFeeder />
+                    <IndentStyled three/>if ( isOpenForBusiness )<LineFeeder />
+                    <IndentStyled three/>{leftBrace}<LineFeeder />
+                    <IndentStyled four/>{comment} when timer is up, do work<LineFeeder />
+                    <IndentStyled four/>setTimeout( ( ) =><LineFeeder />
+                    <IndentStyled five/>{leftBrace}<LineFeeder />
+                    <IndentStyled six/>resolve( workNeeded( ) )<LineFeeder />
+                    <IndentStyled five/>{rightBrace}, timeNeeded<LineFeeder />
+                    <IndentStyled four/>)<LineFeeder />
+                    <IndentStyled three/>{rightBrace}<LineFeeder />
+                    <IndentStyled three/>else<LineFeeder />
+                    <IndentStyled three/>{leftBrace}<LineFeeder />
+                    <IndentStyled four/>reject( console.log(' Shop is not open. ') );
                     <LineFeeder />
-                    Line {lineNumber3++}<IndentStyled six/>{leftBrace}<LineFeeder />
-                    Line {lineNumber3++}<IndentStyled seven/>resolve( workNeeded( ) )
-                    <LineFeeder />
-                    Line {lineNumber3++}<IndentStyled six/>{rightBrace}, timeNeeded
-                    <LineFeeder />
-                    Line {lineNumber3++}<IndentStyled five/>{rightBrace}<LineFeeder />
-                    Line {lineNumber3++}<IndentStyled four/>{rightBrace}<LineFeeder />
-                    Line {lineNumber3++}<IndentStyled four/>else<LineFeeder />
-                    Line {lineNumber3++}<IndentStyled four/>{leftBrace}<LineFeeder />
-                    Line {lineNumber3++}<IndentStyled five/>
-                    reject( console.log(' Shop is not open. ') );<LineFeeder />
-                    Line {lineNumber3++}<IndentStyled four/>{rightBrace}<LineFeeder />
-                    Line {lineNumber3++}<IndentStyled three/>{rightBrace}<LineFeeder />
-                    Line {lineNumber3++}<IndentStyled two/>{rightBrace}<LineFeeder />
-                    Line {lineNumber3++}<IndentStyled one/>{rightBrace}<LineFeeder />
-                    Line {lineNumber3++}<LineFeeder />
-                    Line {lineNumber3++}<IndentStyled />{comment} 
+                    <IndentStyled three/>{rightBrace}<LineFeeder />
+                    <IndentStyled two/>{rightBrace}<LineFeeder />
+                    <IndentStyled />)<LineFeeder />
+                    {rightBrace}<LineFeeder /><LineFeeder />
+                    {comment} 
                     if first promise was fulfilled, so are the promises in the then( )
                     <LineFeeder />
-                    Line {lineNumber3++}<IndentStyled />
                     order( 1000, ( ) => console.log(' Customer arrives. ') )
-                    <LineFeeder />
-                    Line {lineNumber3++}<IndentStyled two/>
+                    <LineFeeder /><IndentStyled />
                     .then( () => order( 4000, () => console.log(' Customer orders. ')))
                     <LineFeeder />
-                    Line {lineNumber3++}<IndentStyled two/>
-                    .then( () => order( 5000, () => 
+                    <IndentStyled />.then( () => order( 5000, () => 
                     console.log(' Preparing order. ')))<LineFeeder />
-                    Line {lineNumber3++}<IndentStyled two/>.then( () => order( 1000, () => 
+                    <IndentStyled />.then( () => order( 1000, () => 
                     console.log(' Customer pays. ')))<LineFeeder />
-                    Line {lineNumber3++}<IndentStyled two/>.then( () => order( 4000, () => 
+                    <IndentStyled />.then( () => order( 4000, () => 
                     console.log(' Customer leaves. ')))<LineFeeder />
-                    Line {lineNumber3++}<IndentStyled two/>{comment} 
+                    <IndentStyled />{comment} 
                     if first promise was rejected, do error handling<LineFeeder />
-                    Line {lineNumber3++}<IndentStyled two/>.catch( () => 
+                    <IndentStyled />.catch( () => 
                     console.log(' Customer left the shop angrily. '))<LineFeeder />
-                    Line {lineNumber3++}<IndentStyled two/>.finally( () => 
+                    <IndentStyled />.finally( () => 
                     console.log(' Cleaning up and preparing for next business day. '));
                 </ParagraphStyled>
 
+                <Header filenameEnd>promises.js (end)</Header>
             </DividerStyled>
             {/* *****************************promises.js********************** */}
 
             {/* *****************************promises.js output********************** */}
             <DividerStyled programOutput>
-                <Header output>output</Header>
+                <Header outputBegin>output (begin)</Header>
 
                 <ParagraphStyled>
                     Customer arrives.<LineFeeder />
@@ -395,6 +358,8 @@ const JSProgrammingTechniques = ( { title } ) =>
                     Customer leaves.<LineFeeder />
                     Cleaning ujp and preparing for the next business day.
                 </ParagraphStyled>
+
+                <Header outputEnd>output (end)</Header>
             </DividerStyled>
 
 
@@ -442,80 +407,71 @@ const JSProgrammingTechniques = ( { title } ) =>
             </DividerStyled>
 
             {/* ************************async-and-await.js***************************** */}
-            <DividerStyled programCode>
-                <Header fileName>async-and-await.js</Header>
+            <DividerStyled>
+                <Header filenameBegin>async-and-await.js (begin)</Header>
 
-                <ParagraphStyled>
-                    Line {'0'+lineNumber4++}<IndentStyled />{comment} async-and-await.js
-                    <LineFeeder />
-                    Line {'0'+lineNumber4++}<LineFeeder />
-                    Line {'0'+lineNumber4++}<IndentStyled />
-                    let isOpenForBusiness = true;<LineFeeder />
-                    Line {'0'+lineNumber4++}<LineFeeder />
-                    Line {'0'+lineNumber4++}<IndentStyled />let timer = ( timeNeeded ) =>
-                    <LineFeeder />
-                    Line {'0'+lineNumber4++}<IndentStyled />{leftBrace}<LineFeeder />
-                    Line {'0'+lineNumber4++}<IndentStyled two/>
-                    return new Promise( ( resolve, reject ) =><LineFeeder />
-                    Line {'0'+lineNumber4++}<IndentStyled three/>{leftBrace}<LineFeeder />
-                    Line {'0'+lineNumber4++}<IndentStyled four/>{comment} 
+                <ParagraphStyled code>
+                    {comment} async-and-await.js<LineFeeder /><LineFeeder />
+                    let isOpenForBusiness = true;<LineFeeder /><LineFeeder />
+                    let timer = ( timeNeeded ) =><LineFeeder />
+                    {leftBrace}<LineFeeder />
+                    <IndentStyled />return new Promise( ( resolve, reject ) =><LineFeeder />
+                    <IndentStyled two/>{leftBrace}<LineFeeder />
+                    <IndentStyled three/>{comment} 
                     notice how the setTimeout parameters are slightly different<LineFeeder />
-                    Line {lineNumber4++}<IndentStyled four/>{leftBrace}<LineFeeder />
-                    Line {lineNumber4++}<IndentStyled five/>setTimeout( resolve, timeNeeded );
+                    <IndentStyled three />if ( isOpenForBusiness )<LineFeeder />
+                    <IndentStyled three/>{leftBrace}<LineFeeder />
+                    <IndentStyled four/>setTimeout( resolve, timeNeeded );<LineFeeder />
+                    <IndentStyled three/>{rightBrace}<LineFeeder />
+                    <IndentStyled three/>else<LineFeeder />
+                    <IndentStyled three/>{leftBrace}<LineFeeder />
+                    <IndentStyled four/>reject( console.log(' Shop is not open. ') );
                     <LineFeeder />
-                    Line {lineNumber4++}<IndentStyled four/>{rightBrace}<LineFeeder />
-                    Line {lineNumber4++}<IndentStyled four/>else<LineFeeder />
-                    Line {lineNumber4++}<IndentStyled four/>{leftBrace}<LineFeeder />
-                    Line {lineNumber4++}<IndentStyled five/>
-                    reject( console.log(' Shop is not open. ') );<LineFeeder />
-                    Line {lineNumber4++}<IndentStyled four/>{rightBrace}<LineFeeder />
-                    Line {lineNumber4++}<IndentStyled three/>{rightBrace}<LineFeeder />
-                    Line {lineNumber4++}<IndentStyled two/>{rightBrace}<LineFeeder />
-                    Line {lineNumber4++}<IndentStyled />{rightBrace}<LineFeeder />
-                    Line {lineNumber4++}<IndentStyled /><LineFeeder />
-                    Line {lineNumber4++}<IndentStyled />{comment} 
-                    the async keyword automatically makes the function asynchronous<LineFeeder />
-                    Line {lineNumber4++}<IndentStyled />async function order( ) <LineFeeder />
-                    Line {lineNumber4++}<IndentStyled />{leftBrace}<LineFeeder />
-                    Line {lineNumber4++}<IndentStyled two/>try<LineFeeder />
-                    Line {lineNumber4++}<IndentStyled two/>{leftBrace}<LineFeeder />
-                    Line {lineNumber4++}<IndentStyled three/>await timer( 2000 )<LineFeeder />
-                    Line {lineNumber4++}<IndentStyled three/>
+                    <IndentStyled three/>{rightBrace}<LineFeeder />
+                    <IndentStyled two/>{rightBrace}<LineFeeder />
+                    <IndentStyled />{rightBrace}<LineFeeder />
+                    {rightBrace}<LineFeeder /><LineFeeder />
+                    {comment} 
+                    the async keyword automatically makes the function asynchronous
+                    <LineFeeder />
+                    async function order( ) <LineFeeder />
+                    {leftBrace}<LineFeeder />
+                    <IndentStyled />try<LineFeeder />
+                    <IndentStyled />{leftBrace}<LineFeeder />
+                    <IndentStyled two/>await timer( 2000 )<LineFeeder />
+                    <IndentStyled two/>
                     console.log(' Customer arrives. ');<LineFeeder />
-                    Line {lineNumber4++}<IndentStyled three/>await timer( 4000 )<LineFeeder />
-                    Line {lineNumber4++}<IndentStyled three/>
-                    console.log(' Customer orders. ');<LineFeeder />
-                    Line {lineNumber4++}<IndentStyled three/>await timer( 5000 )<LineFeeder />
-                    Line {lineNumber4++}<IndentStyled three/>console.log(' Preparing order. ');
+                    <IndentStyled two/>await timer( 4000 )<LineFeeder />
+                    <IndentStyled two/>console.log(' Customer orders. ');<LineFeeder />
+                    <IndentStyled two/>await timer( 5000 )<LineFeeder />
+                    <IndentStyled two/>console.log(' Preparing order. ');<LineFeeder />
+                    <IndentStyled two/>await timer( 1000 )<LineFeeder />
+                    <IndentStyled two/>console.log(' Customer pays. ');<LineFeeder />
+                    <IndentStyled two/>await timer( 4000 )<LineFeeder />
+                    <IndentStyled two/>console.log(' Customer leaves. ');<LineFeeder />
+                    <IndentStyled />{rightBrace}<LineFeeder />
+                    <IndentStyled />catch( error )<LineFeeder />
+                    <IndentStyled />{leftBrace}<LineFeeder />
+                    <IndentStyled two/>console.log(' Customer left the shop angrily. ');
                     <LineFeeder />
-                    Line {lineNumber4++}<IndentStyled three/>await timer( 1000 )<LineFeeder />
-                    Line {lineNumber4++}<IndentStyled three/>console.log(' Customer pays. ');
+                    <IndentStyled />{rightBrace}<LineFeeder />
+                    <IndentStyled />finally<LineFeeder />
+                    <IndentStyled />{leftBrace}<LineFeeder />
+                    <IndentStyled two/>
+                    console.log(' Cleaning up and preparing for next business day. ');
                     <LineFeeder />
-                    Line {lineNumber4++}<IndentStyled three/>await timer( 4000 )<LineFeeder />
-                    Line {lineNumber4++}<IndentStyled three/>console.log(' Customer leaves. ');
-                    <LineFeeder />
-                    Line {lineNumber4++}<IndentStyled two/>{rightBrace}<LineFeeder />
-                    Line {lineNumber4++}<IndentStyled two/>catch( error )<LineFeeder />
-                    Line {lineNumber4++}<IndentStyled two/>{leftBrace}<LineFeeder />
-                    Line {lineNumber4++}<IndentStyled three/>
-                    console.log(' Customer left the shop angrily. ');<LineFeeder />
-                    Line {lineNumber4++}<IndentStyled two/>{rightBrace}<LineFeeder />
-                    Line {lineNumber4++}<IndentStyled two/>finally<LineFeeder />
-                    Line {lineNumber4++}<IndentStyled two/>{leftBrace}<LineFeeder />
-                    Line {lineNumber4++}<IndentStyled three/>
-                    console.log(' Cleaning up and preparing for next business day. ');<LineFeeder />
-                    Line {lineNumber4++}<IndentStyled two/>{rightBrace}<LineFeeder />
-                    Line {lineNumber4++}<IndentStyled />{rightBrace}<LineFeeder />
-                    Line {lineNumber4++}<IndentStyled /><LineFeeder />
-                    Line {lineNumber4++}<IndentStyled />order();<LineFeeder />
+                    <IndentStyled />{rightBrace}<LineFeeder />
+                    {rightBrace}<LineFeeder /><LineFeeder />
+                    order();<LineFeeder />
                 </ParagraphStyled>
 
+                <Header filenameEnd>async-and-await.js (end)</Header>
             </DividerStyled>
             {/* ************************async-and-await.js***************************** */}
 
             {/* ***********async-and-await.js output***************************** */}
             <DividerStyled programOutput>
-                <Header output>output</Header>
+                <Header outputBegin>output (begin)</Header>
 
                 <ParagraphStyled>
                     Customer arrives.<LineFeeder />
@@ -525,6 +481,8 @@ const JSProgrammingTechniques = ( { title } ) =>
                     Customer leaves.<LineFeeder />
                     Cleaning up and preparing for next business day.
                 </ParagraphStyled>
+
+                <Header outputEnd>output (end)</Header>
             </DividerStyled>
             {/* ***********async-and-await.js output***************************** */}
 
@@ -563,15 +521,15 @@ const JSProgrammingTechniques = ( { title } ) =>
                             <ParagraphStyled review>
                                 <Header main>Recap</Header>
                                 
-                                ({lineNumber5++}) Callbacks allow tasks to delegated without 
+                                ({lineNumber++}) Callbacks allow tasks to delegated without 
                                 halting program execution.<LineFeeder />
-                                ({lineNumber5++}) The fetch API and the axios library help 
+                                ({lineNumber++}) The fetch API and the axios library help 
                                 facilitate async operations.<LineFeeder />
-                                ({lineNumber5++}) Chaining callbacks can result in Callback 
+                                ({lineNumber++}) Chaining callbacks can result in Callback 
                                 Hell with lopsided, deeply nested code.<LineFeeder />
-                                ({lineNumber5++}) Promises is a better way to chain callback 
+                                ({lineNumber++}) Promises is a better way to chain callback 
                                 functions.<LineFeeder />
-                                ({lineNumber5++}) Async and Await is a more concise way of 
+                                ({lineNumber++}) Async and Await is a more concise way of 
                                 writing a promise.
                             </ParagraphStyled>
                         </>

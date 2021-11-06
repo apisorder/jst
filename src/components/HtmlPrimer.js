@@ -93,33 +93,28 @@ const HtmlPrimer = ( { title } ) =>
             </DividerStyled>
 
             {/* ***********************************index.html******************************* */}
-            <DividerStyled programCode>
+            <DividerStyled>
                 <Header filenameBegin>index.html (begin)</Header>
 
-                <ParagraphStyled>
+                <ParagraphStyled code>
                     <ElementDelimiter>
                     !-- This is a comment. --</ElementDelimiter><LineFeeder />
                     <ElementDelimiter>!DOCTYPE html
                     </ElementDelimiter><LineFeeder />
-                    <ElementDelimiter>html
-                    </ElementDelimiter><LineFeeder />
+                    <ElementDelimiter>html</ElementDelimiter><LineFeeder />
                     <LineFeeder />
                     <ElementDelimiter>
                     !-- The head contains meta information about the page. --
                     </ElementDelimiter><LineFeeder />
-                    <ElementDelimiter>head
-                    </ElementDelimiter><LineFeeder />
+                    <ElementDelimiter>head</ElementDelimiter><LineFeeder />
                     <IndentStyled /><ElementDelimiter>title
                     </ElementDelimiter>Page Title<ElementDelimiter>/title</ElementDelimiter>
                     <LineFeeder />
-                    <ElementDelimiter>/head
-                    </ElementDelimiter><LineFeeder />
-                    <LineFeeder />
+                    <ElementDelimiter>/head</ElementDelimiter><LineFeeder /><LineFeeder />
                     <ElementDelimiter>
                     !-- The body contains the visible elements on the page. --</ElementDelimiter>
                     <LineFeeder />
-                    <ElementDelimiter>body</ElementDelimiter>
-                    <LineFeeder />
+                    <ElementDelimiter>body</ElementDelimiter><LineFeeder />
                     <IndentStyled /><ElementDelimiter>
                     !-- H1 through H6 tags creating page headers. --</ElementDelimiter>
                     <LineFeeder />
@@ -127,25 +122,23 @@ const HtmlPrimer = ( { title } ) =>
                     A heading<ElementDelimiter>h1</ElementDelimiter><LineFeeder />
                     <LineFeeder />
                     <IndentStyled /><ElementDelimiter>
-                    !-- Creates a hypertext link to other resources. --</ElementDelimiter><LineFeeder />
-                    <IndentStyled /><ElementDelimiter>button
-                    </ElementDelimiter>
+                    !-- Creates a hypertext link to other resources. --</ElementDelimiter>
                     <LineFeeder />
+                    <IndentStyled /><ElementDelimiter>button</ElementDelimiter><LineFeeder />
                     <IndentStyled two/><ElementDelimiter>
-                    a href="https://cs.sfsu.edu/" target="_blank"</ElementDelimiter><LineFeeder />
+                    a href="https://cs.sfsu.edu/" target="_blank"</ElementDelimiter>
+                    <LineFeeder />
                     <IndentStyled two/>CS Department<ElementDelimiter>/a
                     </ElementDelimiter><LineFeeder />
                     <IndentStyled /><ElementDelimiter>/button
-                    </ElementDelimiter><LineFeeder />
-                    <LineFeeder />
+                    </ElementDelimiter><LineFeeder /><LineFeeder />
                     <IndentStyled /><ElementDelimiter>
                     !-- The img tag inserts an image on the page. --</ElementDelimiter>
                     <LineFeeder />
                     <IndentStyled /><ElementDelimiter>img<LineFeeder />
-                    <IndentStyled two/>src="https://placeimg.com/640/480/any" alt="img"/</ElementDelimiter>
-                    <LineFeeder />
-                    <ElementDelimiter>/body</ElementDelimiter>
-                    <LineFeeder />
+                    <IndentStyled two/>src="https://placeimg.com/640/480/any" alt="img"/
+                    </ElementDelimiter><LineFeeder />
+                    <ElementDelimiter>/body</ElementDelimiter><LineFeeder />
                     <ElementDelimiter>/html</ElementDelimiter>
                 </ParagraphStyled>
 
@@ -199,29 +192,26 @@ const HtmlPrimer = ( { title } ) =>
             </DividerStyled>
 
             {/* ***********************************script.js*********************** */}
-            <DividerStyled programCode>
+            <DividerStyled>
                 <Header filenameBegin>script.js (begin)</Header>
 
-                <ParagraphStyled>
-                    {comment} This is a comment.
-                    <LineFeeder />
+                <ParagraphStyled code>
+                    {comment} This is a comment.<LineFeeder />
                     {comment} 
-                    JS can insert HTML elements into the page.<LineFeeder />
-                    <LineFeeder />
+                    JS can insert HTML elements into the page.<LineFeeder /><LineFeeder />
                     document.write('<ElementDelimiter>h1</ElementDelimiter>A heading
                     <ElementDelimiter>/h1</ElementDelimiter>');<LineFeeder />
                     document.write('<ElementDelimiter>button</ElementDelimiter><LineFeeder />
                     <IndentStyled three/><ElementDelimiter>
                     a href="https://cs.sfsu.edu/" target="_blank"</ElementDelimiter>
                     <LineFeeder />
-                    <IndentStyled four/>CS Department<ElementDelimiter>/a
+                    CS Department<ElementDelimiter>/a
                     </ElementDelimiter><LineFeeder />
                     <IndentStyled three/><ElementDelimiter>/button</ElementDelimiter>');
                     <LineFeeder />
                     document.write('<ElementDelimiter>img<LineFeeder />
                     <IndentStyled three/>
-                    src="https://placeimg.com/640/480/any"<LineFeeder />
-                    <IndentStyled three/>
+                    src="https://placeimg.com/640/480/any"<LineFeeder /><IndentStyled three/>
                     alt="image"/</ElementDelimiter>');
                 </ParagraphStyled>
 
@@ -237,34 +227,27 @@ const HtmlPrimer = ( { title } ) =>
             </DividerStyled>
     
             {/* ***********************************index.html********************* */}
-            <DividerStyled programCode>
+            <DividerStyled>
                 <Header filenameBegin>index.html (begin)</Header>
 
-                <ParagraphStyled>
-                    <ElementDelimiter>!DOCTYPE html
-                    </ElementDelimiter><LineFeeder />
+                <ParagraphStyled code>
+                    <ElementDelimiter>!DOCTYPE html</ElementDelimiter><LineFeeder />
                     <ElementDelimiter>html
-                    </ElementDelimiter><LineFeeder />
-                    <LineFeeder />
-                    <ElementDelimiter>head
-                    </ElementDelimiter><LineFeeder />
+                    </ElementDelimiter><LineFeeder /><LineFeeder />
+                    <ElementDelimiter>head</ElementDelimiter><LineFeeder />
                     <IndentStyled /><ElementDelimiter>title
-                    </ElementDelimiter>Page Title<ElementDelimiter>/title</ElementDelimiter>
-                    <LineFeeder />
-                    <ElementDelimiter>/head
+                    </ElementDelimiter>Page Title<ElementDelimiter>/title
                     </ElementDelimiter><LineFeeder />
+                    <ElementDelimiter>/head</ElementDelimiter><LineFeeder />
                     <LineFeeder />
-                    <ElementDelimiter>body
-                    </ElementDelimiter><LineFeeder />
+                    <ElementDelimiter>body</ElementDelimiter><LineFeeder />
                     <ElementDelimiter>
                     !-- The JS file is embedded here. --</ElementDelimiter><LineFeeder />
                     <IndentStyled /><ElementDelimiter>
                     script src="script.js"</ElementDelimiter><ElementDelimiter>/script
                     </ElementDelimiter><LineFeeder />
-                    <ElementDelimiter>/body
-                    </ElementDelimiter><LineFeeder />
-                    <ElementDelimiter>/html
-                    </ElementDelimiter>
+                    <ElementDelimiter>/body</ElementDelimiter><LineFeeder />
+                    <ElementDelimiter>/html</ElementDelimiter>
                 </ParagraphStyled>
 
                 <Header filenameEnd>index.html (end)</Header>
