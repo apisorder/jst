@@ -377,7 +377,8 @@ const Quiz = ( { title } ) =>
 
             //  randomize question from the test bank
             setActualQuestion( Math.floor( Math.random() * questions.length ));
-		} else 
+		} 
+        else 
         {
             //  the predetermine number of questions have been answered
             //  show the quiz score
@@ -446,7 +447,7 @@ const Quiz = ( { title } ) =>
                                 </ParagraphStyled>                     
                             </DividerStyled>
 
-                            {/* show the question to ask       */}
+                            {/* show the question to ask */}
                             <DividerStyled>
                                 <ParagraphStyled question>
                                     { questions[ actualQuestion ].question }

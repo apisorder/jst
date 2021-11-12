@@ -17,7 +17,6 @@ const TodoList = ({ todoList, handleToggle, handleFilter }) =>
                     <Todo 
                         todo={ todo }
                         handleToggle={ handleToggle }
-                        handleFilter={ handleFilter }
                     />
                 )
             }
