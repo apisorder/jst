@@ -49,6 +49,9 @@ import Quiz from './components/Quiz';
 import { createGlobalStyle } from 'styled-components';
 import background from './images/background.png';
 const GlobalStyle = createGlobalStyle`
+  // * {
+  //   box-sizing:  border-box;
+  // }
   body {
     margin: 0;
     padding: 0;
