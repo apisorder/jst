@@ -1,7 +1,7 @@
 #	install the Node Package Manager
 sudo apt install npm
 #	which is used to install Yarn
-sudo install -g yarn
+sudo npm install -g yarn
 #	add the necessary node modules (libraries, etc.)
 sudo npm install
 #	in some cases, the project can't start, so update NPM as a preventative measure
@@ -9,7 +9,5 @@ sudo npm update
 #	run the project
 sudo yarn start
 
-Note sudo is likely optional, except with the first two commands
-
-WINDOWS/mac OSX/ Linux  HOST
-	set NODE_OPTIONS=--openssl-legacy-provider && yarn start
+#	in some cases, it's set, instead of export
+export NODE_OPTIONS=--openssl-legacy-provider && yarn start
